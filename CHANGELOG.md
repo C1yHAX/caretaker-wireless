@@ -10,3 +10,7 @@
 - Offline-Asset-/Referenz-/Rückextraktionsprüfung und Lua-Tests bestanden. Nativer Spieltest der zusätzlichen Ressourcenpaare steht aus.
 
 Version bleibt auf ausdrücklichen Wunsch **1.0.0**. Die Release-Dateien wurden um die Ressourcen erweitert; aktuelle Prüfsummen beachten. Frühere Fassungen enthielten die ursprünglichen Funkstrom-Geräte und Wandbrücken-/Datenkorrekturen.
+
+### Ressourcen-Icons innerhalb des Erstreleases 1.0.0
+
+18 neue farbige Sender-/Empfänger-Icons, einschließlich Rot für Benzin, Gelb für Diesel und gedecktem Tank-Graugrün für Methan. Neun passende Skill-Icons. Keine Änderungen an Durchsatz, Kanälen, Freischaltungen oder Lua-Laufzeit. Offline geprüft; nativer UI-Test ausstehend.

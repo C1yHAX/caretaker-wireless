@@ -12,14 +12,15 @@ using UAssetAPI.PropertyTypes.Structs;
 using UAssetAPI.UnrealTypes;
 using static AssetTools;
 
-if(args.Length!=5)throw new ArgumentException("IconBuilder mapping stock icons-json energy-source reports");
+if(args.Length!=5)throw new ArgumentException("IconBuilder mapping stock icons-json wireless-source reports");
 MapPath=args[0];string stock=args[1],specPath=args[2],source=args[3],reports=args[4];
 Directory.CreateDirectory(reports);
 var spec=JArray.Parse(File.ReadAllText(specPath));var records=new List<object>();
 foreach(var row in spec){
  string original=(string)row["original"],id=(string)row["id"],target=((string)row["packageRoot"]??"/Game/CaretakerEnergy/Icons")+"/"+id;
  string imagePath=Path.Combine(Path.GetDirectoryName(specPath),(string)row["image"]);
- var a=Load(Path.Combine(stock,"Voyage","Content",original[6..]+".uasset"));
+ string template=(string)row["template"]??original;
+ var a=Load(Path.Combine(stock,"Voyage","Content",template[6..]+".uasset"));
  Require(a.Exports.Count==1,"Expected one texture export");var e=(NormalExport)a.Exports[0];var extra=e.Extras;
  uint U32(int n)=>BinaryPrimitives.ReadUInt32LittleEndian(extra.AsSpan(n));
  Require(extra.Length==262252&&U32(44)==256&&U32(48)==256&&U32(76)==1,"Unexpected UI texture layout");
@@ -39,7 +40,7 @@ foreach(var row in spec){
  int transparent=0,opaque=0;for(int i=3;i<pixels.Length;i+=4){if(pixels[i]==0)transparent++;if(pixels[i]>240)opaque++;}
  Require(transparent>1000&&opaque>2000,"Missing transparency or subject");
  pixels.CopyTo(extra,84);
- Rename(a,original,target,new List<string>());e.ObjectName=new FName(a,id);a.FolderName=new FString(target);
+ Rename(a,template,target,new List<string>());e.ObjectName=new FName(a,id);a.FolderName=new FString(target);
  Prop<GuidPropertyData>(Prop<StructPropertyData>(e.Data,"LightingGuid").Value,"LightingGuid").Value=new Guid(SHA256.HashData(pixels).AsSpan(0,16));
  var dest=Path.Combine(source,"Voyage","Content",target[6..]+".uasset");Directory.CreateDirectory(Path.GetDirectoryName(dest));
  a.Write(dest);var check=Load(dest);Require(((NormalExport)check.Exports[0]).Extras.AsSpan(84,262144).SequenceEqual(pixels),"Icon payload changed");
@@ -50,9 +51,20 @@ foreach(var row in spec){
   Require(icon.Value.Index<0,"Expected hard texture import");
   // Keep import indices and dependencies; retarget the texture package/object names.
   var names=asset.GetNameMapIndexList().Select(x=>x.Value).Where(x=>x==original||x==original.Split('/').Last()).ToArray();
-  Require(names.Length==2,"Unexpected original item/skill icon names: "+leaf);
-  Rename(asset,original,target,new List<string>());Rename(asset,original.Split('/').Last(),id,new List<string>());
-  asset.Write(path);Load(path);
+  var texture=asset.Imports[-icon.Value.Index-1];
+  Require(texture.ClassName.ToString()=="Texture2D"&&texture.ClassPackage.ToString()=="/Script/Engine","Invalid texture import: "+leaf);
+  Require(texture.OuterIndex.Index<0,"Texture package must be imported");
+  var package=asset.Imports[-texture.OuterIndex.Index-1];
+  if(names.Length==2){
+   Require(texture.ObjectName.ToString()==original.Split('/').Last()&&package.ObjectName.ToString()==original,"Icon property points elsewhere: "+leaf);
+   Rename(asset,original,target,new List<string>());Rename(asset,original.Split('/').Last(),id,new List<string>());
+   asset.Write(path);
+  }else{
+   Require(names.Length==0&&texture.ObjectName.ToString()==id&&package.ObjectName.ToString()==target,"Unexpected original item/skill icon names: "+leaf);
+  }
+  var rebound=Load(path);
+  Directory.CreateDirectory(Path.Combine(reports,"bindings"));
+  File.WriteAllText(Path.Combine(reports,"bindings",leaf+".json"),rebound.SerializeJson(true));
  }
  records.Add(new{id,sourceImageSha256=Convert.ToHexString(SHA256.HashData(File.ReadAllBytes(imagePath))).ToLowerInvariant(),pixelSha256=Convert.ToHexString(SHA256.HashData(pixels)).ToLowerInvariant(),width=256,height=256,transparentPixels=transparent,opaquePixels=opaque,bindings=row["bindings"]});
  Console.WriteLine("Built icon "+id+" and "+((JArray)row["bindings"]).Count+" references");

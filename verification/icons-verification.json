@@ -1,0 +1,251 @@
+[
+  {
+    "id": "Icon_WirelessPower_Transmitter",
+    "sourceImageSha256": "8e4c70df78d80cd92d1d2cb4714c73d8825de46010ab466f5aef0f0b13bfea03",
+    "pixelSha256": "e099ee7e0297901d5e569458ee59a25d721bea2aab96f820995043e6bbb59204",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51660,
+    "opaquePixels": 12250,
+    "bindings": [
+      "DA_Module_WirelessResourceTransmitter"
+    ]
+  },
+  {
+    "id": "Icon_WirelessPower_Receiver",
+    "sourceImageSha256": "acb405b70ed61c4866029522f69b7ec32e900d5d6211aa584035870736139354",
+    "pixelSha256": "bf8acaf257300fa77284e5137fa2da5838c1160ae99be10c6aa73183f1b682b0",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34527,
+    "opaquePixels": 26626,
+    "bindings": [
+      "DA_Module_WirelessResourceTransmitter_Socket_Electricity"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Petrol_Transmitter",
+    "sourceImageSha256": "35b868dd702a05487994fcbe8f07a457f39e852b7a73a7ea37c2ff0b9428304a",
+    "pixelSha256": "f98f22faf8febcd3a7b6e1396b50b1dc372cd7d7bec5eb00daff496be90105db",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51261,
+    "opaquePixels": 12699,
+    "bindings": [
+      "DA_Wireless_Petrol_Transmitter",
+      "DA_Skill_Wireless_Petrol"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Petrol_Receiver",
+    "sourceImageSha256": "143a1bd723075b6fbf03e9a8835653d257a9cc7b03b2d90a40ed8f0d87859ca6",
+    "pixelSha256": "f5db0e07ffd212e55e5bf79ce05a58548d418366121d40700f99de6b6fcceb4f",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34454,
+    "opaquePixels": 27158,
+    "bindings": [
+      "DA_Wireless_Petrol_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Diesel_Transmitter",
+    "sourceImageSha256": "2c3b70a944f03f0088f4edc50c4ecafa33147523c784acdd48315febfd38fc54",
+    "pixelSha256": "b8734bbd7890cef81fd7432aff942eee716636b3d065eed90f9cba816b230e7b",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51334,
+    "opaquePixels": 12612,
+    "bindings": [
+      "DA_Wireless_Diesel_Transmitter",
+      "DA_Skill_Wireless_Diesel"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Diesel_Receiver",
+    "sourceImageSha256": "9706c44cbe6667b9273901ed57b143d0b309f988632533b5c203832eeebd0700",
+    "pixelSha256": "3271cb12d13c6efb9fb1497aec49b8f43aafa85bb51a4f0b2aa14770f4ed5280",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34597,
+    "opaquePixels": 26253,
+    "bindings": [
+      "DA_Wireless_Diesel_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Methane_Transmitter",
+    "sourceImageSha256": "e27d9b2f60fd362851d1a3ad3e6e0d8608637f5ea095132f0cf75f00ffbabd7a",
+    "pixelSha256": "8928f1b32c91e7159996c0cac10512800b9f57559d318ff1611963920847f6c2",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51236,
+    "opaquePixels": 12656,
+    "bindings": [
+      "DA_Wireless_Methane_Transmitter",
+      "DA_Skill_Wireless_Methane"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Methane_Receiver",
+    "sourceImageSha256": "2c8f4cfaf5b87ff340932b35ff9685a729be9e03420d6b6c4122b4f02b133a85",
+    "pixelSha256": "371394046760e508fecf0de6a0b3aad9e37e4ebd821735140b9379627e2e6b15",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34503,
+    "opaquePixels": 29470,
+    "bindings": [
+      "DA_Wireless_Methane_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oil_Transmitter",
+    "sourceImageSha256": "31383d6bc3e48cdb0bf3edf85556c869747b7f92c610601529d85725f83586f3",
+    "pixelSha256": "3d06ed5c4f40cfd5c68386642f079d3e67d4926e63a2fd93e9187a543d633b00",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51307,
+    "opaquePixels": 12623,
+    "bindings": [
+      "DA_Wireless_Oil_Transmitter",
+      "DA_Skill_Wireless_Oil"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oil_Receiver",
+    "sourceImageSha256": "15076d7adfc943ad25b89f5af32491f76cac99cd1e4fe39afe74adda871e215b",
+    "pixelSha256": "a8bf4a03890f533cba0182cec3e3be8b5c45d0d3cb5aa0ec902aaec9d97dc96e",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 36407,
+    "opaquePixels": 27728,
+    "bindings": [
+      "DA_Wireless_Oil_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_FreshWater_Transmitter",
+    "sourceImageSha256": "423f23359b766288a69fbbc03bb263efd3f790d0111effa48c9b3ea25cac605f",
+    "pixelSha256": "3a03ec9d315fbea034ddb53868e8d9727d9dfbc924f181ea2b61cb0bd2015079",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51377,
+    "opaquePixels": 12607,
+    "bindings": [
+      "DA_Wireless_FreshWater_Transmitter",
+      "DA_Skill_Wireless_FreshWater"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_FreshWater_Receiver",
+    "sourceImageSha256": "994a5e8c1446114c372bb26e021516a3781a539fb4d156e84517870590c94527",
+    "pixelSha256": "8225704183523565c678301a2fe752e20d710edaeaa1db52a08ea96b709ec983",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34630,
+    "opaquePixels": 26519,
+    "bindings": [
+      "DA_Wireless_FreshWater_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_SaltWater_Transmitter",
+    "sourceImageSha256": "208e7b2b95d5ecef2857213e65be8ab01e2251b8767b8626361c0e327ae2bf84",
+    "pixelSha256": "2531e183dcb83eeb1bdcd341e2f3dd21a023146373a4513f0ef478d41728cbca",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51275,
+    "opaquePixels": 12586,
+    "bindings": [
+      "DA_Wireless_SaltWater_Transmitter",
+      "DA_Skill_Wireless_SaltWater"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_SaltWater_Receiver",
+    "sourceImageSha256": "fd8a455643a9386c5759491d872d0994683d1261f5d9447aa05aabe4c18c3193",
+    "pixelSha256": "cc37de6013f7a0ac09581f9b6dd5fceea03123f8707e222bc2739af58312aa8e",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34669,
+    "opaquePixels": 26402,
+    "bindings": [
+      "DA_Wireless_SaltWater_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oxygen_Transmitter",
+    "sourceImageSha256": "4fdc0b0a0a0719e6b38fa8d756706741e6ec9fd36c84d210d84836a6af6d46a9",
+    "pixelSha256": "7f25e31927c153bc482aae7124480746e49cb04e71f3deb52ba76a65085e7874",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51404,
+    "opaquePixels": 12438,
+    "bindings": [
+      "DA_Wireless_Oxygen_Transmitter",
+      "DA_Skill_Wireless_Oxygen"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oxygen_Receiver",
+    "sourceImageSha256": "9eca86ecc6d729ac232566b0875c07750fc9b795a3b56ca25e706fe64bf0abf8",
+    "pixelSha256": "1257eb219d2ce7d75d4885521efb2dd3ece46e57e002bcce01176a34b7c37859",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34353,
+    "opaquePixels": 26771,
+    "bindings": [
+      "DA_Wireless_Oxygen_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_CarbonDioxide_Transmitter",
+    "sourceImageSha256": "ef68fc5810ce64839079ce516aaf31f7287804fe2a36b65c35699aa3ad01acc4",
+    "pixelSha256": "9c7c1115e2d8f171cac53e71924ee4cee234c7bbae3d7ba76073d4b2a34a7f49",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51373,
+    "opaquePixels": 12586,
+    "bindings": [
+      "DA_Wireless_CarbonDioxide_Transmitter",
+      "DA_Skill_Wireless_CarbonDioxide"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_CarbonDioxide_Receiver",
+    "sourceImageSha256": "5a9ba75eb8850eb647e91a2366888fdfd64a39d2f154ebac72581127ea15ea04",
+    "pixelSha256": "4d33460962d144a067d48dc0629c2bf98e0a94760511145e3b37b192a637b3a8",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 34866,
+    "opaquePixels": 26980,
+    "bindings": [
+      "DA_Wireless_CarbonDioxide_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Steam_Transmitter",
+    "sourceImageSha256": "af59fc1f11681aa11b365e0e4aaee7973880d4fc50a6874accc4575e17e896a5",
+    "pixelSha256": "c1e74fbe9a4da30fed90a93e38ca1dca8ae01dc9022b9f02120bd07604bff7e6",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 51202,
+    "opaquePixels": 12684,
+    "bindings": [
+      "DA_Wireless_Steam_Transmitter",
+      "DA_Skill_Wireless_Steam"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Steam_Receiver",
+    "sourceImageSha256": "705c12d8fe34d09cc6516a6963361f1129da9ddfd1c5fb9a32d642cfa8d75fc1",
+    "pixelSha256": "7922a88a0dd49736f9d7e57fa38e2b559c189fd4d39c6df31847e8393da97bc2",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 36718,
+    "opaquePixels": 27410,
+    "bindings": [
+      "DA_Wireless_Steam_Receiver"
+    ]
+  }
+]

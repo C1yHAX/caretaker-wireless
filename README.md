@@ -14,15 +14,15 @@ Zusätzlich zum vorhandenen Funkstrom enthält dieses Paket je einen eigenen Sen
 |---|---|---|
 | Benzin | Treibstoff | 18 |
 | Diesel | Treibstoff | 18 |
-| RohÃ¶l | Treibstoff | 20 |
+| Rohöl | Treibstoff | 20 |
 | Frischwasser | Wasser | 18 |
 | Salzwasser | Wasser | 18 |
 | Sauerstoff | Gas | 20 |
-| COâ‚‚ | Gas | 20 |
+| CO₂ | Gas | 20 |
 | Methan | Gas | 21 |
 | Dampf | Gas | 20 |
 
-Die Stufen folgen den vorhandenen Wandbrücken (16–18), der Destillation (20) und dem Methan-Extraktor (19). Alle neuen Items tragen den Ressourcennamen. Die unterschiedlichen Antennen-/Anschluss-Icons bleiben erhalten; die native Anschlussgrafik zeigt die Ressource.
+Die Stufen folgen den vorhandenen Wandbrücken (16–18), der Destillation (20) und dem Methan-Extraktor (19). Alle neuen Items tragen den Ressourcennamen. Jede Ressourcenart besitzt farblich angepasste Sender-/Empfänger-Icons; die native Anschlussgrafik zeigt ebenfalls die Ressource.
 
 **Beispiel Diesel:** Tank → Treibstoffschlauch → **Diesel-Funksender**, zusätzlich ein Stromkabel an dessen zweiten Anschluss. Am Ziel **Diesel-Funkempfänger** → Treibstoffschlauch → Tank oder Verbraucher. Beide Geräte anvisieren und mit **Ö** denselben Kanal wählen. Für andere Ressourcen entsprechend passende Geräte und Schläuche verwenden.
 
@@ -59,6 +59,26 @@ Zusätzlich werden die bisherigen Modpack-Werte der sieben betroffenen Itemdefin
 
 Die beiden transparenten Icons sind fest an die vorhandenen Gegenstände gebunden. Sie unterscheiden sich in Form, Farbe und Richtung der Pfeile. Die Texturen liegen unter eigenen Paketpfaden; das bisherige Extender-Icon, Wandbrücken und Signalrelais behalten ihre Symbole. Zwei statische 256×256-UI-Texturen benötigen zusammen etwa 512 KiB rohe Pixeldaten und keine zusätzliche laufende Skriptprüfung.
 
+## Farbige Ressourcen-Icons
+
+Alle 18 Ressourcen-Geräte besitzen ein eigenes transparentes Icon. Sender zeigen eine hohe Antenne mit einem ausgehenden Pfeil; Empfänger einen flachen Anschluss mit einem eingehenden Pfeil. Die neun Freischaltungen zeigen jeweils den passenden Sender. Die Farbgebung gilt für die Menüsymbole.
+
+| Ressource | Iconfarbe |
+|---|---|
+| Benzin | Rot |
+| Diesel | Gelb |
+| Methan | Gedecktes Graugrün, an die Methan-Tanks angelehnt |
+| Rohöl | Braun / Kupfer |
+| Frischwasser | Blau |
+| Salzwasser | Türkis |
+| Sauerstoff | Eisblau |
+| CO₂ | Violett |
+| Dampf | Silbergrau |
+
+![Ressourcen-Icons mit 64-Pixel-Kontrolle; offline erstellt, kein Spiel-Screenshot](assets/icons/resource-preview.png)
+
+Die 18 zusätzlichen Texturen haben jeweils 256 × 256 Pixel und benötigen zusammen 4,5 MiB unkomprimierte Pixeldaten. Sie führen keine zusätzlichen Laufzeitskripte aus. Bestehende Geräte behalten ihre Identität und müssen für das Icon-Update nicht neu gebaut werden. **Version bleibt 1.0.0.** Die Icon-Imports, Textur-Payloads und Container-Rückextraktion sind geprüft; ein neuer Spielstart oder nativer UI-Test wurde nicht ausgeführt.
+
 ## Voraussetzungen und Download
 
 - *The Last Caretaker*, Windows, Build **25982825 / 0.10.0.653173**. Andere Builds sind nicht bestätigt.
@@ -68,7 +88,7 @@ Die beiden transparenten Icons sind fest an die vorhandenen Gegenstände gebunde
 
 Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten Installation verglichen. SHA-256 des UE4SS-ZIP: `4f9762f812329a640c8cfa14444c2bb97ecc213b8320bd4c5433383c3eef48f7`. SHA-256 der `UE4SS.dll`: `91d5444f41d19d0bb502f0fbdc15d76421e20359e898caa39e41e134c8f87958`.
 
-**Das vollständige Modpack und Caretaker Energy sind nicht erforderlich. AssetBridge ist seit der Ressourcen-Erweiterung erforderlich.** Die elf vorhandenen Asset-Overrides bleiben; 45 Ressourcen-Assets und zwei Icontexturen kommen hinzu. AssetBridge registriert **27 zusätzliche Item-/Skill-Einträge** aus `CaretakerWirelessFix_P.tlcaddon.json`. UE4SS ist erforderlich für Hintergrundbetrieb und Ö-Kanalbedienung. Es wird nicht im Mod-ZIP mitgeliefert.
+**Das vollständige Modpack und Caretaker Energy sind nicht erforderlich. AssetBridge ist seit der Ressourcen-Erweiterung erforderlich.** Die elf vorhandenen Asset-Overrides bleiben; 45 Ressourcen-Assets und insgesamt 20 Icontexturen kommen hinzu. AssetBridge registriert **27 zusätzliche Item-/Skill-Einträge** aus `CaretakerWirelessFix_P.tlcaddon.json`. UE4SS ist erforderlich für Hintergrundbetrieb und Ö-Kanalbedienung. Es wird nicht im Mod-ZIP mitgeliefert.
 
 ## Installation
 

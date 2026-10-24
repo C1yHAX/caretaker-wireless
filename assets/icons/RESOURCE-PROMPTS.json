@@ -1,0 +1,115 @@
+{
+  "version": "1.0.0",
+  "tool": "OpenAI built-in image_gen",
+  "method": "Individual transparent recolor edits of existing transmitter.png and receiver.png; methane also uses user tank color reference",
+  "images": [
+    {
+      "resource": "Petrol",
+      "role": "Transmitter",
+      "color": "deep clear petrol RED, body enamel #ac302d, bright red waves; no orange or blue",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Petrol wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to deep clear petrol RED, body enamel #ac302d, bright red waves; no orange or blue. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Petrol",
+      "role": "Receiver",
+      "color": "deep clear petrol RED, body enamel #ac302d, bright red waves; no orange or blue",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Petrol wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to deep clear petrol RED, body enamel #ac302d, bright red waves; no orange or blue. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Diesel",
+      "role": "Transmitter",
+      "color": "diesel YELLOW, body enamel #d3b32c, yellow waves; no orange or blue",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Diesel wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to diesel YELLOW, body enamel #d3b32c, yellow waves; no orange or blue. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Diesel",
+      "role": "Receiver",
+      "color": "diesel YELLOW, body enamel #d3b32c, yellow waves; no orange or blue",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Diesel wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to diesel YELLOW, body enamel #d3b32c, yellow waves; no orange or blue. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Methane",
+      "role": "Transmitter",
+      "color": "muted dark GRAY GREEN like the attached methane tank reference, body enamel #445951, silver sage waves #91aaa0. Low saturation; NOT vivid green, NOT lime, NOT turquoise",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Methane wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to muted dark GRAY GREEN like the attached methane tank reference, body enamel #445951, silver sage waves #91aaa0. Low saturation; NOT vivid green, NOT lime, NOT turquoise. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Methane",
+      "role": "Receiver",
+      "color": "muted dark GRAY GREEN like the attached methane tank reference, body enamel #445951, silver sage waves #91aaa0. Low saturation; NOT vivid green, NOT lime, NOT turquoise",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Methane wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to muted dark GRAY GREEN like the attached methane tank reference, body enamel #445951, silver sage waves #91aaa0. Low saturation; NOT vivid green, NOT lime, NOT turquoise. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Oil",
+      "role": "Transmitter",
+      "color": "dark warm brown, body enamel #514039, copper-brown waves #aa8064",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Oil wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to dark warm brown, body enamel #514039, copper-brown waves #aa8064. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Oil",
+      "role": "Receiver",
+      "color": "dark warm brown, body enamel #514039, copper-brown waves #aa8064",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Oil wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to dark warm brown, body enamel #514039, copper-brown waves #aa8064. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "FreshWater",
+      "role": "Transmitter",
+      "color": "royal blue, body enamel #285fa8, blue waves #568cda",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the FreshWater wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to royal blue, body enamel #285fa8, blue waves #568cda. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "FreshWater",
+      "role": "Receiver",
+      "color": "royal blue, body enamel #285fa8, blue waves #568cda",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the FreshWater wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to royal blue, body enamel #285fa8, blue waves #568cda. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "SaltWater",
+      "role": "Transmitter",
+      "color": "turquoise teal, body enamel #278f91, turquoise waves #59c9c3",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the SaltWater wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to turquoise teal, body enamel #278f91, turquoise waves #59c9c3. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "SaltWater",
+      "role": "Receiver",
+      "color": "turquoise teal, body enamel #278f91, turquoise waves #59c9c3",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the SaltWater wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to turquoise teal, body enamel #278f91, turquoise waves #59c9c3. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Oxygen",
+      "role": "Transmitter",
+      "color": "pale icy blue, body enamel #9ebfcd, pale blue-white waves #b9e1ef",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Oxygen wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to pale icy blue, body enamel #9ebfcd, pale blue-white waves #b9e1ef. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Oxygen",
+      "role": "Receiver",
+      "color": "pale icy blue, body enamel #9ebfcd, pale blue-white waves #b9e1ef",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Oxygen wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to pale icy blue, body enamel #9ebfcd, pale blue-white waves #b9e1ef. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "CarbonDioxide",
+      "role": "Transmitter",
+      "color": "muted violet purple, body enamel #73517e, violet waves #b080cd",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the CarbonDioxide wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to muted violet purple, body enamel #73517e, violet waves #b080cd. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "CarbonDioxide",
+      "role": "Receiver",
+      "color": "muted violet purple, body enamel #73517e, violet waves #b080cd",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the CarbonDioxide wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to muted violet purple, body enamel #73517e, violet waves #b080cd. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Steam",
+      "role": "Transmitter",
+      "color": "silver gray, body enamel #8f969c, silver-white waves #d6dce1",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Steam wireless Transmitter. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to silver gray, body enamel #8f969c, silver-white waves #d6dce1. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    },
+    {
+      "resource": "Steam",
+      "role": "Receiver",
+      "color": "silver gray, body enamel #8f969c, silver-white waves #d6dce1",
+      "prompt": "Use case: precise-object-edit. Edit target: the first image, an existing transparent game inventory icon. Produce ONE square transparent icon variant for the Steam wireless Receiver. Recolor the device's light painted metal panels, radio wave glyphs and directional arrow to silver gray, body enamel #8f969c, silver-white waves #d6dce1. Preserve exactly the existing device geometry, silhouette, camera perspective, metal wear, radio wave shapes and arrow direction. Leave dark structural metal mostly neutral dark gray; color the main light body panels so resource color is visible at 64px. Preserve composition with every antenna tip and full device safely inside canvas, about 5% clear margin. No labels, letters, logos, extra devices, background, ground or shadow. This is an icon, no environment. TRUE transparent alpha background. For Methane only, second image is the user's tank COLOR reference, not a shape to copy."
+    }
+  ]
+}

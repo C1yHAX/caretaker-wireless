@@ -1,6 +1,6 @@
 # Bearbeitete Spielassets
 
-Elf vorhandene Paketpfade werden überschrieben. Hinzu kommen zwei eigene Icontexturen und 45 Ressourcen-Assets, insgesamt **58 Pakete**. AssetBridge registriert **18 neue Items und neun Skills**. Die 13 bisherigen Assetpakete und ihre Geräteidentitäten bleiben bytegleich zur vorherigen Icon-Fassung.
+Elf vorhandene Paketpfade werden überschrieben. Hinzu kommen 20 eigene Icontexturen und 45 Ressourcen-Assets, insgesamt **76 Pakete**. AssetBridge registriert **18 neue Items und neun Skills**. Die elf bisherigen Spielasset-Overrides und zwei Funkstrom-Icons bleiben bytegleich zur vorherigen Fassung.
 
 | Paketpfad unter `/Game/` | Änderung |
 |---|---|
@@ -35,3 +35,7 @@ Skills/DA_Skill_Wireless_<Resource>
 Eigenständige Klassenkopien mit passenden gegenseitigen Referenzen, typisierten Schlauchanschlüssen, nativen Anschlussgrafiken und einem zusätzlichen elektrischen Sendereingang. Ressourcenpuffer, Durchsatz, Rezepte, Texte und Freischaltungen stehen in README/resources.json. Die Eigenbedarfsberechnung berücksichtigt den zusätzlichen lokalen Anschluss. Sender suchen nur ihren jeweiligen Empfängertyp.
 
 `devices.lua` erweitert Ö-Bedienung und aktuelle/gespeicherte Netzerkennung. Ein gemeinsamer Persistenzkomponenten-Scan findet alle Typen; die bisherigen Schutzgrenzen bleiben. Der Container ist fertig gebaut; ein vollständiger Editor-/Asset-Build ist weiterhin nicht Bestandteil des Repositories.
+
+## Ressourcen-Icons (1.0.0)
+
+18 Texturen unter `/Game/CaretakerWireless/Icons/Icon_Wireless_<Resource>_<Transmitter|Receiver>`. Die 18 Ressourcen-Items und neun Skills referenzieren diese neuen Texturen. Alle bisherigen 58 Export-Payloads bleiben bytegleich; nur 27 Asset-Header ändern je zwei Icon-Namen. Insgesamt 76 Pakete, unverändert 27 AssetBridge-Registrierungen. `icons.json` enthält alle 20 Texturen und 29 Bindungen. Die beiden Funkstrom-Icons bleiben bytegleich.

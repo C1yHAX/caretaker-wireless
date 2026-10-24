@@ -11,3 +11,21 @@ Freischaltung je Paar für zwei Punkte: Level 18 Benzin/Diesel/Frischwasser/Salz
 **Neue Ressourcenpaare: Offline-Prüfungen bestanden; nativer Durchfluss-, Platzierungs- und Speichern/Laden-Test steht aus.** Kein Spielstart für diese Erweiterung. Frühere native Stromtests sind kein Nachweis für die zusätzlichen Gas-/Flüssigkeitsgeräte.
 
 Version bleibt 1.0.0; `SHA256SUMS.txt` enthält die aktuellen Download-Prüfsummen.
+
+## Farbige Ressourcen-Icons – weiterhin 1.0.0
+
+18 eigene Icons unterscheiden alle Ressourcenpaare; neun Freischaltungen nutzen die passenden Symbole.
+
+| Ressource | Iconfarbe |
+|---|---|
+| Benzin | Rot |
+| Diesel | Gelb |
+| Methan | Gedecktes Graugrün, an die Methan-Tanks angelehnt |
+| Rohöl | Braun / Kupfer |
+| Frischwasser | Blau |
+| Salzwasser | Türkis |
+| Sauerstoff | Eisblau |
+| CO₂ | Violett |
+| Dampf | Silbergrau |
+
+Sender: hohe Antenne mit ausgehendem Pfeil. Empfänger: flacher Anschluss mit eingehendem Pfeil. Statische 256×256-Texturen ohne neue Laufzeitskripte. Bestehende Geräte behalten ihre Identität. Installation durch Ersetzen der bisherigen Paketdateien; Anleitung in README.md. Exportdaten, Icon-Referenzen, Transparenz und Rückextraktion offline geprüft. Nativer UI-Test der neuen Icons steht aus; kein Spielstart für diese Änderung.

@@ -4,13 +4,206 @@
     "packageRoot": "/Game/CaretakerWireless/Icons",
     "original": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
     "image": "assets/icons/transmitter.png",
-    "bindings": ["DA_Module_WirelessResourceTransmitter"]
+    "bindings": [
+      "DA_Module_WirelessResourceTransmitter"
+    ]
   },
   {
     "id": "Icon_WirelessPower_Receiver",
     "packageRoot": "/Game/CaretakerWireless/Icons",
     "original": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
     "image": "assets/icons/receiver.png",
-    "bindings": ["DA_Module_WirelessResourceTransmitter_Socket_Electricity"]
+    "bindings": [
+      "DA_Module_WirelessResourceTransmitter_Socket_Electricity"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Petrol_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/petrol-transmitter.png",
+    "bindings": [
+      "DA_Wireless_Petrol_Transmitter",
+      "DA_Skill_Wireless_Petrol"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Petrol_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/petrol-receiver.png",
+    "bindings": [
+      "DA_Wireless_Petrol_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Diesel_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/diesel-transmitter.png",
+    "bindings": [
+      "DA_Wireless_Diesel_Transmitter",
+      "DA_Skill_Wireless_Diesel"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Diesel_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/diesel-receiver.png",
+    "bindings": [
+      "DA_Wireless_Diesel_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Methane_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/methane-transmitter.png",
+    "bindings": [
+      "DA_Wireless_Methane_Transmitter",
+      "DA_Skill_Wireless_Methane"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Methane_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/methane-receiver.png",
+    "bindings": [
+      "DA_Wireless_Methane_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oil_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/oil-transmitter.png",
+    "bindings": [
+      "DA_Wireless_Oil_Transmitter",
+      "DA_Skill_Wireless_Oil"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oil_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/oil-receiver.png",
+    "bindings": [
+      "DA_Wireless_Oil_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_FreshWater_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/freshwater-transmitter.png",
+    "bindings": [
+      "DA_Wireless_FreshWater_Transmitter",
+      "DA_Skill_Wireless_FreshWater"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_FreshWater_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/freshwater-receiver.png",
+    "bindings": [
+      "DA_Wireless_FreshWater_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_SaltWater_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/saltwater-transmitter.png",
+    "bindings": [
+      "DA_Wireless_SaltWater_Transmitter",
+      "DA_Skill_Wireless_SaltWater"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_SaltWater_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/saltwater-receiver.png",
+    "bindings": [
+      "DA_Wireless_SaltWater_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oxygen_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/oxygen-transmitter.png",
+    "bindings": [
+      "DA_Wireless_Oxygen_Transmitter",
+      "DA_Skill_Wireless_Oxygen"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Oxygen_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/oxygen-receiver.png",
+    "bindings": [
+      "DA_Wireless_Oxygen_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_CarbonDioxide_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/carbondioxide-transmitter.png",
+    "bindings": [
+      "DA_Wireless_CarbonDioxide_Transmitter",
+      "DA_Skill_Wireless_CarbonDioxide"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_CarbonDioxide_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/carbondioxide-receiver.png",
+    "bindings": [
+      "DA_Wireless_CarbonDioxide_Receiver"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Steam_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/steam-transmitter.png",
+    "bindings": [
+      "DA_Wireless_Steam_Transmitter",
+      "DA_Skill_Wireless_Steam"
+    ]
+  },
+  {
+    "id": "Icon_Wireless_Steam_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/steam-receiver.png",
+    "bindings": [
+      "DA_Wireless_Steam_Receiver"
+    ]
   }
 ]

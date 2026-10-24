@@ -66,12 +66,12 @@
   },
   {
     "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.ucas",
-    "bytes": 1207487,
-    "sha256": "01676620e4bd6465300cff560f4db2ed4c5ae48cffe92a15c85e9ac30075fbad"
+    "bytes": 5939798,
+    "sha256": "76837885cdacabdb34490ee4c332ec44172fa9743354c72e74891e12d60d9dbc"
   },
   {
     "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.utoc",
-    "bytes": 7224,
-    "sha256": "092c6bf610b83dbed754544a55fd97e9252ffdf88e45d00cf8ccad24328d091b"
+    "bytes": 10135,
+    "sha256": "5b2957c92f18dae5e367f95299a1952f4e0438ea5c13872044d9f8f4630544b5"
   }
 ]

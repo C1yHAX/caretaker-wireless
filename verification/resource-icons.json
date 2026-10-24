@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "newResourceIcons": 18,
+  "totalIcons": 20,
+  "resourceItemBindings": 18,
+  "resourceSkillBindings": 9,
+  "wirelessAssetPackages": 76,
+  "primaryRecords": 27,
+  "allPriorExportPayloadsByteIdentical": true,
+  "nameMapChangesOnly": true,
+  "roundtripPayloads": 65,
+  "otherModContainerConflicts": 0,
+  "extraRuntimeScripts": 0,
+  "newRawPixelBytes": 4718592,
+  "nativeGameTestPerformed": false,
+  "nativeIconRendering": "not tested in game; source and 64-pixel offline previews checked",
+  "unchangedHeaders": 31,
+  "unchangedExportPayloads": 58,
+  "retargetedHeaders": 27
+}
