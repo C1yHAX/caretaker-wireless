@@ -1,5 +1,5 @@
 {
-  "version": "1.4.2",
+  "version": "1.0.0",
   "allPassed": true,
   "verification": {
     "packageCount": 11,
@@ -31,5 +31,6 @@
     "Actual in-game receiver dialog and cable prompt visually inspected"
   ],
   "testMethod": "Fresh game world, native game APIs and Enhanced Input actions; registered Ö callback executed programmatically, no physical keyboard press simulated.",
-  "inheritedTests": "Routing and distant native simulation from Wireless 1.4.0; existing routing bytecode and background scripts unchanged."
+  "inheritedTests": "Earlier routing and distant simulation tests; gameplay bytecode and background implementation unchanged.",
+  "releaseTestBasis": "Controlled development tests of the unchanged gameplay implementation, retained for first release."
 }

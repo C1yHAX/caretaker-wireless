@@ -16,4 +16,4 @@ Alle elf Pfade existieren im geprüften Original-Spielbuild. Das Paket überschr
 | `Data/Assets/Cable/DA_Module_WallSocket_Gas` | Deutsche Wandbrücken-Beschreibung, Modpack-Gewicht/Stapelgröße |
 | `Data/Assets/Cable/DA_Module_WallSocket_Water` | Deutsche Wandbrücken-Beschreibung, Modpack-Gewicht/Stapelgröße |
 
-Die Ausführung von Hintergrundbetrieb und Ö-Tastenhandler erfolgt zusätzlich durch die beiden Lua-Modordner. Kein bestehender Blueprint-Kanalalgorithmus wurde für die Tastenänderung von 1.4.2 umgeschrieben. Der Installer kontrolliert die Datei-Hashes aus `Dateien.json`.
+Die Ausführung von Hintergrundbetrieb und Ö-Tastenhandler erfolgt zusätzlich durch die beiden Lua-Modordner. Die Ö-Bedienung verwendet einen eigenen Tastenhandler; die Kanalzuordnung läuft im Blueprint. Der Installer kontrolliert die Datei-Hashes aus `Dateien.json`.

@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.0.0",
   "backgroundVersion": "1.0.0",
   "allPassed": true,
   "gameVersion": "0.10.0.653173",
@@ -49,5 +49,6 @@
     "connections.lua": "8b437ab516f80e7577d4737b8f314b449cb15f43b6cbf9ef079a425c01129236",
     "saved_network.lua": "9e7af477442eb03a80c945fd02d405fd99f09167039cc9b4ff4d93859e9de302",
     "config.lua": "ae3a9413ac8798e1f1fa160647bd068f3f73359b344b17077ac243cd0b8d530f"
-  }
+  },
+  "releaseTestBasis": "Controlled development tests of the unchanged gameplay implementation, retained for first release."
 }

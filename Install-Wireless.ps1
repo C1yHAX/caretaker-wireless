@@ -40,4 +40,4 @@ try{
  throw
 }
 [pscustomobject]@{installed=(Get-Date -Format o);backup=$backup;files=$files} | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $backup 'installation.json') -Encoding utf8
-Write-Output "Wireless Fix 1.4.2 installiert; vorherige Dateien gesichert: $backup"
+Write-Output "Wireless Fix 1.0.0 installiert; vorherige Dateien gesichert: $backup"

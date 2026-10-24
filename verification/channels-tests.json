@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.0.0",
   "game": "0.10.0.653173",
   "steamBuild": 25982825,
   "allPassed": true,
@@ -53,5 +53,6 @@
       "sha256": "484e9c7aae68b5829d91b33dc270755e1d2636a561bac229603099148162718b",
       "bytes": 1787
     }
-  ]
+  ],
+  "releaseTestBasis": "Controlled development tests of the unchanged gameplay implementation, retained for first release."
 }

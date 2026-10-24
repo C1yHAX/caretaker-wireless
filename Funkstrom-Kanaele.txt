@@ -1,7 +1,7 @@
-FUNKSTROM KONFIGURIEREN – VERSION 1.4.2
+FUNKSTROM KONFIGURIEREN – VERSION 1.0.0
 
-KANALWAHL MIT Ö – WIRELESS FIX 1.4.2
-Die Kanalwahl verwendet jetzt eine eigene Taste Ö auf der deutschen Tastatur. Die Anbindung an F / Interaktion 2 aus Version 1.4.1 ist entfernt. Auch die zusätzliche Kollisionsfläche für die Kanalbedienung ist deaktiviert, damit sie die Kabelanschlüsse nicht überlagert.
+KANALWAHL MIT Ö – WIRELESS FIX 1.0.0
+Die Kanalwahl verwendet jetzt eine eigene Taste Ö auf der deutschen Tastatur. Die Kanalwahl belegt keine normale Interaktionstaste des Spiels. Auch die zusätzliche Kollisionsfläche für die Kanalbedienung ist deaktiviert, damit sie die Kabelanschlüsse nicht überlagert.
 
 1. Nahe an den Funkstrom-Sender oder Funkstrom-Empfänger gehen und das Gerät oder seinen Anschluss anvisieren.
 2. Ö ohne Zusatztaste drücken. Das Menü „Funkstrom-Kanal“ öffnet sich.

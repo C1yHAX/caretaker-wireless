@@ -5,7 +5,7 @@ import json
 import zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = '1.4.2'
+VERSION = '1.0.0'
 
 def sha(data):
     return hashlib.sha256(data).hexdigest()

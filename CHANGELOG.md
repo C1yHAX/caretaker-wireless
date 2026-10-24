@@ -1,19 +1,12 @@
 # Änderungen
 
-## 1.4.2 – 24. Oktober 2026
+## 1.0.0 – Erstrelease, 24. Oktober 2026
 
-Erste öffentliche Veröffentlichung als eigenständige Mod auf GitHub und GitLab. Der installierbare Inhalt entspricht der geprüften Modpack-Fassung 1.4.2; für die Veröffentlichung wurden Beschreibung, Installationshinweise und Herkunftsangaben ergänzt.
+- 1.000 m Funkstrom zwischen Sender und Empfänger, Puffer und regulärer Energiefluss.
+- Gespeicherte Kanäle 1–9999 für getrennte Stromnetze; eigene Ö-Taste für den Dialog.
+- Normale E-/F-Kabelbedienung, reparierte Anschlüsse und zerlegbarer Empfänger.
+- Hintergrundbetrieb bei entladener Umgebung, native Wiederherstellung gespeicherter Geräte und Schutz entfernter Physikobjekte.
+- Stabile Senderzuordnung, Kanaltrennung, Versorgungsausfall und Wiederanlauf.
+- 50-m-Wandbrücken, deutsche Namen und Beschreibungen, eigenständiger Download mit UE4SS-Anleitung.
 
-- Eigene Ö-Taste für den Funkstrom-Kanaldialog.
-- Fehlerhafte Bindung an F / Interaktion 2 aus der internen Fassung 1.4.1 entfernt.
-- Zusätzliche Bedienkollision deaktiviert; normale Kabelaktionen an beiden Geräten geprüft.
-- Unveränderte Kanaltrennung und Fernsimulation aus 1.4.0.
-- Direkter Link auf die geprüfte UE4SS-Abhängigkeit; kein vollständiges Modpack erforderlich.
-
-## Interne Vorversionen
-
-- **1.4.0:** gespeicherte Stromkanäle 1–9999, Trennung überlappender Netze und Kanalwechsel.
-- **1.3.0:** native Gerätesimulation bei entladener Umgebung, Wiederherstellung gespeicherter Verbindungen und Schutz entfernter Physikobjekte.
-- **1.2.0:** 1.000 m Funkstrom, Empfänger-Ausgang, Senderpuffer, stabile Zuordnung und Ausfallbehandlung.
-- **1.1.0:** reparierte Zerlegbarkeit und Modulanbindung des Empfängers.
-- **1.0.0:** Kabelkategorien, deutsche Namen/Beschreibungen und integrierte 50-m-Wandbrücken.
+Die zuvor vorläufig verwendeten Versionsnummern waren Entwicklungsstände. Die öffentliche Erstrelease-Version ist einheitlich **1.0.0**. Gegenüber dem zuletzt geprüften Entwicklungsstand ist das Spielverhalten unverändert; Versionsanzeigen und Veröffentlichungsunterlagen wurden vereinheitlicht.

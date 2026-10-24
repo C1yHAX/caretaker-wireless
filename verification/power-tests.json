@@ -45,5 +45,7 @@
       "name": "cable_probe.lua",
       "sha256": "29855d5c0a9e95bff50e7cf3e2f2957bf788c0ab6baad6b9c847fc782f702330"
     }
-  ]
+  ],
+  "version": "1.0.0",
+  "releaseTestBasis": "Controlled development tests of the unchanged gameplay implementation, retained for first release."
 }

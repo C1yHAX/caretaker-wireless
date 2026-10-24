@@ -1,4 +1,4 @@
--- Caretaker Wireless Controls 1.4.2. Independent of all game interaction bindings.
+-- Caretaker Wireless Controls 1.0.0. Independent of all game interaction bindings.
 local folder=debug.getinfo(1,'S').source:sub(2):match('^(.*[/\\])')
 local config=dofile(folder..'config.lua')
 local M={}
@@ -62,5 +62,5 @@ LoopInGameThreadWithDelay(50,function()
     local ok,err=pcall(M.open)
     if not ok then log('Open failed: '..tostring(err))end
 end)
-log('1.4.2: '..config.KeyLabel..' opens channel settings; E/F/game input unchanged')
+log('1.0.0: '..config.KeyLabel..' opens channel settings; E/F/game input unchanged')
 return M
