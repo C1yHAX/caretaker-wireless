@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "energyAssets": 30,
+  "wirelessAssets": 13,
+  "totalModpackAssetPaths": 977,
+  "conflicts": 0,
+  "energyChangedAssets": [
+    "Icon_LargeMethane_Green",
+    "Icon_PortableMethane_Green",
+    "MI_LargeMethane_Green",
+    "MI_PortableMethane_Green"
+  ],
+  "wirelessChangedExistingAssets": [
+    "DA_Module_WirelessResourceTransmitter",
+    "DA_Module_WirelessResourceTransmitter_Socket_Electricity"
+  ],
+  "newWirelessIcons": 2,
+  "originalIconOverrides": 0,
+  "allGameplayBlueprintsAndRecipesByteIdentical": true,
+  "wirelessLuaUnchanged": true,
+  "roundtripPayloadsMatch": true,
+  "nativeIconBindingsChecked": 12,
+  "nativeRenderingSizes": [
+    256,
+    64
+  ],
+  "allSevenIconsRendered": true,
+  "methaneHousingColor": {
+    "hueShift": 0.41,
+    "desaturation": 0.8,
+    "brightness": -0.15,
+    "reference": "Original methane tank muted grey-green",
+    "verification": "Native model preview with equivalent compiled scalar overrides; original game material overrides removed after test"
+  },
+  "savesUnchanged": 6,
+  "testHelpersRemoved": true
+}

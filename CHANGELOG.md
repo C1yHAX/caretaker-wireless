@@ -7,6 +7,7 @@
 - Normale E-/F-Kabelbedienung, reparierte Anschlüsse und zerlegbarer Empfänger.
 - Hintergrundbetrieb bei entladener Umgebung, native Wiederherstellung gespeicherter Geräte und Schutz entfernter Physikobjekte.
 - Stabile Senderzuordnung, Kanaltrennung, Versorgungsausfall und Wiederanlauf.
+- Zwei eigene transparente Icons: orange Senderwellen an der hohen Antenne und blaue Empfangswellen am flachen Anschluss.
 - 50-m-Wandbrücken, deutsche Namen und Beschreibungen, eigenständiger Download mit UE4SS-Anleitung.
 
-Die zuvor vorläufig verwendeten Versionsnummern waren Entwicklungsstände. Die öffentliche Erstrelease-Version ist einheitlich **1.0.0**. Gegenüber dem zuletzt geprüften Entwicklungsstand ist das Spielverhalten unverändert; Versionsanzeigen und Veröffentlichungsunterlagen wurden vereinheitlicht.
+Die zuvor vorläufig verwendeten Versionsnummern waren Entwicklungsstände. Die öffentliche Erstrelease-Version ist einheitlich **1.0.0**. Gegenüber dem zuletzt geprüften Entwicklungsstand ist das Spielverhalten unverändert; Versionsanzeigen und Veröffentlichungsunterlagen wurden vereinheitlicht. Die Icon-Ergänzung verändert ausschließlich die Darstellung der beiden Funkstrom-Items; die Versionsnummer bleibt 1.0.0.

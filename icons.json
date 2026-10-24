@@ -1,0 +1,16 @@
+[
+  {
+    "id": "Icon_WirelessPower_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/transmitter.png",
+    "bindings": ["DA_Module_WirelessResourceTransmitter"]
+  },
+  {
+    "id": "Icon_WirelessPower_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/receiver.png",
+    "bindings": ["DA_Module_WirelessResourceTransmitter_Socket_Electricity"]
+  }
+]

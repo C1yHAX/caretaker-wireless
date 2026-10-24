@@ -4,6 +4,7 @@ Erste öffentliche Fassung der eigenständigen Wireless-Mod für **The Last Care
 
 ## Verbesserungen gegenüber den Original-Spielassets
 
+- **Unterschiedliche Icons:** Sender mit orangefarbenen ausgehenden Funkwellen, Empfänger mit blauen eingehenden Funkwellen. Transparent, gut in kleiner Darstellung unterscheidbar.
 - **1.000 m Funkstrom** statt 10 m.
 - **Kanäle 1–9999** für getrennte Stromnetze; Einstellung direkt am Sender oder Empfänger mit **Ö**. E/F bleiben für normale Kabelaktionen verfügbar.
 - Reparierte Strom-/Datenanschlüsse, regulärer Empfänger-Ausgang und zerlegbarer Empfänger.

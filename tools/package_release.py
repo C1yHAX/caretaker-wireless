@@ -21,12 +21,13 @@ def main():
         data = p.read_bytes()
         assert len(data) == row['bytes'] and sha(data) == row['sha256'], row['path']
     metadata = ['README.md', 'CHANGELOG.md', 'THIRD-PARTY-NOTICES.md', 'LICENSE',
-                'ASSET-CHANGES.md', 'Install-Wireless.ps1', 'Dateien.json', 'Funkstrom-Kanaele.txt']
+                'ASSET-CHANGES.md', 'Install-Wireless.ps1', 'Dateien.json', 'Funkstrom-Kanaele.txt', 'icons.json', 'BUILDING-ICONS.md']
     files = [ROOT/name for name in metadata] + [ROOT/name for name in expected]
     files += list((ROOT/'verification').glob('*.json'))
+    files += [p for p in (ROOT/'assets/icons').iterdir() if p.is_file()]
     for p in files:
         assert p.suffix not in ('.sav', '.log', '.dmp') and 'CaretakerAudit' not in str(p)
-        if p.suffix not in ('.pak', '.ucas', '.utoc'):
+        if p.suffix not in ('.pak', '.ucas', '.utoc', '.png'):
             text = p.read_text(encoding='utf-8')
             for private in ['C:\\Users\\', 'C:/Users/', 'E:\\Program Files\\GitHub',
                             'E:/Program Files/GitHub', 'ghp_', 'glpat-', 'gho_']:
@@ -39,7 +40,7 @@ def main():
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o644 << 16
             # Preserve install payload bytes; canonicalize documentation newlines.
-            data = p.read_bytes() if p.relative_to(ROOT).as_posix() in expected else p.read_text(encoding='utf-8').encode('utf-8')
+            data = p.read_bytes() if p.relative_to(ROOT).as_posix() in expected or p.suffix=='.png' else p.read_text(encoding='utf-8').encode('utf-8')
             z.writestr(info, data, compresslevel=9)
     with zipfile.ZipFile(archive) as z:
         assert z.testzip() is None
