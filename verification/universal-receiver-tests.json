@@ -25,7 +25,7 @@
     "BP_Wireless_Universal_Receiver": {
       "functions": 31,
       "jumps": 14,
-      "contexts": 89,
+      "contexts": 90,
       "eventEntries": 10,
       "valid": true
     },
@@ -40,6 +40,7 @@
   "controlFlowTests": {
     "passed": true,
     "tests": [
+      "initial binding even when receiver own module reports power",
       "all ten native attach calls",
       "idempotent binding",
       "all-output power gating and recovery",
