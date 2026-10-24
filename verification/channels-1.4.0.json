@@ -1,0 +1,57 @@
+{
+  "version": "1.4.0",
+  "game": "0.10.0.653173",
+  "steamBuild": 25982825,
+  "allPassed": true,
+  "tests": [
+    "native editor and interaction",
+    "native editor and interaction",
+    "different channels isolated",
+    "two overlapping independent pairs",
+    "receiver channel change and multiple receivers",
+    "transmitter channel change isolates old receivers",
+    "new matching channel delivers power",
+    "native save property on both types",
+    "visible sender dialog changes native saved channel, arrow step 1",
+    "visible receiver dialog changes native saved channel",
+    "background energy while world cells unload",
+    "native unload after disabling background, no synthetic save zones",
+    "transmitter and receiver channel 17 restored",
+    "native save-data restore without loading scenery, cables and cross-cell sources retained",
+    "background supply loss stops transfer",
+    "background supply recovery",
+    "return to area and physics restoration"
+  ],
+  "testScope": "Separate fresh game world; actual native modules, four wired connections for channel isolation; UI opened by native pointer interaction and edited through the native slider; remote network unloaded and restored from native in-memory saved actor data. User saves were not loaded into the world or overwritten.",
+  "channelRange": [
+    1,
+    9999
+  ],
+  "defaultChannel": 1,
+  "wirelessDistanceMeters": 1000,
+  "backgroundDistanceTestMeters": 20000,
+  "backgroundRefreshTestMs": {
+    "average": 1.4827586206894,
+    "maximum": 3.0000000000001,
+    "startup": 15.999999999991
+  },
+  "limits": "Native saved-data unload/reload verified, but no manual long-term test of the user base or arbitrary mod combinations. Timing covers the background Lua scan, not total native simulation or a full-base FPS benchmark.",
+  "uiEvidence": "Native interaction filter Never (0) permits the dialog. Both live dialogs changed their target actor channel; sender arrow input increments exactly one. Final built assets use the same verified filter value.",
+  "packages": [
+    {
+      "name": "CaretakerWirelessFix_P.pak",
+      "sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd",
+      "bytes": 347
+    },
+    {
+      "name": "CaretakerWirelessFix_P.ucas",
+      "sha256": "6985fe2468f475997c0971f77c4fc548421c4de04b9db49d81f7fad69315bb4f",
+      "bytes": 99044
+    },
+    {
+      "name": "CaretakerWirelessFix_P.utoc",
+      "sha256": "484e9c7aae68b5829d91b33dc270755e1d2636a561bac229603099148162718b",
+      "bytes": 1787
+    }
+  ]
+}

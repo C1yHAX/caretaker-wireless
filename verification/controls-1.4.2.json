@@ -1,0 +1,35 @@
+{
+  "version": "1.4.2",
+  "allPassed": true,
+  "verification": {
+    "packageCount": 11,
+    "packagePathsUnchanged": true,
+    "containerPayloadsByteIdentical": true,
+    "changedAssets": [
+      "BP_Module_WirelessResourceTransmitter",
+      "BP_WirelessResource_Socket_Base",
+      "DA_Module_WirelessResourceTransmitter",
+      "DA_Module_WirelessResourceTransmitter_Socket_Electricity"
+    ],
+    "unchangedExistingInstalledFiles": 102,
+    "changedExistingInstalledFiles": [
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.ucas",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.utoc"
+    ],
+    "unchangedSaveFiles": 6,
+    "existingRoutingBytecodeUnchanged": true,
+    "gameInteractionOverridesRemoved": true
+  },
+  "tests": [
+    "German Windows keyboard layout maps Ö to VK 0xC0 / UE4SS Key.OEM_THREE; dedicated binding registered",
+    "Registered hotkey callback and production game-thread scheduler open native sender and receiver dialogs",
+    "Both native channel sliders set 23; arrow steps 23-24-23 work; active dialogs reject another opening",
+    "Native E input grabs connected cables at both devices; native F input leaves cable interaction available; E reconnects both cables",
+    "Native F input no longer opens channel settings",
+    "Channel interaction component uses None and its collider has NoCollision in freshly loaded packaged assets",
+    "Same-channel power flows after reconnecting both ends; unrelated view does not open a channel dialog",
+    "Actual in-game receiver dialog and cable prompt visually inspected"
+  ],
+  "testMethod": "Fresh game world, native game APIs and Enhanced Input actions; registered Ö callback executed programmatically, no physical keyboard press simulated.",
+  "inheritedTests": "Routing and distant native simulation from Wireless 1.4.0; existing routing bytecode and background scripts unchanged."
+}

@@ -1,0 +1,49 @@
+{
+  "powerTestPassed": true,
+  "overlapTestPassed": true,
+  "nativeCableTestPassed": true,
+  "world": "/Game/Maps/VoyageWorld2.VoyageWorld2 (fresh isolated session; no save loaded)",
+  "tests": [
+    "900m cold start: source battery -> sender -> receiver -> target battery",
+    "Energy conservation including the sender internal buffer and operating consumption",
+    "Empty supply and exhausted internal buffer stop energy delivery",
+    "Restored supply resumes energy delivery",
+    "1002m separation stops delivery; returning to 999m resumes delivery",
+    "Native CanDismantleDestructible and DismantleDestructible succeed on receiver",
+    "Two receivers deliver energy simultaneously with 3kW transmitter overhead",
+    "Unpowered overlapping transmitter cannot take ownership",
+    "Powered overlapping transmitter preserves an adequately supplied active owner",
+    "Loss of primary supply transfers both receivers to the second powered transmitter",
+    "Old transmitter retains only its own inlet; new transmitter owns both outputs",
+    "Four stock electric cable actors registered through native ConnectCable during the overlap test"
+  ],
+  "controls": [
+    "Fixtures spawned through the native persistent subsystem and physics frozen",
+    "Range test uses temporary native streaming loaders to keep both test locations active",
+    "Range test uses direct native socket connections limited to 1MW",
+    "Overlap/cable test uses 1MW source limits and 200kW per target battery, allowing transmitter overhead"
+  ],
+  "limitations": [
+    "No manual placement/cable-tool interaction or long-term existing-save playthrough",
+    "Normal game world streaming remains active in the shipped mod",
+    "A source must supply attached loads plus the transmitter operating consumption"
+  ],
+  "evidence": [
+    {
+      "name": "power-success.log",
+      "sha256": "5f887152bff33b1402c236a2de88c5b574b71e5a2806732b13f735ca9f3b31d0"
+    },
+    {
+      "name": "cable-success.log",
+      "sha256": "94db67d9241390c06b85c8b9b3f3271abbe62909c2b95a589600a1ddbab4b35e"
+    },
+    {
+      "name": "power_probe.lua",
+      "sha256": "eea9e58c0acac14690a2c2c520464e8fa67883aab162060422aa9c85ba744187"
+    },
+    {
+      "name": "cable_probe.lua",
+      "sha256": "29855d5c0a9e95bff50e7cf3e2f2957bf788c0ab6baad6b9c847fc782f702330"
+    }
+  ]
+}

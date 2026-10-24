@@ -1,0 +1,17 @@
+FUNKSTROM KONFIGURIEREN – VERSION 1.4.2
+
+KANALWAHL MIT Ö – WIRELESS FIX 1.4.2
+Die Kanalwahl verwendet jetzt eine eigene Taste Ö auf der deutschen Tastatur. Die Anbindung an F / Interaktion 2 aus Version 1.4.1 ist entfernt. Auch die zusätzliche Kollisionsfläche für die Kanalbedienung ist deaktiviert, damit sie die Kabelanschlüsse nicht überlagert.
+
+1. Nahe an den Funkstrom-Sender oder Funkstrom-Empfänger gehen und das Gerät oder seinen Anschluss anvisieren.
+2. Ö ohne Zusatztaste drücken. Das Menü „Funkstrom-Kanal“ öffnet sich.
+3. Am Sender und den zugehörigen Empfängern dieselbe Nummer einstellen. Die Pfeile am Regler ändern die Nummer in Einerschritten. Bereich: 1–9999; Standard: 1.
+4. „Schließen“ wählen. Änderungen gelten direkt; einige Sekunden für die Verbindung warten. Anschließend das Spiel normal speichern, damit die Kanäle erhalten bleiben.
+
+E und F / Interaktion 2 behalten die normale Spielbedienung für Kabel. Ö erscheint nicht als normale Interaktion-2-Einblendung; der eigene Tastaturbefehl funktioniert unabhängig davon. Bei bereits geöffnetem Menü oder ohne anvisiertes Funkstrom-Gerät öffnet Ö kein zusätzliches Kanalmenü. Bestehende Geräte übernehmen die Korrektur beim nächsten vollständigen Spielstart; kein Neubau erforderlich.
+
+Andere Taste gewünscht: Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/config.lua. KeyName ist der UE4SS-Tastenname; OEM_THREE entspricht auf der deutschen Windows-Tastatur Ö. KeyLabel ist nur die Beschriftung. Änderungen werden beim nächsten Spielstart geladen.
+
+Beispiel: Netz A = Sender 1 / Empfänger 1; Netz B = Sender 2 / Empfänger 2. Mehrere Empfänger desselben Kanals teilen die verfügbare Leistung. Andere Kanäle bleiben getrennt.
+Reichweite: 1.000 Meter zwischen Sender und Empfänger. Hintergrundbetrieb ist weiterhin enthalten. Der neue Tastenhandler prüft im Leerlauf alle 50 ms ausschließlich ein Lua-Flag; Geräteziel und Spielmenü werden erst bei einem Tastendruck abgefragt. Keine neue dauernde Weltsuche.
+Das vollständige Modpack enthält diese Wireless-Erweiterung bereits. Nicht zusätzlich eine zweite Kopie der Einzelmod installieren.

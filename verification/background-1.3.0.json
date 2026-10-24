@@ -1,0 +1,53 @@
+{
+  "version": "1.3.0",
+  "backgroundVersion": "1.0.0",
+  "allPassed": true,
+  "gameVersion": "0.10.0.653173",
+  "steamBuild": 25982825,
+  "tests": [
+    "background energy while world cells unload",
+    "native unload after disabling background, no synthetic save zones",
+    "native save-data restore without loading scenery, cables and cross-cell sources retained",
+    "background supply loss stops transfer",
+    "background supply recovery",
+    "return to area and physics restoration"
+  ],
+  "fixture": {
+    "playerDistanceMeters": 20000,
+    "transmitterReceiverDistanceMeters": 997,
+    "runtimeCells": 4,
+    "nativeCables": 2,
+    "unloadedControlConfirmed": true,
+    "source": "native large battery",
+    "load": "native large battery",
+    "sceneStreamingSourcesDisabled": true,
+    "restoredFrom": "native PersistentActors serialized data, without world scenery"
+  },
+  "backgroundChargeWh": 3193.1666894215,
+  "physicsPositionDriftCentimeters": 0.14941390385866,
+  "periodicNetworkCheck": {
+    "intervalSeconds": 5,
+    "meanMilliseconds": 1.833333333334,
+    "maxMilliseconds": 7.9999999999991,
+    "excludesNativeMachineSimulationCost": true,
+    "scope": "small controlled test network; no FPS benchmark of the user base"
+  },
+  "bootstrapIndexMilliseconds": 22.000000000006,
+  "limits": {
+    "maxRuntimeCells": 256,
+    "maxActors": 2048,
+    "cellSizeMeters": 100
+  },
+  "limitations": [
+    "Native save-data unload/reload tested; a full save-to-disk and game-restart cycle of the user base was not performed.",
+    "Large-factory long-term FPS, weather-dependent generation and remote moving vessels were not benchmarked.",
+    "Runtime actors in protected cells stay alive; their surrounding World Partition scenery unloads normally."
+  ],
+  "sources": {
+    "main.lua": "449ef46ae976ad8f786367e8e27a8d07ad76aac1596fc8449de65950f919f467",
+    "physics.lua": "d94f6295570c754fbcc1d0640327f7dbf4189b917c4eeba933b3184abd84a5a4",
+    "connections.lua": "8b437ab516f80e7577d4737b8f314b449cb15f43b6cbf9ef079a425c01129236",
+    "saved_network.lua": "9e7af477442eb03a80c945fd02d405fd99f09167039cc9b4ff4d93859e9de302",
+    "config.lua": "ae3a9413ac8798e1f1fa160647bd068f3f73359b344b17077ac243cd0b8d530f"
+  }
+}

@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.lua text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.ps1 text eol=lf
+*.pak binary
+*.ucas binary
+*.utoc binary
+# Preserve every installed byte, including Lua line endings, for Dateien.json.
+Voyage/** -text

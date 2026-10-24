@@ -1,0 +1,9 @@
+/dist/
+/private-verification/
+__pycache__/
+*.pyc
+*.log
+*.sav
+*.dmp
+.env
+.env.*
