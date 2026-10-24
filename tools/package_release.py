@@ -21,7 +21,7 @@ def main():
         data = p.read_bytes()
         assert len(data) == row['bytes'] and sha(data) == row['sha256'], row['path']
     metadata = ['README.md', 'CHANGELOG.md', 'THIRD-PARTY-NOTICES.md', 'LICENSE',
-                'ASSET-CHANGES.md', 'Install-Wireless.ps1', 'Dateien.json', 'Funkstrom-Kanaele.txt', 'icons.json', 'resources.json', 'BUILDING-ICONS.md']
+                'ASSET-CHANGES.md', 'Install-Wireless.ps1', 'Dateien.json', 'Funkstrom-Kanaele.txt', 'icons.json', 'resources.json', 'BUILDING-ICONS.md', 'UNIVERSAL.md']
     files = [ROOT/name for name in metadata] + [ROOT/name for name in expected]
     files += list((ROOT/'verification').glob('*.json'))
     files += [p for p in (ROOT/'assets/icons').iterdir() if p.is_file()]

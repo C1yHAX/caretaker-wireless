@@ -14,3 +14,7 @@ Version bleibt auf ausdrücklichen Wunsch **1.0.0**. Die Release-Dateien wurden 
 ### Ressourcen-Icons innerhalb des Erstreleases 1.0.0
 
 18 neue farbige Sender-/Empfänger-Icons, einschließlich Rot für Benzin, Gelb für Diesel und gedecktem Tank-Graugrün für Methan. Neun passende Skill-Icons. Keine Änderungen an Durchsatz, Kanälen, Freischaltungen oder Lua-Laufzeit. Offline geprüft; nativer UI-Test ausstehend.
+
+### Universalsender innerhalb des Erstreleases 1.0.0
+
+Ein zusätzlicher Sender überträgt Strom und alle neun Flüssigkeits-/Gasressourcen. Zehn getrennte Eingänge, vorhandene Empfänger, 1.000 m, gemeinsamer Ö-Kanal, Level 22 / vier Punkte und eigenes mehrfarbiges Icon. Grundlast 3 kW plus 1 kW je Empfänger. Offline geprüft; nativer Durchfluss und Anschlussbedienung stehen aus.

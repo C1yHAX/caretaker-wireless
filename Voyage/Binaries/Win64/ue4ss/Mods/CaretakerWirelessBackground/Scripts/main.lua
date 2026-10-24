@@ -101,7 +101,7 @@ function M.refresh()
   if not valid(c)or mods[c:GetAddress()]then return end
   mods[c:GetAddress()]=c;addActor(c:GetOwner())
  end
- -- Discover all twenty supported device classes in one native component scan,
+ -- Discover all supported device classes in one native component scan,
  -- rather than repeating a global class search for every resource and role.
  local discovered={}
  for _,persistent in ipairs(FindAllOf('VoyagePersistentActorComponent')or{})do

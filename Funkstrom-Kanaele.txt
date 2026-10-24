@@ -18,3 +18,5 @@ Das vollständige Modpack enthält diese Wireless-Erweiterung bereits. Nicht zus
 
 RESSOURCEN
 Die neun neuen Ressourcenpaare werden genauso mit Ö konfiguriert. Quelle -> passender Schlauch -> Ressourcen-Sender; zusätzlich Strom an seinen zweiten Anschluss. Empfänger -> Schlauch -> Verbraucher/Tank. Gleiche Ressource UND gleicher Kanal erforderlich. AssetBridge 0.4.0 registriert die zusätzlichen Items/Skills. Native Durchfluss-, Platzierungs- und Speichertests der neuen Geräte stehen noch aus.
+
+UNIVERSALSENDER: Ein gemeinsamer Kanal für Strom und alle neun Flüssigkeits-/Gasressourcen. Normale passende Empfänger auf dieselbe Nummer stellen. Separate Anlagen benötigen unterschiedliche Kanäle. Anleitung: UNIVERSAL.md.

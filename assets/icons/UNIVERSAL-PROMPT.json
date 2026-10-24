@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "tool": "OpenAI built-in image_gen",
+  "source": "transmitter.png",
+  "prompt": "Use case: precise-object-edit. Edit the supplied transparent game inventory transmitter icon to identify a UNIVERSAL resource transmitter. Preserve exact tower silhouette, perspective, industrial metal wear, full antenna and outgoing radio waves and right-pointing arrow. Main painted panels neutral silver-gray. Recolor the three radio arcs, inner to outer: petrol red, diesel yellow, muted gray-green like methane tanks (not lime). Outgoing arrow white-silver. Add small blue, turquoise and violet paint bands on the lower silver panel, clearly secondary. Keep all artwork inside the square with clear transparent margin, no clipping. ONE device only. No text, labels, new components or environment. True transparent alpha background. This is a menu icon, not a technical drawing of connector placement."
+}

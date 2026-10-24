@@ -1,5 +1,6 @@
 -- Exact known device classes. Shared by channel controls and saved-network discovery.
 local classes={
+ BP_Wireless_Universal_Transmitter_C=true,
  BP_Module_WirelessResourceTransmitter_C=true,
  BP_WirelessResource_Socket_Base_C=true,
  BP_Wireless_Petrol_Transmitter_C=true,

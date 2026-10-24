@@ -10,3 +10,5 @@ Dieses Release enthält weder das vollständige Modpack noch Caretaker Energy, f
 - **AssetBridge von NotLazy:** Version 0.4.0 für die 27 zusätzlichen Registrierungen erforderlich, separat vom Autor: https://www.nexusmods.com/thelastcaretaker/mods/225. Nicht mitgeliefert; die `.tlcaddon.json` beschreibt unsere zusätzlichen Geräte und Skills.
 
 Die 18 Ressourcen-Iconvarianten wurden mit dem integrierten OpenAI-Bildwerkzeug aus den bestehenden Sender-/Empfänger-Icons farblich abgeleitet. Die Geräteformen basieren auf den originalen Spielgeräten. Die Farbpalette und vollständigen Bearbeitungsprompts stehen in assets/icons/RESOURCE-PROMPTS.json. Die erzeugten PNGs werden unverändert als Quellen mitgeliefert; nur Größenanpassung und Texturverpackung erfolgen im Builder.
+
+Das Universalsender-Icon ist eine zusätzliche farbliche Bearbeitung des Sender-Icons mit dem integrierten OpenAI-Bildwerkzeug. Prompt: assets/icons/UNIVERSAL-PROMPT.json. Die Darstellung ist ein Menüsymbol und keine technische Darstellung der Anschlusspositionen.

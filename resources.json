@@ -31,7 +31,7 @@
     },
     {
       "resource": "Oil",
-      "name": "Rohöl",
+      "name": "RohÃ¶l",
       "category": "Fuel",
       "socket": "DA_Socket_LiquidData_Oil",
       "level": 20,
@@ -87,7 +87,7 @@
     },
     {
       "resource": "CarbonDioxide",
-      "name": "CO₂",
+      "name": "COâ‚‚",
       "category": "Gas",
       "socket": "DA_Socket_GasData_CO2",
       "level": 20,
@@ -127,5 +127,166 @@
       "buffer": 1000,
       "bandwidth": 72000
     }
-  ]
+  ],
+  "universal": {
+    "senderClass": "BP_Wireless_Universal_Transmitter_C",
+    "senderItem": "DA_Wireless_Universal_Transmitter",
+    "skill": "DA_Skill_Wireless_Universal",
+    "level": 22,
+    "cost": 4,
+    "range": 1000,
+    "localSockets": 10,
+    "baseElectricity": 3000,
+    "receiverElectricity": 1000,
+    "channel": "shared across resources",
+    "resources": [
+      "Electricity",
+      "Petrol",
+      "Diesel",
+      "Oil",
+      "FreshWater",
+      "SaltWater",
+      "Oxygen",
+      "CarbonDioxide",
+      "Methane",
+      "Steam"
+    ],
+    "ports": [
+      {
+        "resource": "Petrol",
+        "name": "Benzin",
+        "category": "Fuel",
+        "component": "ResourceInput_Petrol",
+        "bank": 1,
+        "position": [
+          67.45950817142797,
+          16.346722084970192,
+          150.99152249727095
+        ],
+        "yaw": -90.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "Diesel",
+        "name": "Diesel",
+        "category": "Fuel",
+        "component": "ResourceInput_Diesel",
+        "bank": 1,
+        "position": [
+          67.45950817142797,
+          16.346722084970192,
+          300.9915224972709
+        ],
+        "yaw": -90.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "Oil",
+        "name": "RohÃ¶l",
+        "category": "Fuel",
+        "component": "ResourceInput_Oil",
+        "bank": 1,
+        "position": [
+          67.45950817142797,
+          16.346722084970192,
+          450.9915224972709
+        ],
+        "yaw": -90.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "FreshWater",
+        "name": "Frischwasser",
+        "category": "Water",
+        "component": "ResourceInput_FreshWater",
+        "bank": 2,
+        "position": [
+          0.0,
+          -67.45950817142797,
+          150.99152249727095
+        ],
+        "yaw": 180.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "SaltWater",
+        "name": "Salzwasser",
+        "category": "Water",
+        "component": "ResourceInput_SaltWater",
+        "bank": 2,
+        "position": [
+          0.0,
+          -67.45950817142797,
+          300.9915224972709
+        ],
+        "yaw": 180.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "Oxygen",
+        "name": "Sauerstoff",
+        "category": "Gas",
+        "component": "ResourceInput_Oxygen",
+        "bank": 2,
+        "position": [
+          0.0,
+          -67.45950817142797,
+          450.9915224972709
+        ],
+        "yaw": 180.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "CarbonDioxide",
+        "name": "COâ‚‚",
+        "category": "Gas",
+        "component": "ResourceInput_CarbonDioxide",
+        "bank": 3,
+        "position": [
+          0.0,
+          67.45950817142797,
+          150.99152249727095
+        ],
+        "yaw": 0.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "Methane",
+        "name": "Methan",
+        "category": "Gas",
+        "component": "ResourceInput_Methane",
+        "bank": 3,
+        "position": [
+          0.0,
+          67.45950817142797,
+          300.9915224972709
+        ],
+        "yaw": 0.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      },
+      {
+        "resource": "Steam",
+        "name": "Dampf",
+        "category": "Gas",
+        "component": "ResourceInput_Steam",
+        "bank": 3,
+        "position": [
+          0.0,
+          67.45950817142797,
+          450.9915224972709
+        ],
+        "yaw": 0.0,
+        "bandwidth": 72000,
+        "buffer": 1000
+      }
+    ]
+  }
 }

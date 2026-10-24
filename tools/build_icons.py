@@ -10,14 +10,17 @@ def main():
  if out.exists() and any(out.iterdir()):raise SystemExit('Use a new empty output directory')
  source=out/'source';shutil.copytree(a.wireless_source,source)
  before={p.relative_to(source).as_posix() for p in source.rglob('*.uasset')}
- assert len(before) in (58,76),'Expected complete resource-enabled Wireless assets (58 before or 76 after resource icons)'
  spec=json.loads((ROOT/'icons.json').read_text(encoding='utf-8'))
+ resources=json.loads((ROOT/'resources.json').read_text(encoding='utf-8'))
+ gameplay=11+5*len(resources['resources'])+(3 if resources.get('universal') else 0)
+ icon_paths={'Voyage/Content/'+r['packageRoot'][6:]+'/'+r['id']+'.uasset' for r in spec}
+ assert len(before-icon_paths)==gameplay,'Expected all gameplay packages including universal sender when enabled'
  expected=before|{'Voyage/Content/'+r['packageRoot'][6:]+'/'+r['id']+'.uasset' for r in spec}
  project=ROOT/'tools/IconBuilder'
  run('dotnet','build',project/'IconBuilder.csproj','-c','Release','--nologo')
  run('dotnet',project/'bin/Release/net10.0-windows/IconBuilder.dll',a.mapping,a.stock,ROOT/'icons.json',source,out/'reports')
  assert {p.relative_to(source).as_posix() for p in source.rglob('*.uasset')}==expected
- assert len(expected)==76,'Never drop the resource devices when rebuilding icons'
+ assert len(expected)==gameplay+len(spec),'Never drop the resource devices when rebuilding icons'
  package=out/'package';package.mkdir()
  run(a.retoc,'to-zen',source,package/'CaretakerWirelessFix_P.utoc','--version','UE5_6')
  run(a.retoc,'verify',package/'CaretakerWirelessFix_P.utoc')

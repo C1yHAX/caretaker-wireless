@@ -247,5 +247,18 @@
     "bindings": [
       "DA_Wireless_Steam_Receiver"
     ]
+  },
+  {
+    "id": "Icon_Wireless_Universal_Transmitter",
+    "sourceImageSha256": "ec993eeb23d389c461d476e97cdb93544d37393b5d86a19b7064726717b45f22",
+    "pixelSha256": "1cda2b46ab59324e7c82f781cf4e697f23f3ca41b44cd44bfdaed3fbc3a38275",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 50951,
+    "opaquePixels": 12947,
+    "bindings": [
+      "DA_Wireless_Universal_Transmitter",
+      "DA_Skill_Wireless_Universal"
+    ]
   }
 ]

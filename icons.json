@@ -205,5 +205,16 @@
     "bindings": [
       "DA_Wireless_Steam_Receiver"
     ]
+  },
+  {
+    "id": "Icon_Wireless_Universal_Transmitter",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Transmitter",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/universal-transmitter.png",
+    "bindings": [
+      "DA_Wireless_Universal_Transmitter",
+      "DA_Skill_Wireless_Universal"
+    ]
   }
 ]

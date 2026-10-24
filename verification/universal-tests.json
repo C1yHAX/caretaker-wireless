@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "wirelessAssetPackages": 80,
+  "primaryRecords": 29,
+  "previous76AssetsByteIdentical": true,
+  "newAssets": 4,
+  "localSockets": 10,
+  "independentResourceBuffers": 10,
+  "knownReceiverClasses": 10,
+  "spatialQueriesPerSenderTick": 1,
+  "minimumSocketCenterSpacingCm": 21.16,
+  "moduleConnectionSignaturesMatch": true,
+  "channelAndPowerGatesPreserved": true,
+  "level": 22,
+  "skillPoints": 4,
+  "baseElectricityWatts": 3000,
+  "wattsPerReceiver": 1000,
+  "roundtripPayloadsByteIdentical": true,
+  "otherModContainerConflicts": 0,
+  "luaTestsPassed": 4,
+  "recognizedDeviceClasses": 21,
+  "nativeGameTestPerformed": false,
+  "nativeMultiResourceFlowAndSocketPlacement": "pending in-game verification",
+  "bytecodeValidation": {
+    "functions": 11,
+    "jumps": 6,
+    "contexts": 10,
+    "eventEntries": 1,
+    "valid": true
+  }
+}

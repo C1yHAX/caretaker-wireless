@@ -29,3 +29,11 @@ Version bleibt 1.0.0; `SHA256SUMS.txt` enthält die aktuellen Download-Prüfsumm
 | Dampf | Silbergrau |
 
 Sender: hohe Antenne mit ausgehendem Pfeil. Empfänger: flacher Anschluss mit eingehendem Pfeil. Statische 256×256-Texturen ohne neue Laufzeitskripte. Bestehende Geräte behalten ihre Identität. Installation durch Ersetzen der bisherigen Paketdateien; Anleitung in README.md. Exportdaten, Icon-Referenzen, Transparenz und Rückextraktion offline geprüft. Nativer UI-Test der neuen Icons steht aus; kein Spielstart für diese Änderung.
+
+## Universalsender – weiterhin 1.0.0
+
+Ein zusätzlicher **Universal-Funksender** versorgt Strom, Benzin, Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf über zehn getrennte Eingänge. Vorhandene Empfänger auf denselben Ö-Kanal stellen; Reichweite 1.000 m. **Level 22 / vier Skillpunkte**, 20 Kunststoff + 20 Eisen, 3 kW Grundlast + 1 kW je verbundenem Empfänger. Nicht verwendete Ressourceneingänge dürfen frei bleiben. Eigener mehrfarbiger Menü- und Skill-Icon.
+
+Alle bisherigen Geräte bleiben erhalten. AssetBridge 0.4.0 registriert nun 29 Einträge in der Einzelmod. Installation: bisheriges Paket bei geschlossenem Spiel ersetzen, anschließend vollständig neu starten. Anleitung und Anschlussbeispiel: UNIVERSAL.md im ZIP oder Projekt.
+
+76 frühere Assets bytegleich, vier neue Pakete, alle Anschlüsse/Referenzen/Rückextraktion und Blueprint-Sprungadressen geprüft; vier Lua-Tests für 21 Gerätetypen bestanden. **Nativer Mehrressourcen-Durchfluss und räumliche Anschlussbedienung stehen als Spieltest aus.** Kein Spielstart für diese Änderung.

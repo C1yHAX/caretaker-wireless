@@ -1,6 +1,6 @@
 # Bearbeitete Spielassets
 
-Elf vorhandene Paketpfade werden überschrieben. Hinzu kommen 20 eigene Icontexturen und 45 Ressourcen-Assets, insgesamt **76 Pakete**. AssetBridge registriert **18 neue Items und neun Skills**. Die elf bisherigen Spielasset-Overrides und zwei Funkstrom-Icons bleiben bytegleich zur vorherigen Fassung.
+Elf vorhandene Paketpfade werden überschrieben. Hinzu kommen 21 eigene Icontexturen und 48 Ressourcen-/Universal-Assets, insgesamt **80 Pakete**. AssetBridge registriert **19 neue Items und zehn Skills**. Die elf bisherigen Spielasset-Overrides und zwei Funkstrom-Icons bleiben bytegleich zur vorherigen Fassung.
 
 | Paketpfad unter `/Game/` | Änderung |
 |---|---|
@@ -39,3 +39,7 @@ Eigenständige Klassenkopien mit passenden gegenseitigen Referenzen, typisierten
 ## Ressourcen-Icons (1.0.0)
 
 18 Texturen unter `/Game/CaretakerWireless/Icons/Icon_Wireless_<Resource>_<Transmitter|Receiver>`. Die 18 Ressourcen-Items und neun Skills referenzieren diese neuen Texturen. Alle bisherigen 58 Export-Payloads bleiben bytegleich; nur 27 Asset-Header ändern je zwei Icon-Namen. Insgesamt 76 Pakete, unverändert 27 AssetBridge-Registrierungen. `icons.json` enthält alle 20 Texturen und 29 Bindungen. Die beiden Funkstrom-Icons bleiben bytegleich.
+
+## Universalsender (1.0.0)
+
+Vier additive Pakete: `/Game/CaretakerWireless/Blueprints/BP_Wireless_Universal_Transmitter`, `Items/DA_Wireless_Universal_Transmitter`, `Skills/DA_Skill_Wireless_Universal` und `Icons/Icon_Wireless_Universal_Transmitter` unter demselben Basisverzeichnis. Alle 76 bisherigen Pakete bleiben bytegleich. Eine explizite Liste der zehn vorhandenen Empfängerklassen erweitert die Senderzuordnung; alle Empfängerfunktionen bleiben unverändert. Neun optionale Ressourceneingänge, ein benötigter Stromeingang, zehn native Puffer. Zwei neue AssetBridge-Einträge. Die gemeinsamen devices.lua-Listen erkennen zusätzlich den Universalsender. Keine weiteren Laufzeitskripte.

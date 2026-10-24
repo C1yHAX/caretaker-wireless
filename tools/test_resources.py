@@ -8,9 +8,12 @@ from lupa.lua54 import LuaRuntime
 
 ROOT=Path(__file__).resolve().parent.parent
 MODS=ROOT/'Voyage/Binaries/Win64/ue4ss/Mods'
-RESOURCES=json.loads((ROOT/'resources.json').read_text(encoding='utf-8'))['resources']
+SPEC=json.loads((ROOT/'resources.json').read_text(encoding='utf-8'))
+RESOURCES=SPEC['resources']
 NAMES=['BP_Module_WirelessResourceTransmitter_C','BP_WirelessResource_Socket_Base_C']
 for row in RESOURCES:NAMES += [row['senderClass'],row['receiverClass']]
+NAMES.append(SPEC['universal']['senderClass'])
+assert len(NAMES)==21 and len(set(NAMES))==21
 
 def setup():
  lua=LuaRuntime(unpack_returned_tuples=True)
@@ -32,7 +35,7 @@ class Resources(unittest.TestCase):
   lua=setup();lua.execute('''
   a=dofile(background..'devices.lua');b=dofile(controls..'devices.lua')
   local count=0;for n in pairs(a)do count=count+1;assert(b[n])end
-  assert(count==20)
+  assert(count==#names)
   for _,n in ipairs(names)do assert(a[n] and b[n])end
   assert(not a.BP_Module_SmallGenerator_C and not a.BP_Wireless_Unknown_Receiver_C)
   ''')
@@ -43,8 +46,8 @@ class Resources(unittest.TestCase):
   for i,n in ipairs(names)do records[fname(i..':0')]={actors=list({{ActorClass=klass(n)}})}end
   records[fname('99:0')]={actors=list({{ActorClass=klass('UnrelatedDevice')}})}
   cells,info=saved.index({PersistentActors=list(records)},10000)
-  assert(info.cells==20 and info.actors==20 and not cells['99:0'])
-  for i=1,20 do assert(cells[i..':0'])end
+  assert(info.cells==#names and info.actors==#names and not cells['99:0'])
+  for i=1,#names do assert(cells[i..':0'])end
   ''')
 
  def test_channel_control_handles_all_devices_and_preserves_game_keys(self):
@@ -67,12 +70,12 @@ class Resources(unittest.TestCase):
   M=dofile(controls..'main.lua')
   assert(#bindings==1 and bindings[1].key==192)
   for _,n in ipairs(names)do current=n;bindings[1].fn();timers[50]()end
-  assert(shown==20)
-  current='UnrelatedDevice';assert(not M.open());assert(shown==20)
+  assert(shown==#names)
+  current='UnrelatedDevice';assert(not M.open());assert(shown==#names)
   current=names[1];pc.bShowMouseCursor=true;assert(not M.open())
   ''')
 
- def test_background_discovers_twenty_types_in_one_scan_and_deduplicates(self):
+ def test_background_discovers_twenty_one_types_in_one_scan_and_deduplicates(self):
   lua=setup();lua.execute('''
   actors={};persistentComponents={};scanCount=0
   world=validObject({GetAddress=function()return 1 end})
@@ -102,8 +105,8 @@ class Resources(unittest.TestCase):
   function RegisterHook()end
   function ExecuteInGameThreadWithDelay()end
   M=dofile(background..'main.lua');M.refresh()
-  assert(scanCount==1 and M.stats.cells==20 and M.stats.actors==20)
-  for i=1,20 do assert(M.snapshot().pins[i..':0'])end
+  assert(scanCount==1 and M.stats.cells==#names and M.stats.actors==#names)
+  for i=1,#names do assert(M.snapshot().pins[i..':0'])end
   ''')
 
 if __name__=='__main__':unittest.main()

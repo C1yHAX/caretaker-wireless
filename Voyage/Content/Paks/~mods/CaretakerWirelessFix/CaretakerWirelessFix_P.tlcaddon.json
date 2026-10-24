@@ -137,6 +137,16 @@
       "type": "Skill",
       "id": "Skill:DA_Skill_Wireless_Steam",
       "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Steam.DA_Skill_Wireless_Steam"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Universal_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Universal_Transmitter.DA_Wireless_Universal_Transmitter"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_Universal",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Universal.DA_Skill_Wireless_Universal"
     }
   ]
 }
