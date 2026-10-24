@@ -216,5 +216,15 @@
       "DA_Wireless_Universal_Transmitter",
       "DA_Skill_Wireless_Universal"
     ]
+  },
+  {
+    "id": "Icon_Wireless_Universal_Receiver",
+    "packageRoot": "/Game/CaretakerWireless/Icons",
+    "original": "/Game/CaretakerWireless/Icons/Icon_WirelessPower_Receiver",
+    "template": "/Game/UI/Icons/Cables/Icon_Extender_Electricity",
+    "image": "assets/icons/universal-receiver.png",
+    "bindings": [
+      "DA_Wireless_Universal_Receiver"
+    ]
   }
 ]

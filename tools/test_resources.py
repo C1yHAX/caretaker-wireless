@@ -13,7 +13,8 @@ RESOURCES=SPEC['resources']
 NAMES=['BP_Module_WirelessResourceTransmitter_C','BP_WirelessResource_Socket_Base_C']
 for row in RESOURCES:NAMES += [row['senderClass'],row['receiverClass']]
 NAMES.append(SPEC['universal']['senderClass'])
-assert len(NAMES)==21 and len(set(NAMES))==21
+NAMES.append(SPEC['universal']['receiver']['receiverClass'])
+assert len(NAMES)==22 and len(set(NAMES))==22
 
 def setup():
  lua=LuaRuntime(unpack_returned_tuples=True)
@@ -75,7 +76,7 @@ class Resources(unittest.TestCase):
   current=names[1];pc.bShowMouseCursor=true;assert(not M.open())
   ''')
 
- def test_background_discovers_twenty_one_types_in_one_scan_and_deduplicates(self):
+ def test_background_discovers_twenty_two_types_in_one_scan_and_deduplicates(self):
   lua=setup();lua.execute('''
   actors={};persistentComponents={};scanCount=0
   world=validObject({GetAddress=function()return 1 end})

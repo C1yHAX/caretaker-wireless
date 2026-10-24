@@ -1,6 +1,6 @@
 # Bearbeitete Spielassets
 
-Elf vorhandene Paketpfade werden überschrieben. Hinzu kommen 21 eigene Icontexturen und 48 Ressourcen-/Universal-Assets, insgesamt **80 Pakete**. AssetBridge registriert **19 neue Items und zehn Skills**. Die elf bisherigen Spielasset-Overrides und zwei Funkstrom-Icons bleiben bytegleich zur vorherigen Fassung.
+Elf vorhandene Paketpfade werden überschrieben. Hinzu kommen 22 eigene Icontexturen und 50 Ressourcen-/Universal-Assets, insgesamt **83 Pakete**. AssetBridge registriert **20 neue Items und zehn Skills**. Die elf bisherigen Spielasset-Overrides und zwei Funkstrom-Icons bleiben bytegleich zur vorherigen Fassung.
 
 | Paketpfad unter `/Game/` | Änderung |
 |---|---|
@@ -43,3 +43,11 @@ Eigenständige Klassenkopien mit passenden gegenseitigen Referenzen, typisierten
 ## Universalsender (1.0.0)
 
 Vier additive Pakete: `/Game/CaretakerWireless/Blueprints/BP_Wireless_Universal_Transmitter`, `Items/DA_Wireless_Universal_Transmitter`, `Skills/DA_Skill_Wireless_Universal` und `Icons/Icon_Wireless_Universal_Transmitter` unter demselben Basisverzeichnis. Alle 76 bisherigen Pakete bleiben bytegleich. Eine explizite Liste der zehn vorhandenen Empfängerklassen erweitert die Senderzuordnung; alle Empfängerfunktionen bleiben unverändert. Neun optionale Ressourceneingänge, ein benötigter Stromeingang, zehn native Puffer. Zwei neue AssetBridge-Einträge. Die gemeinsamen devices.lua-Listen erkennen zusätzlich den Universalsender. Keine weiteren Laufzeitskripte.
+
+## Universal-Empfänger (aktueller Stand 1.0.0)
+
+Drei additive Pakete: `Blueprints/BP_Wireless_Universal_Receiver`, `Items/DA_Wireless_Universal_Receiver` und `Icons/Icon_Wireless_Universal_Receiver` unter `/Game/CaretakerWireless/`. Ein platzierter Actor mit zehn nativen Ausgängen und wiederverwendeten Anschlussplatten; keine untergeordneten Sender/Empfänger-Actors. Alle Anschlüsse werden zusammen registriert, bei Kanal-/Reichweitenwechsel abgemeldet und bei Stromausfall gesperrt. Eigene, pro Instanz und Ressource unterschiedliche Socket-IDs.
+
+Zwei vorhandene Pakete geändert: der Universal-Sender akzeptiert zusätzlich die neue Empfängerklasse und berechnet Verbindungsstrom anhand unterschiedlicher Besitzer seiner externen Anschlüsse; der vorhandene Skill schaltet beide Universal-Geräte frei. 78 der vorherigen 80 Pakete bleiben bytegleich. Ein neuer AssetBridge-Item-Eintrag, insgesamt 30. Gemeinsame Gerätefilter erweitert auf 22 Klassen. 83 Pakete und 22 Icons mit 32 Bindungen. Keine zusätzlichen Laufzeit-Schleifen oder Ressourcen-Kopierskripte.
+
+Prüfnachweis: verification/universal-receiver-tests.json. Kontrollflussprüfung führt die serialisierten Blueprint-Ausdrücke mit simulierten nativen Aufrufen aus; sie prüft keine echte Unreal-Ressourcen-Simulation. Die früheren Abschnitte beschreiben die jeweiligen vorherigen Erweiterungsschritte.

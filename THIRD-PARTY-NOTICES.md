@@ -12,3 +12,5 @@ Dieses Release enthält weder das vollständige Modpack noch Caretaker Energy, f
 Die 18 Ressourcen-Iconvarianten wurden mit dem integrierten OpenAI-Bildwerkzeug aus den bestehenden Sender-/Empfänger-Icons farblich abgeleitet. Die Geräteformen basieren auf den originalen Spielgeräten. Die Farbpalette und vollständigen Bearbeitungsprompts stehen in assets/icons/RESOURCE-PROMPTS.json. Die erzeugten PNGs werden unverändert als Quellen mitgeliefert; nur Größenanpassung und Texturverpackung erfolgen im Builder.
 
 Das Universalsender-Icon ist eine zusätzliche farbliche Bearbeitung des Sender-Icons mit dem integrierten OpenAI-Bildwerkzeug. Prompt: assets/icons/UNIVERSAL-PROMPT.json. Die Darstellung ist ein Menüsymbol und keine technische Darstellung der Anschlusspositionen.
+
+Das Universal-Empfänger-Icon ist eine zusätzliche Bearbeitung des Empfänger-Icons mit dem integrierten OpenAI-Bildwerkzeug. Prompt: assets/icons/UNIVERSAL-RECEIVER-PROMPT.json. Die Darstellung kennzeichnet den Gerätetyp im Menü; sie bildet die zehn räumlichen Anschlusspositionen nicht ab.

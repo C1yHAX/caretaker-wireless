@@ -147,6 +147,11 @@
       "type": "Skill",
       "id": "Skill:DA_Skill_Wireless_Universal",
       "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Universal.DA_Skill_Wireless_Universal"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Universal_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Universal_Receiver.DA_Wireless_Universal_Receiver"
     }
   ]
 }

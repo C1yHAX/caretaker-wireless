@@ -18,3 +18,7 @@ Version bleibt auf ausdrücklichen Wunsch **1.0.0**. Die Release-Dateien wurden 
 ### Universalsender innerhalb des Erstreleases 1.0.0
 
 Ein zusätzlicher Sender überträgt Strom und alle neun Flüssigkeits-/Gasressourcen. Zehn getrennte Eingänge, vorhandene Empfänger, 1.000 m, gemeinsamer Ö-Kanal, Level 22 / vier Punkte und eigenes mehrfarbiges Icon. Grundlast 3 kW plus 1 kW je Empfänger. Offline geprüft; nativer Durchfluss und Anschlussbedienung stehen aus.
+
+### Universal-Empfänger innerhalb des Erstreleases 1.0.0
+
+Ein zusätzlicher Empfänger für alle zehn Ressourcen, mit getrennten Kabel-/Schlauchausgängen und eigenem mehrfarbigen Empfangs-Icon. Gemeinsame Freischaltung mit dem Universal-Sender auf Level 22 / vier Punkte. Ein gemeinsamer Ö-Kanal. Der Sender zählt Empfängergeräte statt ihrer Anschlüsse, sodass ein Universal-Empfänger 1 kW Verbindungsbedarf verursacht. Alle Ausgänge folgen Strom-, Kanal- und Reichweitenwechseln. Native Spieltests bleiben ausstehend.

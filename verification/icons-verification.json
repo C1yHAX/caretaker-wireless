@@ -260,5 +260,17 @@
       "DA_Wireless_Universal_Transmitter",
       "DA_Skill_Wireless_Universal"
     ]
+  },
+  {
+    "id": "Icon_Wireless_Universal_Receiver",
+    "sourceImageSha256": "c19bd369fb285051aac67b551b4e14cb875ff3ac26d1b9141e50e2864d0515c8",
+    "pixelSha256": "a6cf1b2474868769f032021bfc8d49ab8cc9f72b13f6874393840a59cbe88161",
+    "width": 256,
+    "height": 256,
+    "transparentPixels": 35921,
+    "opaquePixels": 27427,
+    "bindings": [
+      "DA_Wireless_Universal_Receiver"
+    ]
   }
 ]

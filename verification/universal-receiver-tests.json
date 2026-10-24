@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "wirelessAssetPackages": 83,
+  "primaryRecords": 30,
+  "previousAssetsUnchanged": 78,
+  "updatedPreviousAssets": [
+    "BP_Wireless_Universal_Transmitter",
+    "DA_Skill_Wireless_Universal"
+  ],
+  "newAssets": 3,
+  "receiverOutputs": 10,
+  "knownReceiverClasses": 11,
+  "spatialQueriesPerSenderTick": 1,
+  "minimumOutputCenterSpacingCm": 50,
+  "onePlacedReceiverActor": true,
+  "oneKilowattPerReceiverDevice": true,
+  "level": 22,
+  "skillPoints": 4,
+  "sharedSkillUnlocksBothDevices": true,
+  "roundtripPayloadsByteIdentical": true,
+  "otherModContainerConflicts": 0,
+  "luaTestsPassed": 4,
+  "recognizedDeviceClasses": 22,
+  "bytecodeValidation": {
+    "BP_Wireless_Universal_Receiver": {
+      "functions": 31,
+      "jumps": 14,
+      "contexts": 89,
+      "eventEntries": 10,
+      "valid": true
+    },
+    "BP_Wireless_Universal_Transmitter": {
+      "functions": 12,
+      "jumps": 9,
+      "contexts": 14,
+      "eventEntries": 1,
+      "valid": true
+    }
+  },
+  "controlFlowTests": {
+    "passed": true,
+    "tests": [
+      "all ten native attach calls",
+      "idempotent binding",
+      "all-output power gating and recovery",
+      "channel mismatch rejection",
+      "powered assignment retained",
+      "receiver channel change detaches ten outputs",
+      "range exit detaches ten outputs",
+      "sender channel change detaches ten outputs",
+      "unpowered candidate rejection",
+      "ten unique stable per-instance socket IDs",
+      "unique-owner counting for single, universal, mixed and invalid sockets"
+    ],
+    "nativeOperations": "mocked; Unreal resource simulation remains untested"
+  },
+  "nativeGameTestPerformed": false,
+  "nativeMultiResourceFlowSocketPlacementAndSaveLoad": "pending in-game verification"
+}

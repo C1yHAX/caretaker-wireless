@@ -287,6 +287,128 @@
         "bandwidth": 72000,
         "buffer": 1000
       }
-    ]
+    ],
+    "receiver": {
+      "receiverClass": "BP_Wireless_Universal_Receiver_C",
+      "receiverItem": "DA_Wireless_Universal_Receiver",
+      "skill": "DA_Skill_Wireless_Universal",
+      "level": 22,
+      "cost": 4,
+      "range": 1000,
+      "localSockets": 10,
+      "receiverElectricity": 1000,
+      "compatibleSender": "BP_Wireless_Universal_Transmitter_C",
+      "ports": [
+        {
+          "resource": "Petrol",
+          "name": "Benzin",
+          "category": "Fuel",
+          "component": "ResourceOutput_Petrol",
+          "position": [
+            -50.0,
+            50.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "Diesel",
+          "name": "Diesel",
+          "category": "Fuel",
+          "component": "ResourceOutput_Diesel",
+          "position": [
+            0.0,
+            50.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "Oil",
+          "name": "Rohöl",
+          "category": "Fuel",
+          "component": "ResourceOutput_Oil",
+          "position": [
+            50.0,
+            50.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "FreshWater",
+          "name": "Frischwasser",
+          "category": "Water",
+          "component": "ResourceOutput_FreshWater",
+          "position": [
+            -50.0,
+            100.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "SaltWater",
+          "name": "Salzwasser",
+          "category": "Water",
+          "component": "ResourceOutput_SaltWater",
+          "position": [
+            0.0,
+            100.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "Oxygen",
+          "name": "Sauerstoff",
+          "category": "Gas",
+          "component": "ResourceOutput_Oxygen",
+          "position": [
+            50.0,
+            100.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "CarbonDioxide",
+          "name": "CO₂",
+          "category": "Gas",
+          "component": "ResourceOutput_CarbonDioxide",
+          "position": [
+            -50.0,
+            150.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "Methane",
+          "name": "Methan",
+          "category": "Gas",
+          "component": "ResourceOutput_Methane",
+          "position": [
+            0.0,
+            150.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        },
+        {
+          "resource": "Steam",
+          "name": "Dampf",
+          "category": "Gas",
+          "component": "ResourceOutput_Steam",
+          "position": [
+            50.0,
+            150.0,
+            12.0
+          ],
+          "bandwidth": 72000
+        }
+      ]
+    },
+    "receiverCounting": "unique external socket owners; ten outputs on one receiver count as one device"
   }
 }

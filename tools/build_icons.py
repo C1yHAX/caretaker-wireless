@@ -12,9 +12,9 @@ def main():
  before={p.relative_to(source).as_posix() for p in source.rglob('*.uasset')}
  spec=json.loads((ROOT/'icons.json').read_text(encoding='utf-8'))
  resources=json.loads((ROOT/'resources.json').read_text(encoding='utf-8'))
- gameplay=11+5*len(resources['resources'])+(3 if resources.get('universal') else 0)
+ gameplay=11+5*len(resources['resources'])+(3 if resources.get('universal') else 0)+(2 if resources.get('universal',{}).get('receiver') else 0)
  icon_paths={'Voyage/Content/'+r['packageRoot'][6:]+'/'+r['id']+'.uasset' for r in spec}
- assert len(before-icon_paths)==gameplay,'Expected all gameplay packages including universal sender when enabled'
+ assert len(before-icon_paths)==gameplay,'Expected all gameplay packages including universal sender and receiver when enabled'
  expected=before|{'Voyage/Content/'+r['packageRoot'][6:]+'/'+r['id']+'.uasset' for r in spec}
  project=ROOT/'tools/IconBuilder'
  run('dotnet','build',project/'IconBuilder.csproj','-c','Release','--nologo')

@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "tool": "OpenAI built-in image_gen",
+  "source": "receiver.png",
+  "paletteReference": "universal-transmitter.png",
+  "prompt": "Use case: precise-object-edit. Asset type: transparent square inventory icon for The Last Caretaker Universal Wireless Receiver. Image 1 (receiver.png) is the edit target: preserve its receiving-socket body, three-quarter perspective, realistic worn metal and clearly DOWNWARD receiving arrow. Image 2 (universal-transmitter.png) is only the companion palette/style reference. Recolor the three radio arcs above the socket to the companion universal palette: the largest outer arc muted tank-like gray-green, middle arc diesel yellow, innermost arc petrol red. Change the downward arrow to bright readable silver-white with a subtle cool outline. Keep the receiver body neutral silver/charcoal metal, add three small restrained painted blue, turquoise and purple stripes on its front edge to echo the transmitter. No lettering, no extra devices, no pedestal, no colored background. Maintain a crisp large silhouette for a 256-pixel game icon, fully visible with a little transparent margin. Actual transparent background, preserve alpha. Do not turn it into the transmitter or change the arrow direction."
+}

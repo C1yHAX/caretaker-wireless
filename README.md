@@ -6,11 +6,13 @@
 
 [Download auf GitHub](https://github.com/C1yHAX/caretaker-wireless/releases/tag/v1.0.0) · [Download auf GitLab](https://gitlab.com/c0d1ngf1eber/caretaker-wireless/-/releases/v1.0.0) · [Änderungsverlauf](CHANGELOG.md)
 
-## Ein Universalsender statt vieler einzelner Sender
+## Ein Universal-Gerätepaar für alle Ressourcen
 
-Zusätzlich enthalten: **Universal-Funksender (1.000 m)** mit einem Stromanschluss und neun getrennten Flüssigkeits-/Gaseingängen. Er versorgt die vorhandenen Empfänger aller zehn Ressourcenarten auf einem gemeinsamen Kanal. **Level 22, vier Skillpunkte; 3 kW Eigenbedarf plus 1 kW je Empfänger.** Eigenes mehrfarbiges Icon. Die bisherigen Geräte bleiben verfügbar.
+**Universal-Funksender (1.000 m)** und **Universal-Funkempfänger** besitzen jeweils zehn getrennte Anschlüsse für Strom, Benzin, Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf. Ein gemeinsamer Ö-Kanal verbindet das Paar. Am Ziel reicht ein Universal-Empfänger; die bisherigen einzelnen Ressourcen-Empfänger bleiben ebenfalls mit dem Universalsender kompatibel.
 
-**[Anschlüsse, Beispiel und vollständige Anleitung](UNIVERSAL.md).** Der gleichzeitige native Durchfluss und die räumliche Anschlussbedienung sind noch nicht im Spiel getestet; für diese Erweiterung wurde kein Spielstart ausgeführt.
+Beide Universal-Geräte werden über **Universelle Funkversorgung ab Level 22 für vier Skillpunkte** freigeschaltet. **3 kW Grundlast plus 1 kW pro Empfängergerät** am Universalsender: zehn Anschlüsse eines Universal-Empfängers zählen als ein Gerät. Ein Paar benötigt somit 4 kW Eigenbedarf, zusätzlich zum übertragenen Strom. Unterschiedliche mehrfarbige Icons kennzeichnen Senden und Empfangen.
+
+**[Anschlüsse, Beispiel und vollständige Anleitung](UNIVERSAL.md).** Native Durchfluss-, Platzierungs- und Speichertests im Spiel stehen aus. Für diese Erweiterung wurde kein Spielstart ausgeführt.
 
 ## Neue Ressourcen-Funkübertragung
 
@@ -37,7 +39,7 @@ Die Stufen folgen den vorhandenen Wandbrücken (16–18), der Destillation (20) 
 - Sender-Eigenbedarf: **1 kW Grundlast plus 1 kW je zugeordnetem Empfänger**. Es werden keine Ressourcen erzeugt oder umgewandelt.
 - Nominal **72.000 Einheiten/h (20/s)**, abhängig vom angeschlossenen Netz. Senderpuffer: **1.000 Ressourceneinheiten und 1 kWh Strom**. Mehrere Empfänger teilen den verfügbaren Zufluss.
 - Senderrezept: **4 Kunststoff + 4 Eisen**, 8 s, 20 Wh. Empfänger: **2 Kunststoff + 2 Eisen**, 4 s, 10 Wh. Gewicht 0 und Stapelgröße 99.999 entsprechen den übrigen Modpack-Wireless-Items.
-- Hintergrund-Erkennung für alle **21 Gerätetypen** über einen gemeinsamen Scan nativer Persistenzkomponenten alle fünf Sekunden. Grenzen weiterhin 256 Gerätebereiche / 2.048 Objekte.
+- Hintergrund-Erkennung für alle **22 Gerätetypen** über einen gemeinsamen Scan nativer Persistenzkomponenten alle fünf Sekunden. Grenzen weiterhin 256 Gerätebereiche / 2.048 Objekte.
 
 **Prüfstatus:** Die neuen Ressourcenpaare sind offline geprüft und erfolgreich gepackt/rückextrahiert. Lua-Tests mit Attrappen prüfen Ö-Bedienung, Geräteerkennung und gespeicherte Netze. **Nativer Ressourcenfluss, Platzierung und Speichern/Neuladen stehen noch als Spieltest aus.** Das Spiel wurde für diese Erweiterung nicht gestartet. Die früheren Spieltests weiter unten gelten für Funkstrom, nicht als Nachweis für die neuen Gas-/Flüssigkeitsgeräte.
 
@@ -89,12 +91,12 @@ Die 18 zusätzlichen Texturen haben jeweils 256 × 256 Pixel und benötigen zusa
 
 - *The Last Caretaker*, Windows, Build **25982825 / 0.10.0.653173**. Andere Builds sind nicht bestätigt.
 - **UE4SS v3.0.1-1125-g527a483b**, separat vom Originalprojekt: [geprüftes UE4SS-ZIP herunterladen](https://github.com/UE4SS-RE/RE-UE4SS/releases/download/experimental/UE4SS_v3.0.1-1125-g527a483b.zip). [Quellstand](https://github.com/UE4SS-RE/RE-UE4SS/commit/527a483b).
-- **[AssetBridge von NotLazy](https://www.nexusmods.com/thelastcaretaker/mods/225), Version 0.4.0**, separat installieren. Es registriert die 19 neuen Items und zehn Skills.
+- **[AssetBridge von NotLazy](https://www.nexusmods.com/thelastcaretaker/mods/225), Version 0.4.0**, separat installieren. Es registriert die 20 neuen Items und zehn Skills.
 - Unser Release-Download **`Caretaker-Wireless-Fix-1.0.0.zip`**. Die automatisch erzeugten GitHub/GitLab-Quellcodearchive sind nicht der empfohlene Installationsdownload.
 
 Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten Installation verglichen. SHA-256 des UE4SS-ZIP: `4f9762f812329a640c8cfa14444c2bb97ecc213b8320bd4c5433383c3eef48f7`. SHA-256 der `UE4SS.dll`: `91d5444f41d19d0bb502f0fbdc15d76421e20359e898caa39e41e134c8f87958`.
 
-**Das vollständige Modpack und Caretaker Energy sind nicht erforderlich. AssetBridge ist seit der Ressourcen-Erweiterung erforderlich.** Die elf vorhandenen Asset-Overrides bleiben; 48 Ressourcen-/Universal-Assets und insgesamt 21 Icontexturen kommen hinzu. AssetBridge registriert **29 zusätzliche Item-/Skill-Einträge** aus `CaretakerWirelessFix_P.tlcaddon.json`. UE4SS ist erforderlich für Hintergrundbetrieb und Ö-Kanalbedienung. Es wird nicht im Mod-ZIP mitgeliefert.
+**Das vollständige Modpack und Caretaker Energy sind nicht erforderlich. AssetBridge ist seit der Ressourcen-Erweiterung erforderlich.** Die elf vorhandenen Asset-Overrides bleiben; 50 Ressourcen-/Universal-Assets und insgesamt 22 Icontexturen kommen hinzu. AssetBridge registriert **30 zusätzliche Item-/Skill-Einträge** aus `CaretakerWirelessFix_P.tlcaddon.json`. UE4SS ist erforderlich für Hintergrundbetrieb und Ö-Kanalbedienung. Es wird nicht im Mod-ZIP mitgeliefert.
 
 ## Installation
 
@@ -174,3 +176,5 @@ Distinct orange transmitter and blue receiver icons show the actual antenna/sock
 Requires the game build and separately linked, hash-verified **UE4SS v3.0.1-1125-g527a483b**. No full modpack or Energy mod required. **AssetBridge 0.4.0 is now required** for the additional resource devices and skills. Download the named release ZIP, close the game, run `Install-Wireless.ps1 -GamePath '<game folder>'`, and restart. First release: controlled native-engine tests passed, but large-base long-term play and arbitrary mod combinations have not been validated. German in-game text. Original game assets remain the property of their respective owners.
 
 The extension adds nine resource sender/receiver pairs: petrol, diesel, crude oil, fresh water, salt water, oxygen, carbon dioxide, methane and steam. Each transmitter needs electrical supply plus its matching hose input. 1,000 m range, channels 1–9999, same resource/channel only, nominal 72,000 units/hour, 1,000-unit resource buffer. Unlock levels 18–21, two points per pair. **Native flow, placement and save/reload tests of these additional resource pairs remain pending; offline checks passed.** Version remains 1.0.0.
+
+The universal transmitter and receiver share ten typed electrical/fluid/gas ports, one saved channel and a joint level-22/four-point unlock. The universal receiver pairs with the universal transmitter; the transmitter also supports existing resource-specific receivers. A universal receiver counts as one device for power costs. Native gameplay validation remains pending; serialized control-flow tests with mocked native calls passed. See UNIVERSAL.md.
