@@ -5,7 +5,7 @@ local M={}
 local pending=false
 local function valid(o)return o and o:IsValid()end
 local function log(s)print('[CaretakerWirelessControls] '..s..'\n')end
-local classes={BP_Module_WirelessResourceTransmitter_C=true,BP_WirelessResource_Socket_Base_C=true}
+local classes=dofile(folder..'devices.lua')
 local function device(a)
     for _=1,4 do
         if not valid(a)then return end

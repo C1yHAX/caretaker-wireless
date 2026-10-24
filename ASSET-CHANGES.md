@@ -1,6 +1,6 @@
 # Bearbeitete Spielassets
 
-Elf Pfade existieren im geprüften Original-Spielbuild und werden überschrieben. Hinzu kommen zwei eigene Icontexturen unter `/Game/CaretakerWireless/Icons/`, insgesamt 13 Pakete. Es werden keine zusätzlichen Gegenstände oder Skills registriert. Bestehende Geräte behalten ihre Identität.
+Elf vorhandene Paketpfade werden überschrieben. Hinzu kommen zwei eigene Icontexturen und 45 Ressourcen-Assets, insgesamt **58 Pakete**. AssetBridge registriert **18 neue Items und neun Skills**. Die 13 bisherigen Assetpakete und ihre Geräteidentitäten bleiben bytegleich zur vorherigen Icon-Fassung.
 
 | Paketpfad unter `/Game/` | Änderung |
 |---|---|
@@ -19,3 +19,19 @@ Elf Pfade existieren im geprüften Original-Spielbuild und werden überschrieben
 | `CaretakerWireless/Icons/Icon_WirelessPower_Receiver` | Neue transparente 256×256-Icontextur: flacher Anschluss mit blauen eingehenden Funkwellen |
 
 Die Ausführung von Hintergrundbetrieb und Ö-Tastenhandler erfolgt zusätzlich durch die beiden Lua-Modordner. Die Ö-Bedienung verwendet einen eigenen Tastenhandler; die Kanalzuordnung läuft im Blueprint. Der Installer kontrolliert die Datei-Hashes aus `Dateien.json`.
+
+## Neue Ressourcenpakete
+
+Pro Ressource in `resources.json` liegen unter `/Game/CaretakerWireless/` fünf neue Pakete:
+
+```text
+Blueprints/BP_Wireless_<Resource>_Transmitter
+Blueprints/BP_Wireless_<Resource>_Receiver
+Items/DA_Wireless_<Resource>_Transmitter
+Items/DA_Wireless_<Resource>_Receiver
+Skills/DA_Skill_Wireless_<Resource>
+```
+
+Eigenständige Klassenkopien mit passenden gegenseitigen Referenzen, typisierten Schlauchanschlüssen, nativen Anschlussgrafiken und einem zusätzlichen elektrischen Sendereingang. Ressourcenpuffer, Durchsatz, Rezepte, Texte und Freischaltungen stehen in README/resources.json. Die Eigenbedarfsberechnung berücksichtigt den zusätzlichen lokalen Anschluss. Sender suchen nur ihren jeweiligen Empfängertyp.
+
+`devices.lua` erweitert Ö-Bedienung und aktuelle/gespeicherte Netzerkennung. Ein gemeinsamer Persistenzkomponenten-Scan findet alle Typen; die bisherigen Schutzgrenzen bleiben. Der Container ist fertig gebaut; ein vollständiger Editor-/Asset-Build ist weiterhin nicht Bestandteil des Repositories.

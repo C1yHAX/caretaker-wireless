@@ -14,14 +14,14 @@ def main():
     rows = json.loads((ROOT/'Dateien.json').read_text(encoding='utf-8'))
     expected = {row['path'] for row in rows}
     actual = {p.relative_to(ROOT).as_posix() for p in (ROOT/'Voyage').rglob('*') if p.is_file()}
-    assert len(rows) == len(expected) == 12 and actual == expected, 'Unexpected install payload'
+    assert len(rows) == len(expected) == 15 and actual == expected, 'Unexpected install payload'
     for row in rows:
         p = ROOT/row['path']
         assert p.resolve().is_relative_to((ROOT/'Voyage').resolve()), row['path']
         data = p.read_bytes()
         assert len(data) == row['bytes'] and sha(data) == row['sha256'], row['path']
     metadata = ['README.md', 'CHANGELOG.md', 'THIRD-PARTY-NOTICES.md', 'LICENSE',
-                'ASSET-CHANGES.md', 'Install-Wireless.ps1', 'Dateien.json', 'Funkstrom-Kanaele.txt', 'icons.json', 'BUILDING-ICONS.md']
+                'ASSET-CHANGES.md', 'Install-Wireless.ps1', 'Dateien.json', 'Funkstrom-Kanaele.txt', 'icons.json', 'resources.json', 'BUILDING-ICONS.md']
     files = [ROOT/name for name in metadata] + [ROOT/name for name in expected]
     files += list((ROOT/'verification').glob('*.json'))
     files += [p for p in (ROOT/'assets/icons').iterdir() if p.is_file()]

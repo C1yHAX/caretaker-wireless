@@ -15,3 +15,6 @@ Andere Taste gewünscht: Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessContr
 Beispiel: Netz A = Sender 1 / Empfänger 1; Netz B = Sender 2 / Empfänger 2. Mehrere Empfänger desselben Kanals teilen die verfügbare Leistung. Andere Kanäle bleiben getrennt.
 Reichweite: 1.000 Meter zwischen Sender und Empfänger. Hintergrundbetrieb ist weiterhin enthalten. Der neue Tastenhandler prüft im Leerlauf alle 50 ms ausschließlich ein Lua-Flag; Geräteziel und Spielmenü werden erst bei einem Tastendruck abgefragt. Keine neue dauernde Weltsuche.
 Das vollständige Modpack enthält diese Wireless-Erweiterung bereits. Nicht zusätzlich eine zweite Kopie der Einzelmod installieren.
+
+RESSOURCEN
+Die neun neuen Ressourcenpaare werden genauso mit Ö konfiguriert. Quelle -> passender Schlauch -> Ressourcen-Sender; zusätzlich Strom an seinen zweiten Anschluss. Empfänger -> Schlauch -> Verbraucher/Tank. Gleiche Ressource UND gleicher Kanal erforderlich. AssetBridge 0.4.0 registriert die zusätzlichen Items/Skills. Native Durchfluss-, Platzierungs- und Speichertests der neuen Geräte stehen noch aus.

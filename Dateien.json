@@ -15,9 +15,14 @@
     "sha256": "8b437ab516f80e7577d4737b8f314b449cb15f43b6cbf9ef079a425c01129236"
   },
   {
+    "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/devices.lua",
+    "bytes": 947,
+    "sha256": "4ef6a5f85cac74fb064d0ce4e0ee4006e655af93d6d2f80fc4f12c05139709c1"
+  },
+  {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/main.lua",
-    "bytes": 11217,
-    "sha256": "449ef46ae976ad8f786367e8e27a8d07ad76aac1596fc8449de65950f919f467"
+    "bytes": 11538,
+    "sha256": "76877adf6b1711201e69020ccd9648d135df06910bed1d76a86e333e37a396e8"
   },
   {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/physics.lua",
@@ -26,8 +31,8 @@
   },
   {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/saved_network.lua",
-    "bytes": 3341,
-    "sha256": "9e7af477442eb03a80c945fd02d405fd99f09167039cc9b4ff4d93859e9de302"
+    "bytes": 3374,
+    "sha256": "80e5815a12ac50fa0b744ac854673b44e4fe6446b90cb70f677cad541c819d4c"
   },
   {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/enabled.txt",
@@ -40,9 +45,14 @@
     "sha256": "8ad51e15e90167cf8e420a6e4d62c5e0b9eab76bb93a835140453711f2923b46"
   },
   {
+    "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/devices.lua",
+    "bytes": 947,
+    "sha256": "4ef6a5f85cac74fb064d0ce4e0ee4006e655af93d6d2f80fc4f12c05139709c1"
+  },
+  {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/main.lua",
-    "bytes": 2772,
-    "sha256": "30400ffef94be9e85933c9845a6489ed074766c5624c68853d5bbb0734bbbda8"
+    "bytes": 2716,
+    "sha256": "7c5d6a2164cbd841e93e563b8d4ffd57e0330369a17fe1d8cd4c43d315c61b97"
   },
   {
     "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.pak",
@@ -50,13 +60,18 @@
     "sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd"
   },
   {
+    "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.tlcaddon.json",
+    "bytes": 5379,
+    "sha256": "40da1af23e777ec5f8a86a3180341c3df56e13a6a1200e891c9d57acdccb8d54"
+  },
+  {
     "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.ucas",
-    "bytes": 625237,
-    "sha256": "c1e04856a7414211f6f3f8b549a53485d8be204d6813f4bd02eacd14497ec038"
+    "bytes": 1207487,
+    "sha256": "01676620e4bd6465300cff560f4db2ed4c5ae48cffe92a15c85e9ac30075fbad"
   },
   {
     "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.utoc",
-    "bytes": 2168,
-    "sha256": "4f67bfe534ce459c2773dae918f4fb4eff91232741d0a702fc98ef2dd14aca04"
+    "bytes": 7224,
+    "sha256": "092c6bf610b83dbed754544a55fd97e9252ffdf88e45d00cf8ccad24328d091b"
   }
 ]

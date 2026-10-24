@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "newResources": 9,
+  "newDevices": 18,
+  "newSkills": 9,
+  "newPrimaryRecords": 27,
+  "wirelessAssetPackages": 58,
+  "baseline13AssetsByteIdentical": true,
+  "newAssetExportPayloadRoundtrip": true,
+  "otherModContainerConflicts": 0,
+  "nativeGameTestPerformed": false,
+  "nativeFlowTest": "pending",
+  "checks": [
+    {
+      "resource": "Petrol",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 18
+    },
+    {
+      "resource": "Diesel",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 18
+    },
+    {
+      "resource": "Oil",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 20
+    },
+    {
+      "resource": "FreshWater",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 18
+    },
+    {
+      "resource": "SaltWater",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 18
+    },
+    {
+      "resource": "Oxygen",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 20
+    },
+    {
+      "resource": "CarbonDioxide",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 20
+    },
+    {
+      "resource": "Methane",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 21
+    },
+    {
+      "resource": "Steam",
+      "pairBindings": true,
+      "typedSockets": true,
+      "separateElectricalInput": true,
+      "savedChannel": true,
+      "level": 20
+    }
+  ],
+  "luaOfflineTests": {
+    "tests": 4,
+    "passed": true,
+    "deviceClasses": 20,
+    "backgroundScansPerRefresh": 1
+  }
+}

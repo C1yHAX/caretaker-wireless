@@ -3,6 +3,7 @@
 -- World Partition, terrain, scenery and unrelated cells still unload normally.
 local folder=debug.getinfo(1,'S').source:sub(2):match('^(.*[/\\])')
 local config=dofile(folder..'config.lua')
+local classes=dofile(folder..'devices.lua')
 local physics=dofile(folder..'physics.lua')
 local saved=dofile(folder..'saved_network.lua')
 local connections=dofile(folder..'connections.lua')
@@ -100,9 +101,14 @@ function M.refresh()
   if not valid(c)or mods[c:GetAddress()]then return end
   mods[c:GetAddress()]=c;addActor(c:GetOwner())
  end
- for _,class in ipairs({'BP_Module_WirelessResourceTransmitter_C','BP_WirelessResource_Socket_Base_C'})do
-  for _,a in ipairs(FindAllOf(class)or{})do
-   if valid(a)and same(a:GetWorld(),state.world)then
+ -- Discover all twenty supported device classes in one native component scan,
+ -- rather than repeating a global class search for every resource and role.
+ local discovered={}
+ for _,persistent in ipairs(FindAllOf('VoyagePersistentActorComponent')or{})do
+  if valid(persistent)then
+   local a=persistent:GetOwner()
+   if valid(a)and not discovered[a:GetAddress()]and same(a:GetWorld(),state.world)and classes[a:GetClass():GetFName():ToString()]then
+    discovered[a:GetAddress()]=true
     addActor(a)
     local c=a.ModuleComponent
     if valid(c)and c.bHasInitialized then
@@ -121,8 +127,8 @@ function M.refresh()
   end)
  end
  if state.bootstrapPins then for k in pairs(state.bootstrapPins)do wanted[k]=true end end
- -- The full placed-object lookup happens only on streaming transitions. Routine
- -- refreshes visit the connected modules and cached background actors alone.
+ -- Only the discovered devices and their connected networks are protected.
+ -- Full per-cell actor collection remains limited to streaming transitions.
  local n=0;local cells=0
  for _ in pairs(wanted)do cells=cells+1 end
  for _,list in pairs(actors)do for _ in pairs(list)do n=n+1 end end

@@ -6,3 +6,5 @@
 - **Eigener Beitrag:** Lua-Quellen der Ordner `CaretakerWirelessBackground` und `CaretakerWirelessControls`, Installer, Paketierung und Dokumentation sowie die beschriebenen Anpassungen an den vorhandenen Geräten. Die MIT-Lizenz erteilt keine zusätzlichen Rechte an fremden Spielinhalten.
 
 Dieses Release enthält weder das vollständige Modpack noch Caretaker Energy, fremde Lua-Mods, Spielstände, AssetBridge-Caches oder lokale Testprogramme.
+
+- **AssetBridge von NotLazy:** Version 0.4.0 für die 27 zusätzlichen Registrierungen erforderlich, separat vom Autor: https://www.nexusmods.com/thelastcaretaker/mods/225. Nicht mitgeliefert; die `.tlcaddon.json` beschreibt unsere zusätzlichen Geräte und Skills.

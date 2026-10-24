@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "addon": "CaretakerWirelessResources",
+  "container": "CaretakerWirelessFix_P",
+  "assets": [
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Petrol_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Petrol_Transmitter.DA_Wireless_Petrol_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Petrol_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Petrol_Receiver.DA_Wireless_Petrol_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_Petrol",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Petrol.DA_Skill_Wireless_Petrol"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Diesel_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Diesel_Transmitter.DA_Wireless_Diesel_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Diesel_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Diesel_Receiver.DA_Wireless_Diesel_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_Diesel",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Diesel.DA_Skill_Wireless_Diesel"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Oil_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Oil_Transmitter.DA_Wireless_Oil_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Oil_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Oil_Receiver.DA_Wireless_Oil_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_Oil",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Oil.DA_Skill_Wireless_Oil"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_FreshWater_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_FreshWater_Transmitter.DA_Wireless_FreshWater_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_FreshWater_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_FreshWater_Receiver.DA_Wireless_FreshWater_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_FreshWater",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_FreshWater.DA_Skill_Wireless_FreshWater"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_SaltWater_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_SaltWater_Transmitter.DA_Wireless_SaltWater_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_SaltWater_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_SaltWater_Receiver.DA_Wireless_SaltWater_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_SaltWater",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_SaltWater.DA_Skill_Wireless_SaltWater"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Oxygen_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Oxygen_Transmitter.DA_Wireless_Oxygen_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Oxygen_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Oxygen_Receiver.DA_Wireless_Oxygen_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_Oxygen",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Oxygen.DA_Skill_Wireless_Oxygen"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_CarbonDioxide_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_CarbonDioxide_Transmitter.DA_Wireless_CarbonDioxide_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_CarbonDioxide_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_CarbonDioxide_Receiver.DA_Wireless_CarbonDioxide_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_CarbonDioxide",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_CarbonDioxide.DA_Skill_Wireless_CarbonDioxide"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Methane_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Methane_Transmitter.DA_Wireless_Methane_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Methane_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Methane_Receiver.DA_Wireless_Methane_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_Methane",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Methane.DA_Skill_Wireless_Methane"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Steam_Transmitter",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Steam_Transmitter.DA_Wireless_Steam_Transmitter"
+    },
+    {
+      "type": "Item",
+      "id": "Item:DA_Wireless_Steam_Receiver",
+      "path": "/Game/CaretakerWireless/Items/DA_Wireless_Steam_Receiver.DA_Wireless_Steam_Receiver"
+    },
+    {
+      "type": "Skill",
+      "id": "Skill:DA_Skill_Wireless_Steam",
+      "path": "/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Steam.DA_Skill_Wireless_Steam"
+    }
+  ]
+}

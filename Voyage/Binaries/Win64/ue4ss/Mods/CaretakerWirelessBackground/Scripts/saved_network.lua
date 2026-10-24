@@ -1,6 +1,8 @@
 -- Read-only index of native saved cable endpoints. Never edits a save or creates
 -- sidecar state: each world/save builds its own graph from its own actor records.
 local M={}
+local folder=debug.getinfo(1,'S').source:sub(2):match('^(.*[/\\])')
+local classes=dofile(folder..'devices.lua')
 local function blob(array)
  local parts={};array:ForEach(function(_,b)parts[#parts+1]=string.char(b:get())end)
  return table.concat(parts)
@@ -51,7 +53,7 @@ function M.index(persistent,cellSize)
     -- Null-class records are removal markers, not actors that will be loaded.
     counts[zone]=(counts[zone]or 0)+1
     local name=c:GetFName():ToString()
-    if name=='BP_Module_WirelessResourceTransmitter_C' or name=='BP_WirelessResource_Socket_Base_C'then seeds[zone]=true end
+    if classes[name]then seeds[zone]=true end
     if name:find('ModuleCable',1,true)then
      cables=cables+1
      local props=M.properties(blob(d.ByteData))

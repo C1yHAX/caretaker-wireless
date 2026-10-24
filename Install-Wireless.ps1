@@ -6,6 +6,8 @@ $dll=Join-Path $game 'Voyage\Binaries\Win64\ue4ss\UE4SS.dll'
 if ((Get-FileHash -LiteralPath $exe -Algorithm SHA256).Hash -ne '08228B72D4590F9B00E2171F252D618464C2E04B785237FE728DDDBF27D3B734') {throw 'Spielbuild 25982825 / 0.10.0.653173 erforderlich.'}
 if (-not (Test-Path -LiteralPath $dll)) {throw 'Zuerst UE4SS v3.0.1-1125-g527a483b installieren. Download und Anleitung: README.md.'}
 if ((Get-FileHash -LiteralPath $dll -Algorithm SHA256).Hash -ne '91D5444F41D19D0BB502F0FBDC15D76421E20359E898CAA39E41E134C8F87958') {throw 'Andere UE4SS-Version: Geprueft ist UE4SS v3.0.1-1125-g527a483b. Download und DLL-Pruefsumme: README.md.'}
+$bridge=Join-Path $game 'Voyage\Content\Paks\~mods\AssetBridge'
+if (-not (Test-Path -LiteralPath $bridge -PathType Container) -or -not (Get-ChildItem -LiteralPath $bridge -Filter '*.utoc' -File)) {throw 'AssetBridge 0.4.0 ist fuer die neuen Ressourcen-Geraete erforderlich. Installation und Autorenlink: README.md.'}
 $files=Get-Content -LiteralPath (Join-Path $PSScriptRoot 'Dateien.json') -Raw | ConvertFrom-Json
 foreach($row in $files){
  $source=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot $row.path))
@@ -13,9 +15,9 @@ foreach($row in $files){
  if(-not $source.StartsWith($PSScriptRoot+'\',[StringComparison]::OrdinalIgnoreCase) -or -not $dest.StartsWith($game+'\Voyage\',[StringComparison]::OrdinalIgnoreCase)){throw 'Ungueltiger Paketpfad.'}
  if((Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash -ne $row.sha256){throw "Pruefsumme falsch: $($row.path)"}
 }
-if($CheckOnly){Write-Output "OK: $($files.Count) Dateien, Spielbuild und UE4SS geprueft. Keine Aenderung.";return}
+if($CheckOnly){Write-Output "OK: $($files.Count) Dateien, Spielbuild, UE4SS und vorhandenes AssetBridge-Paket geprueft. Keine Aenderung.";return}
 if(Get-Process Voyage*,Vortex -ErrorAction SilentlyContinue){throw 'Spiel und Vortex vorher schliessen.'}
-$backup=Join-Path $game ('CaretakerModBackups\WirelessHotkey-'+(Get-Date -Format 'yyyyMMdd-HHmmss-fff'))
+$backup=Join-Path $game ('CaretakerModBackups\WirelessResources-'+(Get-Date -Format 'yyyyMMdd-HHmmss-fff'))
 New-Item -ItemType Directory -Path $backup | Out-Null
 $written=@()
 try{

@@ -2,12 +2,11 @@
 
 ## 1.0.0 – Erstrelease, 24. Oktober 2026
 
-- 1.000 m Funkstrom zwischen Sender und Empfänger, Puffer und regulärer Energiefluss.
-- Gespeicherte Kanäle 1–9999 für getrennte Stromnetze; eigene Ö-Taste für den Dialog.
-- Normale E-/F-Kabelbedienung, reparierte Anschlüsse und zerlegbarer Empfänger.
-- Hintergrundbetrieb bei entladener Umgebung, native Wiederherstellung gespeicherter Geräte und Schutz entfernter Physikobjekte.
-- Stabile Senderzuordnung, Kanaltrennung, Versorgungsausfall und Wiederanlauf.
-- Zwei eigene transparente Icons: orange Senderwellen an der hohen Antenne und blaue Empfangswellen am flachen Anschluss.
-- 50-m-Wandbrücken, deutsche Namen und Beschreibungen, eigenständiger Download mit UE4SS-Anleitung.
+- Bestehende Funkstrom-Reparaturen, 1.000 m, Ö-Kanäle 1–9999, Hintergrundbetrieb, zwei unterschiedliche Icons und 50-m-Wandbrücken.
+- Neu: neun Ressourcenpaare für Benzin, Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf.
+- 18 Geräte und neun Freischaltungen auf Level 18–21; AssetBridge 0.4.0 jetzt zusätzlich erforderlich.
+- Sender mit getrennten Strom-/Ressourcen-Eingängen, 1.000-Einheiten-Puffer und nominal 72.000 Einheiten/h Schlauchrate.
+- Gemeinsame Hintergrund-Gerätesuche alle fünf Sekunden statt einer Suche pro Ressourcenklasse.
+- Offline-Asset-/Referenz-/Rückextraktionsprüfung und Lua-Tests bestanden. Nativer Spieltest der zusätzlichen Ressourcenpaare steht aus.
 
-Die zuvor vorläufig verwendeten Versionsnummern waren Entwicklungsstände. Die öffentliche Erstrelease-Version ist einheitlich **1.0.0**. Gegenüber dem zuletzt geprüften Entwicklungsstand ist das Spielverhalten unverändert; Versionsanzeigen und Veröffentlichungsunterlagen wurden vereinheitlicht. Die Icon-Ergänzung verändert ausschließlich die Darstellung der beiden Funkstrom-Items; die Versionsnummer bleibt 1.0.0.
+Version bleibt auf ausdrücklichen Wunsch **1.0.0**. Die Release-Dateien wurden um die Ressourcen erweitert; aktuelle Prüfsummen beachten. Frühere Fassungen enthielten die ursprünglichen Funkstrom-Geräte und Wandbrücken-/Datenkorrekturen.
