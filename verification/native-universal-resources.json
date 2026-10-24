@@ -1,0 +1,443 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-24",
+  "game": "0.10.0.653173 / Steam 25982825",
+  "status": "PASS: loaded, unloaded and return, including ordinary offline control network",
+  "unloadedAllTenPassed": true,
+  "fullCyclePassed": true,
+  "returnIssueResolved": true,
+  "nativeEngineTest": true,
+  "mockedResourceTransfer": false,
+  "isolatedFreshTestProfile": true,
+  "originalSaveFilesUnchanged": 6,
+  "otherInstalledModsUnchanged": true,
+  "testHelperRemoved": true,
+  "crashesDuringTest": 0,
+  "senderReceiverDistanceMeters": 997,
+  "playerDistanceMeters": {
+    "sender": 20001.5,
+    "receiver": 20998.5
+  },
+  "nativePhysicalCables": 20,
+  "portsPerUniversalDevice": 10,
+  "sourceAndDestinationDevices": 20,
+  "actualNativeWorldRegionsInactive": true,
+  "unconnectedControlCellUnloaded": true,
+  "protectedNativeMachinesStillActive": true,
+  "pairConsumptionWatts": 4000,
+  "steamFixture": "Two controlled native reservoirs using SetupNewResource(Steam); no scripted transfer or replenishment during measurement.",
+  "fixedSocketTemplates": 36,
+  "fixedBlueprints": 20,
+  "roundtripCustomPayloads": 72,
+  "unchangedOtherAssetPackages": 63,
+  "returnFix": "Native resource-grid catch-up guard omits redundant routing/balancing passes only when every initialized grid module is already current; normal ticks and grids with simulation debt use original functions.",
+  "nativeGuardActuallySkippedRedundantPasses": true,
+  "ordinaryOfflineCatchupPreserved": true,
+  "controlNetwork": {
+    "resource": "FreshWater",
+    "independentStockDevices": true,
+    "fullyUnloaded": true,
+    "deliveredAcrossAbsence": 1902.000004,
+    "elapsedSeconds": 95.1
+  },
+  "offlineLuaTestsPassed": 8,
+  "nativeGuardUnitTestsPassed": true,
+  "stages": [
+    {
+      "stage": "loaded",
+      "results": [
+        {
+          "resource": "Electricity",
+          "seconds": 20.0,
+          "delivered": 5533.3334159999995,
+          "sourceUsed": 5555.555638000005,
+          "totalChange": -22.222222000005786
+        },
+        {
+          "resource": "Petrol",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.00000600000203,
+          "totalChange": -2.0463630789890885e-12
+        },
+        {
+          "resource": "Diesel",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.00000600000203,
+          "totalChange": -2.0463630789890885e-12
+        },
+        {
+          "resource": "Oil",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.0000060000002,
+          "totalChange": -2.2737367544323206e-13
+        },
+        {
+          "resource": "FreshWater",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.0000060000002,
+          "totalChange": -2.2737367544323206e-13
+        },
+        {
+          "resource": "SaltWater",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.0000060000002,
+          "totalChange": -2.2737367544323206e-13
+        },
+        {
+          "resource": "Oxygen",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.00000599999476,
+          "totalChange": 5.229594535194337e-12
+        },
+        {
+          "resource": "CarbonDioxide",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.00000599999476,
+          "totalChange": 5.229594535194337e-12
+        },
+        {
+          "resource": "Methane",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.00000600000203,
+          "totalChange": -2.0463630789890885e-12
+        },
+        {
+          "resource": "Steam",
+          "seconds": 20.0,
+          "delivered": 400.000006,
+          "sourceUsed": 400.00000599999476,
+          "totalChange": 5.229594535194337e-12
+        }
+      ]
+    },
+    {
+      "stage": "unloaded-60s",
+      "results": [
+        {
+          "resource": "Electricity",
+          "seconds": 60.10000000000001,
+          "delivered": 16627.778025000003,
+          "sourceUsed": 16694.444693,
+          "totalChange": -66.77777899999802
+        },
+        {
+          "resource": "Petrol",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999988,
+          "totalChange": 1.1368683772161603e-12
+        },
+        {
+          "resource": "Diesel",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999988,
+          "totalChange": 1.1368683772161603e-12
+        },
+        {
+          "resource": "Oil",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999997,
+          "totalChange": 2.2737367544323206e-13
+        },
+        {
+          "resource": "FreshWater",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999997,
+          "totalChange": 2.2737367544323206e-13
+        },
+        {
+          "resource": "SaltWater",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999997,
+          "totalChange": 2.2737367544323206e-13
+        },
+        {
+          "resource": "Oxygen",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999988,
+          "totalChange": 1.1368683772161603e-12
+        },
+        {
+          "resource": "CarbonDioxide",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999988,
+          "totalChange": 1.1368683772161603e-12
+        },
+        {
+          "resource": "Methane",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999988,
+          "totalChange": 1.1368683772161603e-12
+        },
+        {
+          "resource": "Steam",
+          "seconds": 60.10000000000001,
+          "delivered": 1202.000018,
+          "sourceUsed": 1202.0000179999988,
+          "totalChange": 1.1368683772161603e-12
+        }
+      ]
+    },
+    {
+      "stage": "return-transition",
+      "results": [
+        {
+          "resource": "Electricity",
+          "seconds": 15.0,
+          "delivered": 4151.444507,
+          "sourceUsed": 4166.666728999997,
+          "totalChange": -16.666666999996693
+        },
+        {
+          "resource": "Petrol",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000050000017,
+          "totalChange": -1.0000017027778085e-06
+        },
+        {
+          "resource": "Diesel",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000050000017,
+          "totalChange": -1.0000017027778085e-06
+        },
+        {
+          "resource": "Oil",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000049999999,
+          "totalChange": -9.99999883788405e-07
+        },
+        {
+          "resource": "FreshWater",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000049999999,
+          "totalChange": -9.99999883788405e-07
+        },
+        {
+          "resource": "SaltWater",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000049999999,
+          "totalChange": -9.99999883788405e-07
+        },
+        {
+          "resource": "Oxygen",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000050000017,
+          "totalChange": -1.0000017027778085e-06
+        },
+        {
+          "resource": "CarbonDioxide",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000050000017,
+          "totalChange": -1.0000017027778085e-06
+        },
+        {
+          "resource": "Methane",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000050000017,
+          "totalChange": -1.0000017027778085e-06
+        },
+        {
+          "resource": "Steam",
+          "seconds": 15.0,
+          "delivered": 300.000004,
+          "sourceUsed": 300.0000050000017,
+          "totalChange": -1.0000017027778085e-06
+        }
+      ]
+    },
+    {
+      "stage": "returned",
+      "results": [
+        {
+          "resource": "Electricity",
+          "seconds": 15.0,
+          "delivered": 4148.8889500000005,
+          "sourceUsed": 4166.666728000002,
+          "totalChange": -16.66666700000149
+        },
+        {
+          "resource": "Petrol",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.0000039999977,
+          "totalChange": 1.0000026122725103e-06
+        },
+        {
+          "resource": "Diesel",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.0000039999977,
+          "totalChange": 1.0000026122725103e-06
+        },
+        {
+          "resource": "Oil",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.00000400000044,
+          "totalChange": 9.99999883788405e-07
+        },
+        {
+          "resource": "FreshWater",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.00000400000044,
+          "totalChange": 9.99999883788405e-07
+        },
+        {
+          "resource": "SaltWater",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.00000400000044,
+          "totalChange": 9.99999883788405e-07
+        },
+        {
+          "resource": "Oxygen",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.0000039999977,
+          "totalChange": 1.0000026122725103e-06
+        },
+        {
+          "resource": "CarbonDioxide",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.00000400000135,
+          "totalChange": 9.999989742937032e-07
+        },
+        {
+          "resource": "Methane",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.0000039999977,
+          "totalChange": 1.0000026122725103e-06
+        },
+        {
+          "resource": "Steam",
+          "seconds": 15.0,
+          "delivered": 300.00000500000033,
+          "sourceUsed": 300.00000400000135,
+          "totalChange": 9.999989742937032e-07
+        }
+      ]
+    }
+  ],
+  "background": {
+    "refreshes": 43,
+    "averageRefreshMilliseconds": 13.093023,
+    "maxRefreshMilliseconds": 38.0,
+    "protectedCells": 4,
+    "protectedActors": 42,
+    "unloadIntercepts": 4,
+    "returnRestores": 4
+  },
+  "runtimeFiles": [
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/enabled.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/config.lua",
+      "bytes": 110,
+      "sha256": "ae3a9413ac8798e1f1fa160647bd068f3f73359b344b17077ac243cd0b8d530f"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/connections.lua",
+      "bytes": 2541,
+      "sha256": "8b437ab516f80e7577d4737b8f314b449cb15f43b6cbf9ef079a425c01129236"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/devices.lua",
+      "bytes": 1006,
+      "sha256": "6bb633ca7ea623de0ac7f902acc0ce6a93e2d481c0e0bab53348dd121fd30bea"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/main.lua",
+      "bytes": 12237,
+      "sha256": "dce8eea96f745ffe15ab177829b5d7921691498ccc30bac3cbdff24d24e4ab42"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/native/caretaker_catchup.dll",
+      "bytes": 155648,
+      "sha256": "04f4f35c98f5cf815f6fa14e5ca29a2eaab18b925c28563613a003161f61c24e"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/physics.lua",
+      "bytes": 1263,
+      "sha256": "d94f6295570c754fbcc1d0640327f7dbf4189b917c4eeba933b3184abd84a5a4"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/saved_network.lua",
+      "bytes": 3374,
+      "sha256": "80e5815a12ac50fa0b744ac854673b44e4fe6446b90cb70f677cad541c819d4c"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/enabled.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/config.lua",
+      "bytes": 149,
+      "sha256": "8ad51e15e90167cf8e420a6e4d62c5e0b9eab76bb93a835140453711f2923b46"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/devices.lua",
+      "bytes": 1006,
+      "sha256": "6bb633ca7ea623de0ac7f902acc0ce6a93e2d481c0e0bab53348dd121fd30bea"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/main.lua",
+      "bytes": 2716,
+      "sha256": "7c5d6a2164cbd841e93e563b8d4ffd57e0330369a17fe1d8cd4c43d315c61b97"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.pak",
+      "bytes": 347,
+      "sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.tlcaddon.json",
+      "bytes": 5824,
+      "sha256": "22eba09f97b63902fbd685edd4c4199837445ddd2e76b2120e97a6ae967979b4"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.ucas",
+      "bytes": 6562243,
+      "sha256": "468bb693038e33dbf3d607975906b2951913559a4c1b2df9c80126f8550553f7"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.utoc",
+      "bytes": 11025,
+      "sha256": "cb4d126ebe6e866959b39b94db6c2ff2cd49fa9d62ffa818516e4c7e7810c84b"
+    }
+  ],
+  "remainingValidation": [
+    "Manual UI placement/dismantling of all new resource variants",
+    "Full universal-network save/reload cycle",
+    "Long-duration and large-factory profiling"
+  ]
+}

@@ -11,3 +11,4 @@ __pycache__/
 **/obj/
 /tools/lib/
 /build-icons/
+/build-native/

@@ -22,3 +22,13 @@ Ein zusätzlicher Sender überträgt Strom und alle neun Flüssigkeits-/Gasresso
 ### Universal-Empfänger innerhalb des Erstreleases 1.0.0
 
 Ein zusätzlicher Empfänger für alle zehn Ressourcen, mit getrennten Kabel-/Schlauchausgängen und eigenem mehrfarbigen Empfangs-Icon. Gemeinsame Freischaltung mit dem Universal-Sender auf Level 22 / vier Punkte. Ein gemeinsamer Ö-Kanal. Der Sender zählt Empfängergeräte statt ihrer Anschlüsse, sodass ein Universal-Empfänger 1 kW Verbindungsbedarf verursacht. Alle Ausgänge folgen Strom-, Kanal- und Reichweitenwechseln. Native Spieltests bleiben ausstehend.
+
+### Anschluss- und Rückkehrkorrektur innerhalb 1.0.0
+
+36 typisierte Anschlüsse behalten jetzt ihre richtige Ressource bei der nativen
+Initialisierung. Die native Rückkehrkorrektur verhindert erneute Netzverteilung
+für bereits aktuelle Anlagen. Der Spieltest mit dem Universal-Paar bestand für
+alle zehn Ressourcen bei entladener Umgebung und bei der Rückkehr. Ein getrenntes
+Stock-Wassernetz wurde weiterhin regulär nachberechnet. Acht Lua-Tests und die
+nativen Entscheidungstests bestehen. 16 reine Laufzeitdateien im Download-ZIP;
+Dokumentation, Quellen und Lizenztexte bleiben auf den Projektseiten.

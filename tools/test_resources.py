@@ -22,6 +22,11 @@ def setup():
  lua.globals().controls=(MODS/'CaretakerWirelessControls/Scripts').as_posix()+'/'
  lua.globals().names=lua.table_from(NAMES)
  lua.execute('''
+ package.loadlib=function(path,symbol)
+  assert(path:find('native/caretaker_catchup.dll',1,true))
+  assert(symbol=='caretaker_catchup_enable' or symbol=='caretaker_catchup_disable')
+  return function(value)assert(value==true);return true end
+ end
  function validObject(t) t=t or {}; function t:IsValid() return true end;return t end
  function fname(s) return {ToString=function() return s end} end
  function wrap(v) return {get=function() return v end} end
@@ -32,6 +37,17 @@ def setup():
  return lua
 
 class Resources(unittest.TestCase):
+ def test_unsupported_native_guard_keeps_normal_streaming(self):
+  lua=setup();lua.execute('''
+  package.loadlib=function()return function()return nil end end
+  function RegisterHook()end
+  function ExecuteInGameThreadWithDelay()end
+  function FindFirstOf()error('Disabled background must not scan the world')end
+  local M=dofile(background..'main.lua')
+  assert(M.catchupReady==false)
+  M.refresh();M.setEnabled(true);M.refresh()
+  assert(next(M.snapshot().pins)==nil and M.stats.refreshes==0)
+  ''')
  def test_exact_registry_shared_by_both_mods(self):
   lua=setup();lua.execute('''
   a=dofile(background..'devices.lua');b=dofile(controls..'devices.lua')

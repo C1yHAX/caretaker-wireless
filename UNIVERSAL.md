@@ -39,7 +39,13 @@ Daten-/Steuersignale und Inventargegenstände gehören nicht zur Ressourcenüber
 
 ## Alle Ressourcen im Hintergrund
 
-Alle zehn Ressourcen verwenden denselben Hintergrundschutz für Quellen, Verbraucher, Kabel und die beiden Funkgeräte. Die Weltgeometrie kann entladen werden, während die benötigten nativen Geräte aktiv bleiben. Der Schutz gilt während des laufenden Spiels, mit 1.000 m Funkreichweite zwischen den Geräten und den Grenzen von 256 Gerätebereichen / 2.048 Objekten. Die Spielerentfernung ist davon unabhängig. Die tatsächlichen Lua-Module sind dafür mit Netzen aller zehn Ressourcen offline getestet; nativer Durchfluss aller Ressourcen bei entladener Umgebung bleibt ein ausstehender Spieltest. Details und Nachweise: [README](README.md#hintergrundbetrieb-und-performance).
+Alle zehn Ressourcen verwenden denselben Hintergrundschutz für Quellen, Verbraucher, Kabel und die beiden Funkgeräte. Die Weltgeometrie kann entladen werden, während benötigte Geräte aktiv bleiben. Schutzgrenzen: 256 Gerätebereiche / 2.048 Objekte; nur bei laufendem Spiel.
+
+**Nativer Spieltest vom 24.10.2026:** Alle zehn Ressourcen liefen gleichzeitig über ein Universal-Paar mit 997 m Abstand weiter, während der Spieler 20–21 km entfernt war und die native Bereichsabfrage beide Umgebungen als entladen meldete. In rund 60 Sekunden kamen bei jeder Flüssigkeit/jedem Gas etwa weitere 1.200 Einheiten und beim Strom etwa 16,6 kWh an. Quell-/Zielmengen blieben bilanziert; Eigenbedarf des Paars 4 kW. Dampf wurde mit zwei nativen Testreservoirs geprüft. [Messbericht](verification/native-universal-resources.json)
+
+**Rückkehrfehler behoben:** Die native Nachberechnung konnte bereits weitergelaufene Netze zusätzlich verteilen lassen. Ein kleiner nativer Schutz überspringt diese überflüssigen Netz-Durchläufe, wenn alle zugehörigen Geräte bereits aktuell sind. Die Wiederholungsprüfung mit den installierbaren Dateien bestand: auch beim Wiederladen der Umgebung unverändert 20 Einheiten/s pro Flüssigkeit/Gas und regulärer Stromverbrauch. Ein getrenntes Wasser-Kontrollnetz wurde vollständig entladen und anschließend weiterhin regulär nachberechnet. [Technik und Build](BUILDING-CATCHUP.md)
+
+Die DLL prüft die exakte Spiel-EXE und beide Funktionssignaturen. Bei einer nicht unterstützten Version bleibt die normale Entladung aktiv; der Grund erscheint im UE4SS-Protokoll. Die Korrektur kopiert keine Ressourcen, verändert keine Modulzeitstempel und schaltet die Nachberechnung anderer Netze nicht global ab.
 
 ## Installation und Prüfstatus
 
@@ -47,4 +53,6 @@ Im vollständigen Modpack und in der separaten Wireless-Mod enthalten, weiterhin
 
 Offline geprüft: zehn Ausgänge, Verweise und gemeinsame Freischaltung, eindeutige Anschluss-IDs, Paket-Rückextraktion, Blueprint-Sprungadressen sowie Ö- und Hintergrund-Erkennung für 22 Gerätetypen. Tests des serialisierten Kontrollflusses prüfen Anschließen, Wiederholungen, Stromausfall und Wiederanlauf, Kanalwechsel an beiden Geräten, Reichweitenwechsel und die Zählung gemischter Empfänger. Native Engine-Aufrufe sind dabei simuliert. 78 der vorherigen 80 Pakete bleiben bytegleich; Universal-Sender und gemeinsamer Skill sind gezielt angepasst, drei Pakete kommen hinzu.
 
-**Der Spieltest des gleichzeitigen nativen Ressourcenflusses, der Platzierung/Erreichbarkeit aller Anschlüsse, des Verwertens und des Speicherns/Ladens steht aus.** Für diese Arbeiten wurde das Spiel nicht gestartet. Offline-Prüfungen ersetzen keinen Test der echten Unreal-Simulation. Bericht: [verification/universal-receiver-tests.json](verification/universal-receiver-tests.json).
+Außerdem korrigiert das Paket 36 typisierte Flüssigkeits-/Gasanschlüsse in 20 Blueprints: `bAutoInitialize=false` verhindert, dass die Initialisierung deren Ressourcenart mit Strom überschreibt. Alle Kismet-Instruktionen bleiben unverändert; 63 der 83 Assetpakete sind von dieser Anschlusskorrektur unberührt. [Asset-Werkzeug](BUILDING-SOCKETS.md)
+
+Ausstehend bleiben manuelle Anschlussbedienung/Platzierung und Verwertung aller neuen Varianten, Speichern/Laden des vollständigen Universal-Netzes und ein Langzeittest großer Fabriken.

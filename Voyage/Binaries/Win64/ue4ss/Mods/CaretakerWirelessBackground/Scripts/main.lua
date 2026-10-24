@@ -19,7 +19,14 @@ local bypass=false
 local lastRefresh=0
 local lastActorScan=0
 local lastActorCount=0
-local enabled=true
+-- Verify the exact executable and both native entry points before retention.
+-- Missing/unsupported native support keeps ordinary streaming active.
+local nativeEnable=package.loadlib(folder..'native/caretaker_catchup.dll','caretaker_catchup_enable')
+local nativeDisable=package.loadlib(folder..'native/caretaker_catchup.dll','caretaker_catchup_disable')
+local nativeReady=nativeEnable and nativeDisable and nativeEnable(true)==true
+local enabled=nativeReady==true
+M.catchupReady=enabled
+if not enabled then log('Background retention disabled: native catch-up guard unavailable for this executable')end
 local function scanActors()
  local found={};local n=0
  for _,c in ipairs(FindAllOf('VoyagePersistentActorComponent')or{})do
@@ -241,7 +248,8 @@ function M.bootstrap()
  return true
 end
 function M.setEnabled(value)
- enabled=value
+ enabled=value and nativeReady==true
+ if enabled then nativeEnable(true)elseif nativeDisable then nativeDisable(true)end
  if not enabled then
   local keys={};for k in pairs(state.background)do keys[#keys+1]=k end
   state.pins={};state.bootstrapPins=nil
@@ -257,5 +265,5 @@ local function tick()
  ExecuteInGameThreadWithDelay(config.RefreshMilliseconds,tick)
 end
 ExecuteInGameThreadWithDelay(config.RefreshMilliseconds,tick)
-log('1.0.0 loaded; native wireless simulation, 5-second network refresh')
+log('1.0.0 loaded; catch-up guard '..tostring(nativeReady)..'; 5-second network refresh')
 return M

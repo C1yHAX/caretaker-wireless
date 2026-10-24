@@ -51,3 +51,19 @@ Drei additive Pakete: `Blueprints/BP_Wireless_Universal_Receiver`, `Items/DA_Wir
 Zwei vorhandene Pakete geändert: der Universal-Sender akzeptiert zusätzlich die neue Empfängerklasse und berechnet Verbindungsstrom anhand unterschiedlicher Besitzer seiner externen Anschlüsse; der vorhandene Skill schaltet beide Universal-Geräte frei. 78 der vorherigen 80 Pakete bleiben bytegleich. Ein neuer AssetBridge-Item-Eintrag, insgesamt 30. Gemeinsame Gerätefilter erweitert auf 22 Klassen. 83 Pakete und 22 Icons mit 32 Bindungen. Keine zusätzlichen Timer oder Skripte zum Kopieren von Ressourcen; die vorhandene Stromberechnung zählt die Anschlussbesitzer.
 
 Prüfnachweis: verification/universal-receiver-tests.json. Kontrollflussprüfung führt die serialisierten Blueprint-Ausdrücke mit simulierten nativen Aufrufen aus; sie prüft keine echte Unreal-Ressourcen-Simulation. Die früheren Abschnitte beschreiben die jeweiligen vorherigen Erweiterungsschritte.
+
+## Lokal geprüfte Anschlusskorrektur (1.0.0)
+
+Außerdem korrigiert das Paket 36 typisierte Flüssigkeits-/Gasanschlüsse in 20 Blueprints: `bAutoInitialize=false` verhindert, dass die Initialisierung deren Ressourcenart mit Strom überschreibt. Alle Kismet-Instruktionen bleiben unverändert; 63 der 83 Assetpakete sind von dieser Anschlusskorrektur unberührt. [Asset-Werkzeug](BUILDING-SOCKETS.md)
+
+20 von 83 Paketen geändert; die übrigen 63 bleiben bytegleich. Die 72 Pakete im eigenen Namensraum wurden rückextrahiert und ihre Exportdaten bytegleich geprüft. Fernbetrieb und Rückkehr mit allen zehn Ressourcen sind im nativen Spieltest bestätigt; die Rückkehrkorrektur ist unten beschrieben.
+
+## Rückkehrkorrektur 1.0.0
+
+`CaretakerWirelessBackground/Scripts/native/caretaker_catchup.dll` verhindert
+redundante native Netzverteilung bei der Rückkehr in eine bereits im Hintergrund
+simulierte Anlage. `main.lua` lädt den geprüften Schutz und aktiviert Retention
+nur bei erfolgreicher EXE-/Signaturprüfung. Die Korrektur verändert keine weiteren
+Assets. Quellen, Prüfbedingungen und Build: [BUILDING-CATCHUP.md](BUILDING-CATCHUP.md).
+Der native Zehn-Ressourcen-Test einschließlich Rückkehr und unabhängiger
+Offline-Kontrollanlage bestand; [Messbericht](verification/native-universal-resources.json).
