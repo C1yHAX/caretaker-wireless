@@ -1,54 +1,67 @@
-"""Verify the checked-in payload and create a deterministic installable release."""
-from pathlib import Path
-import hashlib
-import json
-import zipfile
+"""Build a deterministic runtime-only ZIP; documentation stays in the repository."""
+from pathlib import Path, PurePosixPath
+import argparse, hashlib, json, zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = '1.0.0'
+ARCHIVE = 'Caretaker-Wireless-Fix-1.0.0.zip'
+KIND = 'wireless'
 
-def sha(data):
-    return hashlib.sha256(data).hexdigest()
+def runtime_path(name):
+    p = PurePosixPath(name)
+    return (name.startswith('Voyage/') and '..' not in p.parts and '\\' not in name
+            and (p.suffix in {'.pak', '.ucas', '.utoc', '.lua', '.dll', '.ini'}
+                 or p.name.endswith('.tlcaddon.json')
+                 or p.name in {'enabled.txt', 'mods.txt', 'load_order.txt'}))
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--package', type=Path, default=ROOT/'build-runtime-only/package',
+                        help='Energy only: directory containing the four verified built files')
+    args = parser.parse_args()
     rows = json.loads((ROOT/'Dateien.json').read_text(encoding='utf-8'))
     expected = {row['path'] for row in rows}
-    actual = {p.relative_to(ROOT).as_posix() for p in (ROOT/'Voyage').rglob('*') if p.is_file()}
-    assert len(rows) == len(expected) == 15 and actual == expected, 'Unexpected install payload'
+    assert len(rows) == len(expected) == 15, 'Unexpected runtime manifest'
+    files = {}
     for row in rows:
-        p = ROOT/row['path']
-        assert p.resolve().is_relative_to((ROOT/'Voyage').resolve()), row['path']
-        data = p.read_bytes()
-        assert len(data) == row['bytes'] and sha(data) == row['sha256'], row['path']
-    metadata = ['README.md', 'CHANGELOG.md', 'THIRD-PARTY-NOTICES.md', 'LICENSE',
-                'ASSET-CHANGES.md', 'Install-Wireless.ps1', 'Dateien.json', 'Funkstrom-Kanaele.txt', 'icons.json', 'resources.json', 'BUILDING-ICONS.md', 'UNIVERSAL.md']
-    files = [ROOT/name for name in metadata] + [ROOT/name for name in expected]
-    files += list((ROOT/'verification').glob('*.json'))
-    files += [p for p in (ROOT/'assets/icons').iterdir() if p.is_file()]
-    for p in files:
-        assert p.suffix not in ('.sav', '.log', '.dmp') and 'CaretakerAudit' not in str(p)
-        if p.suffix not in ('.pak', '.ucas', '.utoc', '.png'):
-            text = p.read_text(encoding='utf-8')
+        name = row['path']
+        assert runtime_path(name), 'Non-runtime or unsafe path: '+name
+        assert PurePosixPath(name).name not in {'settings.ini', 'destinations.tsv', 'hotspots.tsv'}
+        if KIND == 'energy':
+            source = args.package/PurePosixPath(name).name
+        elif KIND == 'warden':
+            prefix = 'Voyage/Binaries/Win64/ue4ss/Mods/'
+            assert name.startswith(prefix)
+            source = ROOT/name.removeprefix(prefix)
+        else:
+            source = ROOT/name
+        data = source.read_bytes()
+        assert len(data) == row['bytes'] and hashlib.sha256(data).hexdigest() == row['sha256'], name
+        if source.suffix not in {'.pak', '.ucas', '.utoc', '.dll'}:
+            text = data.decode('utf-8')
             for private in ['C:\\Users\\', 'C:/Users/', 'E:\\Program Files\\GitHub',
                             'E:/Program Files/GitHub', 'ghp_', 'glpat-', 'gho_']:
-                assert private not in text, f'Private data marker in {p.name}'
+                assert private not in text, 'Private marker in '+name
+        files[name] = data
+    if KIND in {'wireless', 'refinery-intake'}:
+        actual = {p.relative_to(ROOT).as_posix() for p in (ROOT/'Voyage').rglob('*')
+                  if p.is_file() and runtime_path(p.relative_to(ROOT).as_posix())}
+        assert actual == expected, 'Unlisted runtime files'
     out = ROOT/'dist'; out.mkdir(exist_ok=True)
-    archive = out/f'Caretaker-Wireless-Fix-{VERSION}.zip'
-    with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-        for p in sorted(files):
-            info = zipfile.ZipInfo(p.relative_to(ROOT).as_posix(), (2026, 10, 24, 0, 0, 0))
+    target = out/ARCHIVE
+    with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+        for name, data in sorted(files.items()):
+            info = zipfile.ZipInfo(name, (2026, 10, 24, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
-            info.external_attr = 0o644 << 16
-            # Preserve install payload bytes; canonicalize documentation newlines.
-            data = p.read_bytes() if p.relative_to(ROOT).as_posix() in expected or p.suffix=='.png' else p.read_text(encoding='utf-8').encode('utf-8')
+            info.external_attr = 0o100644 << 16
             z.writestr(info, data, compresslevel=9)
-    with zipfile.ZipFile(archive) as z:
-        assert z.testzip() is None
-        for row in rows: assert sha(z.read(row['path'])) == row['sha256']
-    digest = sha(archive.read_bytes())
-    (out/'SHA256SUMS.txt').write_text(f'{digest}  {archive.name}\n', encoding='ascii')
-    print(json.dumps(dict(file=archive.name, bytes=archive.stat().st_size, sha256=digest,
-                          checkedPayloadFiles=len(rows)), indent=2))
+    with zipfile.ZipFile(target) as z:
+        assert z.testzip() is None and set(z.namelist()) == expected
+        for row in rows: assert hashlib.sha256(z.read(row['path'])).hexdigest() == row['sha256']
+    digest = hashlib.sha256(target.read_bytes()).hexdigest()
+    checksum = 'Energy-SHA256SUMS.txt' if KIND == 'energy' else 'SHA256SUMS.txt'
+    (out/checksum).write_text(digest+'  '+target.name+'\n', encoding='ascii')
+    print(json.dumps(dict(file=target.name, bytes=target.stat().st_size, sha256=digest,
+                          runtimeFiles=len(files), runtimeOnly=True), indent=2))
 
 if __name__ == '__main__':
     main()

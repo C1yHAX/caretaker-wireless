@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "nativeGameStarted": false,
+  "runtimeChanged": false,
+  "tests": 3,
+  "passed": true,
+  "resources": [
+    "Electricity",
+    "Petrol",
+    "Diesel",
+    "Oil",
+    "FreshWater",
+    "SaltWater",
+    "Oxygen",
+    "CarbonDioxide",
+    "Methane",
+    "Steam"
+  ],
+  "coverage": [
+    "43 runtime cells: sources, consumers, cables, physical receiver and mount; suppress/restore streaming parameters",
+    "Saved graph: 20 electric/fuel/liquid/gas cables, disconnected cable excluded",
+    "Ten exact saved endpoint pairs, physical receiver and assigned transmitter identities; repeated restoration is a no-op"
+  ],
+  "nativeSignature": "GetConnectedModules(InModule, OutModules, Recursive=true, IncludeGroups=true, IncludeCableConnections=true, OnlyEnabledGroups=false)",
+  "limitation": "Engine APIs are mocked. Native resource flow and full game save/reload remain unverified for universal devices."
+}

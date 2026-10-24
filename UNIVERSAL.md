@@ -37,6 +37,10 @@ Ein Universal-Empfänger ist ein Actor mit zehn nativen Anschlüssen und wiederv
 
 Daten-/Steuersignale und Inventargegenstände gehören nicht zur Ressourcenübertragung. Die mehrfarbigen Icons unterscheiden Sender und Empfänger; sie sind keine technische Zeichnung der Anschlussanordnung.
 
+## Alle Ressourcen im Hintergrund
+
+Alle zehn Ressourcen verwenden denselben Hintergrundschutz für Quellen, Verbraucher, Kabel und die beiden Funkgeräte. Die Weltgeometrie kann entladen werden, während die benötigten nativen Geräte aktiv bleiben. Der Schutz gilt während des laufenden Spiels, mit 1.000 m Funkreichweite zwischen den Geräten und den Grenzen von 256 Gerätebereichen / 2.048 Objekten. Die Spielerentfernung ist davon unabhängig. Die tatsächlichen Lua-Module sind dafür mit Netzen aller zehn Ressourcen offline getestet; nativer Durchfluss aller Ressourcen bei entladener Umgebung bleibt ein ausstehender Spieltest. Details und Nachweise: [README](README.md#hintergrundbetrieb-und-performance).
+
 ## Installation und Prüfstatus
 
 Im vollständigen Modpack und in der separaten Wireless-Mod enthalten, weiterhin **Version 1.0.0**. Voraussetzungen und Installation: [README.md](README.md). Bei geschlossenem Spiel das komplette Wireless-Paket ersetzen und danach das Spiel vollständig neu starten. Nur eine Paketkopie installieren. AssetBridge 0.4.0 registriert jetzt **30 zusätzliche Item-/Skill-Einträge** der Wireless-Mod. Bestehende Geräte werden nicht automatisch in Universal-Geräte umgewandelt. Spielstände werden vom Installer nicht bearbeitet.

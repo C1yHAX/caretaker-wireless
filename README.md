@@ -102,18 +102,12 @@ Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten
 
 1. Spiel und Modmanager schließen. Vor einem Modwechsel eine Sicherung des Spielstands anlegen.
 2. Falls noch nicht vorhanden: das oben verlinkte UE4SS-ZIP entpacken und dessen Inhalt in `<Spielordner>/Voyage/Binaries/Win64/` kopieren. Die DLL liegt anschließend unter `ue4ss/UE4SS.dll`; der Loader liegt neben der Spiel-EXE. Bei vorhandener UE4SS-Installation keine eigenen Einstellungen oder anderen Mods unbesehen überschreiben.
-3. AssetBridge 0.4.0 nach der verlinkten Autorenanleitung installieren. Anschließend **`Caretaker-Wireless-Fix-1.0.0.zip`** vollständig entpacken. Im entpackten Verzeichnis ausführen und den Spielpfad anpassen:
+3. AssetBridge 0.4.0 nach der verlinkten Autorenanleitung installieren. Anschließend **`Caretaker-Wireless-Fix-1.0.0.zip`** vollständig entpacken und den enthaltenen **`Voyage`**-Ordner in den Spielinstallationsordner kopieren, der bereits einen Unterordner `Voyage` enthält. Alle 15 Moddateien gehören zusammen; bei einem Update die Dateien am selben Ziel ersetzen.
+4. Ältere **zusätzliche** Kopien von `CaretakerWirelessFix` oder `zLong_Wireless_Cables_P` außerhalb des gesamten `Paks`-Verzeichnisses aufbewahren. Nur eine Version laden. Der optionale PowerShell-Installer bleibt im Repository und wird nicht ins Mod-ZIP gepackt.
 
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\Install-Wireless.ps1 -GamePath 'E:\Games\steamapps\common\Voyage'
-   ```
-
-   Nur prüfen: denselben Aufruf um `-CheckOnly` ergänzen. Der Installer prüft Spielbuild, UE4SS-DLL und alle 15 Moddateien und das Vorhandensein des AssetBridge-Pakets, sichert bereits vorhandene Zieldateien und kopiert die Mod. Er installiert UE4SS nicht automatisch und bearbeitet keine Spielstände.
-
-4. Ältere **zusätzliche** Kopien von `CaretakerWirelessFix` oder `zLong_Wireless_Cables_P` außerhalb des gesamten `Paks`-Verzeichnisses aufbewahren. Nur eine Version laden. Der Installer tauscht die Dateien am vorgesehenen Ziel aus, sucht aber keine beliebig benannten fremden Modordner.
 5. Spiel vollständig neu starten. Bereits platzierte Sender und Empfänger behalten ihre Identität; ein Neubau ist für dieses Update nicht nötig.
 
-Manuell ist auch das Kopieren des enthaltenen `Voyage`-Ordners in den Spielordner möglich. Alle drei Bereiche gehören zusammen:
+Im kopierten `Voyage`-Ordner gehören alle drei Bereiche zusammen:
 
 ```text
 Voyage/Content/Paks/~mods/CaretakerWirelessFix/        3 Containerdateien + .tlcaddon.json
@@ -138,6 +132,10 @@ Auf einer deutschen Windows-Tastatur entspricht Ö `KeyName = 'OEM_THREE'`. Bei 
 **Wandbrücken und Funk-Datenrelais sind andere Systeme.** Wandbrücken bilden passende Paare derselben Kategorie bis 50 m unter den Montagebedingungen des Spiels. Datenrelais übertragen Steuersignale und verwenden ihre eigene Kanalbedienung; sie versorgen keine Stromverbraucher.
 
 ## Hintergrundbetrieb und Performance
+
+**Auch das Universal-Paar ist für alle zehn Ressourcen erfasst:** Strom, Benzin, Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf. Die native Netzabfrage verfolgt Gruppen und Kabel rekursiv ohne Ressourcenfilter. Der Schutz umfasst die angeschlossenen Quellen und Verbraucher sowie die Kabel und physischen Anschlussbesitzer. Die Wiederherstellung gespeicherter Kabel verwendet die exakten Modul-/Anschluss-IDs, auch wenn ein Empfängerausgang inzwischen dem Sendermodul zugeordnet ist.
+
+Drei zusätzliche Offline-Tests führen die tatsächlichen Lua-Module aus: Schutz und Rückkehr von 43 Gerätebereichen eines Netzes mit allen zehn Ressourcen, Wiederherstellung des gespeicherten Kabelgraphen einschließlich Gas/Flüssigkeiten und exakte Wiederverbindung aller zehn Anschlussarten ohne doppelte Kabel. Die native Engine ist dabei durch API-Attrappen ersetzt. Das bestätigt die Ressourcenunabhängigkeit unserer Hintergrundlogik, **nicht den echten nativen Durchfluss aller Ressourcen in einer entladenen Spielwelt**. Dieser Spieltest steht weiterhin aus. [Prüfbericht](verification/background-resources-tests.json)
 
 Die Erweiterung hält die benötigten nativen Laufzeitgeräte einschließlich verbundener Kabel, Quellen, Verbraucher und Befestigungen aktiv. Landschaft und Weltgeometrie dürfen entladen werden. Das gilt während des laufenden Spiels; es gibt keine Berechnung bei beendetem Spiel.
 
@@ -178,3 +176,7 @@ Requires the game build and separately linked, hash-verified **UE4SS v3.0.1-1125
 The extension adds nine resource sender/receiver pairs: petrol, diesel, crude oil, fresh water, salt water, oxygen, carbon dioxide, methane and steam. Each transmitter needs electrical supply plus its matching hose input. 1,000 m range, channels 1–9999, same resource/channel only, nominal 72,000 units/hour, 1,000-unit resource buffer. Unlock levels 18–21, two points per pair. **Native flow, placement and save/reload tests of these additional resource pairs remain pending; offline checks passed.** Version remains 1.0.0.
 
 The universal transmitter and receiver share ten typed electrical/fluid/gas ports, one saved channel and a joint level-22/four-point unlock. The universal receiver pairs with the universal transmitter; the transmitter also supports existing resource-specific receivers. A universal receiver counts as one device for power costs. Native gameplay validation remains pending; serialized control-flow tests with mocked native calls passed. See UNIVERSAL.md.
+
+## Inhalt des Mod-Downloads
+
+Das Release-ZIP enthält ausschließlich die zum Betrieb benötigten Moddateien in der `Voyage`-Ordnerstruktur. Anleitung, Änderungslisten, Lizenztexte, Drittanbieterhinweise, Entwicklungswerkzeuge und Prüfberichte bleiben im Repository bzw. auf der Release-Seite. Sie werden nicht mit ins Mod-ZIP gepackt. Die Prüfsumme ist ein separater Download. Version bleibt **1.0.0**.

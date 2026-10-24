@@ -10,12 +10,18 @@ Einzelpaare werden für zwei Punkte freigeschaltet: Level 18 Benzin/Diesel/Frisc
 
 ## Installation
 
-Für den geprüften Spielbuild **0.10.0.653173 / Steam 25982825**. **UE4SS v3.0.1-1125-g527a483b** und **AssetBridge 0.4.0** werden separat benötigt; Links und Prüfsummen stehen in README.md. Das Spiel schließen, ZIP entpacken und Install-Wireless.ps1 mit dem Spielordner ausführen. Alternativ den enthaltenen Voyage-Ordner nach Anleitung übernehmen. Alte Wireless-Paketdateien ersetzen und nur eine Kopie laden. Anschließend vollständig neu starten.
+Für den geprüften Spielbuild **0.10.0.653173 / Steam 25982825**. **UE4SS v3.0.1-1125-g527a483b** und **AssetBridge 0.4.0** werden separat benötigt; Links und Prüfsummen stehen in README.md. Das Spiel schließen, ZIP entpacken und den enthaltenen Voyage-Ordner in den Spielinstallationsordner kopieren. Die Anleitung und der optionale Installer stehen im Repository. Alte Wireless-Paketdateien ersetzen und nur eine Kopie laden. Anschließend vollständig neu starten.
 
-Alle 15 Installationsdateien sind in Dateien.json aufgeführt. 83 Assetpakete, 30 zusätzliche Item-/Skill-Registrierungen, 22 Icons. Vollständige Anschlussanleitung: **UNIVERSAL.md**. Die vorhandene gemeinsame Freischaltung enthält beide Universal-Geräte; den neuen Empfänger separat herstellen.
+Alle 15 Installationsdateien sind im Dateikatalog des Repositorys aufgeführt. 83 Assetpakete, 30 zusätzliche Item-/Skill-Registrierungen, 22 Icons. Vollständige Anschlussanleitung: **UNIVERSAL.md**. Die vorhandene gemeinsame Freischaltung enthält beide Universal-Geräte; den neuen Empfänger separat herstellen.
 
 ## Prüfstatus
 
-78 bisherige Pakete bytegleich; nur Universal-Sender und gemeinsamer Skill angepasst, drei neue Pakete. Anschlusszuordnung, Abmeldung aller Ausgänge bei Kanal-/Reichweitenwechsel, Stromsperre und Wiederanlauf, gemeinsame Freischaltung, eindeutige Anschluss-IDs, Blueprint-Sprünge, Rückextraktion und Konfliktprüfung bestanden. Vier Lua-Tests prüfen Kanalbedienung, gespeicherte Netze und Hintergrund-Erkennung. Tests des serialisierten Blueprint-Kontrollflusses verwenden simulierte native Aufrufe.
+78 bisherige Pakete bytegleich; nur Universal-Sender und gemeinsamer Skill angepasst, drei neue Pakete. Anschlusszuordnung, Abmeldung aller Ausgänge bei Kanal-/Reichweitenwechsel, Stromsperre und Wiederanlauf, gemeinsame Freischaltung, eindeutige Anschluss-IDs, Blueprint-Sprünge, Rückextraktion und Konfliktprüfung bestanden. Sieben Lua-Tests prüfen Kanalbedienung, gespeicherte Netze und Hintergrund-Erkennung, darunter drei neue Tests für das Universal-Paar mit allen zehn Ressourcen und der Kabelwiederherstellung. Tests des serialisierten Blueprint-Kontrollflusses verwenden simulierte native Aufrufe.
 
 **Der Spieltest des gleichzeitigen nativen Durchflusses, der Anschlussbedienung/Platzierung, des Verwertens und des Speicherns/Ladens steht aus.** Das Spiel wurde für diese Änderung nicht gestartet. Die Offline-Tests ersetzen keine Prüfung der echten Engine-Simulation. Version bleibt **1.0.0**.
+
+Der Hintergrundschutz gilt für alle zehn Ressourcen einschließlich Quellen, Verbraucher und Kabel. Die Umgebung darf entladen werden; die benötigten Geräte bleiben aktiv. Er läuft nur während des Spiels und bis zu den Schutzgrenzen von 256 Gerätebereichen / 2.048 Objekten. Ein nativer Spieltest des Universal-Paars mit allen Ressourcen steht weiterhin aus.
+
+## Inhalt des Mod-Downloads
+
+Das Release-ZIP enthält ausschließlich die zum Betrieb benötigten Moddateien in der `Voyage`-Ordnerstruktur. Anleitung, Änderungslisten, Lizenztexte, Drittanbieterhinweise, Entwicklungswerkzeuge und Prüfberichte bleiben im Repository bzw. auf der Release-Seite. Sie werden nicht mit ins Mod-ZIP gepackt. Die Prüfsumme ist ein separater Download. Version bleibt **1.0.0**.
