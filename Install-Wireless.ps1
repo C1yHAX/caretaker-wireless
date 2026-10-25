@@ -7,7 +7,7 @@ if ((Get-FileHash -LiteralPath $exe -Algorithm SHA256).Hash -ne '08228B72D4590F9
 if (-not (Test-Path -LiteralPath $dll)) {throw 'Zuerst UE4SS v3.0.1-1125-g527a483b installieren. Download und Anleitung: README.md.'}
 if ((Get-FileHash -LiteralPath $dll -Algorithm SHA256).Hash -ne '91D5444F41D19D0BB502F0FBDC15D76421E20359E898CAA39E41E134C8F87958') {throw 'Andere UE4SS-Version: Geprueft ist UE4SS v3.0.1-1125-g527a483b. Download und DLL-Pruefsumme: README.md.'}
 $bridge=Join-Path $game 'Voyage\Content\Paks\~mods\AssetBridge'
-if (-not (Test-Path -LiteralPath $bridge -PathType Container) -or -not (Get-ChildItem -LiteralPath $bridge -Filter '*.utoc' -File)) {throw 'AssetBridge 0.4.0 ist fuer die neuen Ressourcen-Geraete erforderlich. Installation und Autorenlink: README.md.'}
+if (-not (Test-Path -LiteralPath $bridge -PathType Container) -or -not (Get-ChildItem -LiteralPath $bridge -Filter '*.utoc' -File)) {throw 'AssetBridge 0.4.1 ist fuer die neuen Ressourcen-Geraete erforderlich. Installation und Autorenlink: README.md.'}
 $files=Get-Content -LiteralPath (Join-Path $PSScriptRoot 'Dateien.json') -Raw | ConvertFrom-Json
 foreach($row in $files){
  $source=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot $row.path))

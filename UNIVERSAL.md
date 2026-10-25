@@ -49,10 +49,12 @@ Die DLL prüft die exakte Spiel-EXE und beide Funktionssignaturen. Bei einer nic
 
 ## Installation und Prüfstatus
 
-Im vollständigen Modpack und in der separaten Wireless-Mod enthalten, weiterhin **Version 1.0.0**. Voraussetzungen und Installation: [README.md](README.md). Bei geschlossenem Spiel das komplette Wireless-Paket ersetzen und danach das Spiel vollständig neu starten. Nur eine Paketkopie installieren. AssetBridge 0.4.0 registriert jetzt **30 zusätzliche Item-/Skill-Einträge** der Wireless-Mod. Bestehende Geräte werden nicht automatisch in Universal-Geräte umgewandelt. Spielstände werden vom Installer nicht bearbeitet.
+Im vollständigen Modpack und in der separaten Wireless-Mod enthalten, weiterhin **Version 1.0.0**. Voraussetzungen und Installation: [README.md](README.md). Bei geschlossenem Spiel das komplette Wireless-Paket ersetzen und danach das Spiel vollständig neu starten. Nur eine Paketkopie installieren. AssetBridge 0.4.1 registriert jetzt **30 zusätzliche Item-/Skill-Einträge** der Wireless-Mod. Bestehende Geräte werden nicht automatisch in Universal-Geräte umgewandelt. Spielstände werden vom Installer nicht bearbeitet.
 
 Offline geprüft: zehn Ausgänge, Verweise und gemeinsame Freischaltung, eindeutige Anschluss-IDs, Paket-Rückextraktion, Blueprint-Sprungadressen sowie Ö- und Hintergrund-Erkennung für 22 Gerätetypen. Tests des serialisierten Kontrollflusses prüfen Anschließen, Wiederholungen, Stromausfall und Wiederanlauf, Kanalwechsel an beiden Geräten, Reichweitenwechsel und die Zählung gemischter Empfänger. Native Engine-Aufrufe sind dabei simuliert. 78 der vorherigen 80 Pakete bleiben bytegleich; Universal-Sender und gemeinsamer Skill sind gezielt angepasst, drei Pakete kommen hinzu.
 
 Außerdem korrigiert das Paket 36 typisierte Flüssigkeits-/Gasanschlüsse in 20 Blueprints: `bAutoInitialize=false` verhindert, dass die Initialisierung deren Ressourcenart mit Strom überschreibt. Alle Kismet-Instruktionen bleiben unverändert; 63 der 83 Assetpakete sind von dieser Anschlusskorrektur unberührt. [Asset-Werkzeug](BUILDING-SOCKETS.md)
 
 Ausstehend bleiben manuelle Anschlussbedienung/Platzierung und Verwertung aller neuen Varianten, Speichern/Laden des vollständigen Universal-Netzes und ein Langzeittest großer Fabriken.
+
+Aktualisierung 25.10.2026: Fehlende, bereits verdiente Wireless-Baupläne werden nach dem Laden automatisch wiederhergestellt. Spiel vollständig neu starten, zehn Sekunden warten und das Baumenü neu öffnen. Der Fähigkeiten-Eintrag schaltet jeweils Sender und Empfänger gemeinsam frei. Aktueller vollständiger Prüfstatus: README.md und verification/wireless-audit-20261025.json. Version bleibt 1.0.0.

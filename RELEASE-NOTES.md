@@ -1,5 +1,51 @@
 # Caretaker Wireless Fix 1.0.0
 
+## Reparaturen und vollständige Geräteprüfung vom 25.10.2026
+
+**Freigeschaltet, aber im Baumenü fehlend:** Der native Bauplanspeicher war auf
+1.024 Einträge begrenzt. Eine Fähigkeit konnte erfolgreich freigeschaltet werden,
+obwohl für ihre beiden Geräte kein Platz mehr vorhanden war. Die Mod bereitet
+den Bauplanspeicher vor dem Laden mit mindestens 4.096 Plätzen vor und stellt
+fehlende, bereits durch Fähigkeiten oder Scans verdiente Wireless-Baupläne wieder
+her. Sie vergibt keine neuen Fähigkeiten und löscht keine vorhandenen Einträge.
+Normale Inventare und Materialanforderungen bleiben unverändert.
+
+Nach der Installation vollständig neu starten, den Spielstand laden und etwa
+zehn Sekunden warten. Das Baumenü danach neu öffnen. Bereits freigeschaltete
+Fähigkeiten müssen nicht erneut gekauft werden. Jede Ressourcen-Fähigkeit
+schaltet **Sender und Empfänger gemeinsam** frei; im Fähigkeitenbaum steht dafür
+ein gemeinsamer Eintrag. Auch das Universalpaar teilt eine Freischaltung.
+
+**Gerätezuordnung:** Der orange Funkstrom-Sender hat einen Stromanschluss. Der
+gelbe Diesel-Funksender hat einen Strom- und einen Treibstoffanschluss. Die vier
+Wandanschlussarten sind Strom, Treibstoff, Gas und Wasser; sie sind zusätzlich zu
+den einzelnen Funkempfängern vorhanden. Ein Treibstoff-Wandanschluss deckt die
+Treibstoffressourcen ab, ein Gas-Wandanschluss die Gasressourcen.
+
+**Neustart und Fernbetrieb:** Gespeicherte entfernte Netze werden zunächst über
+reguläre Streamingquellen des Spiels initialisiert. Höchstens vier temporäre
+Quellen bestehen gleichzeitig; danach werden sie entfernt und die Umgebung
+darf wieder entladen. Physiksperren betreffen ausschließlich tatsächlich
+simulierende Körper. Bereits zerlegte, vom Spiel gepoolte Funkgeräte werden bei
+der Gerätesuche ignoriert. Dadurch bleibt kein solcher Geräteeintrag als
+zusätzlicher Hintergrund-Anker bestehen.
+
+Mit dem vollständigen Modpack, unverändertem **Dynamic Grinder 1.0.1** und
+**AssetBridge 0.4.1** wurden in einem separaten Testprofil geprüft: zehn
+Fähigkeiten und ihre 20 neuen Baupläne; native Herstellung und Platzierung;
+49 Ressourcenanschlüsse der 22 Funkgeräte; alle zehn Ressourcen über Einzel-
+und Universalgeräte; Kanaltrennung; Entladung, Rückkehr und Kaltstart;
+vier Wandbrückenarten sowie Signalrelais. Die Tests verwenden die tatsächlichen
+Spielfunktionen. Sie sind keine manuelle Prüfung jedes Mausklicks.
+
+Dampf wird mit eigens konfigurierten nativen Testreservoirs eingespeist. Deren
+vorübergehende Ressourcenkonfiguration und Schlauchverbindung werden nach einem
+Neustart erneut eingerichtet; die gespeicherten Funkgeräte bleiben dabei
+unverändert. Ein Langzeittest beliebig großer Fabriken ist damit nicht ersetzt.
+Der anonymisierte [Prüfbericht](verification/wireless-audit-20261025.json)
+beschreibt den Umfang. Private Spielstände und Rohprotokolle werden nicht
+veröffentlicht.
+
 **Universal-Funksender und Universal-Funkempfänger:** ein Gerätepaar für Strom, Benzin, Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf. Je zehn getrennte Kabel-/Schlauchanschlüsse, ein gemeinsamer Ö-Kanal und 1.000 m Reichweite. Beide Geräte über **Universelle Funkversorgung ab Level 22 für vier Skillpunkte**. Nicht benötigte Ressourcenanschlüsse dürfen frei bleiben.
 
 Der Universal-Empfänger benötigt einen Universal-Sender. Der Universal-Sender unterstützt außerdem die bisherigen einzelnen Empfänger. Die bisherigen Geräte bleiben erhalten. **3 kW Grundlast + 1 kW je Empfängergerät** am Sender: ein Universal-Paar benötigt 4 kW Eigenbedarf, zusätzlich zum weitergeleiteten Strom. Zehn Ausgänge eines Empfängers zählen nur einmal.
@@ -10,13 +56,13 @@ Einzelpaare werden für zwei Punkte freigeschaltet: Level 18 Benzin/Diesel/Frisc
 
 ## Installation
 
-Für den geprüften Spielbuild **0.10.0.653173 / Steam 25982825**. **UE4SS v3.0.1-1125-g527a483b** und **AssetBridge 0.4.0** werden separat benötigt; Links und Prüfsummen stehen in der [Installationsanleitung](https://github.com/C1yHAX/caretaker-wireless#installation). Das Spiel schließen, ZIP entpacken und den enthaltenen Voyage-Ordner in den Spielinstallationsordner kopieren. Die Anleitung und der optionale Installer stehen im Repository. Alte Wireless-Paketdateien ersetzen und nur eine Kopie laden. Anschließend vollständig neu starten.
+Für den geprüften Spielbuild **0.10.0.653173 / Steam 25982825**. **UE4SS v3.0.1-1125-g527a483b** und **AssetBridge 0.4.1** werden separat benötigt; Links und Prüfsummen stehen in der [Installationsanleitung](https://github.com/C1yHAX/caretaker-wireless#installation). Das Spiel schließen, ZIP entpacken und den enthaltenen Voyage-Ordner in den Spielinstallationsordner kopieren. Die Anleitung und der optionale Installer stehen im Repository. Alte Wireless-Paketdateien ersetzen und nur eine Kopie laden. Anschließend vollständig neu starten.
 
-Alle 16 Installationsdateien sind im Dateikatalog des Repositorys aufgeführt. 83 Assetpakete, 30 zusätzliche Item-/Skill-Registrierungen, 22 Icons. Vollständige Anschlussanleitung: **UNIVERSAL.md**. Die vorhandene gemeinsame Freischaltung enthält beide Universal-Geräte; den neuen Empfänger separat herstellen.
+Alle 17 Installationsdateien sind im Dateikatalog des Repositorys aufgeführt. 83 Assetpakete, 30 zusätzliche Item-/Skill-Registrierungen, 22 Icons. Vollständige Anschlussanleitung: **UNIVERSAL.md**. Die vorhandene gemeinsame Freischaltung enthält beide Universal-Geräte; den neuen Empfänger separat herstellen.
 
 ## Prüfstatus
 
-83 Assetpakete insgesamt. Die Anschlusskorrektur betrifft 36 Komponenten in 20 Blueprints; die übrigen 63 Pakete bleiben dabei bytegleich. Anschlusszuordnung, Abmeldung aller Ausgänge bei Kanal-/Reichweitenwechsel, Stromsperre und Wiederanlauf, gemeinsame Freischaltung, eindeutige Anschluss-IDs, Blueprint-Sprünge, Rückextraktion und Konfliktprüfung bestanden. Acht Lua-Tests prüfen Kanalbedienung, gespeicherte Netze und Hintergrund-Erkennung, darunter drei neue Tests für das Universal-Paar mit allen zehn Ressourcen und der Kabelwiederherstellung. Tests des serialisierten Blueprint-Kontrollflusses verwenden simulierte native Aufrufe.
+83 Assetpakete insgesamt. Die Anschlusskorrektur betrifft 36 Komponenten in 20 Blueprints; die übrigen 63 Pakete bleiben dabei bytegleich. Anschlusszuordnung, Abmeldung aller Ausgänge bei Kanal-/Reichweitenwechsel, Stromsperre und Wiederanlauf, gemeinsame Freischaltung, eindeutige Anschluss-IDs, Blueprint-Sprünge, Rückextraktion und Konfliktprüfung bestanden. Zwölf Lua-Tests prüfen Kanalbedienung, gespeicherte Netze und Hintergrund-Erkennung, darunter drei neue Tests für das Universal-Paar mit allen zehn Ressourcen und der Kabelwiederherstellung. Tests des serialisierten Blueprint-Kontrollflusses verwenden simulierte native Aufrufe.
 
 **Nativer Spieltest vom 24.10.2026:** Alle zehn Ressourcen liefen gleichzeitig über ein Universal-Paar mit 997 m Abstand weiter, während der Spieler 20–21 km entfernt war und die native Bereichsabfrage beide Umgebungen als entladen meldete. In rund 60 Sekunden kamen bei jeder Flüssigkeit/jedem Gas etwa weitere 1.200 Einheiten und beim Strom etwa 16,6 kWh an. Quell-/Zielmengen blieben bilanziert; Eigenbedarf des Paars 4 kW. Dampf wurde mit zwei nativen Testreservoirs geprüft. [Messbericht](verification/native-universal-resources.json)
 

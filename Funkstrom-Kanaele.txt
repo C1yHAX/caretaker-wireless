@@ -17,8 +17,11 @@ Reichweite: 1.000 Meter zwischen Sender und Empfänger. Hintergrundbetrieb ist w
 Das vollständige Modpack enthält diese Wireless-Erweiterung bereits. Nicht zusätzlich eine zweite Kopie der Einzelmod installieren.
 
 RESSOURCEN
-Die neun neuen Ressourcenpaare werden genauso mit Ö konfiguriert. Quelle -> passender Schlauch -> Ressourcen-Sender; zusätzlich Strom an seinen zweiten Anschluss. Empfänger -> Schlauch -> Verbraucher/Tank. Gleiche Ressource UND gleicher Kanal erforderlich. AssetBridge 0.4.0 registriert die zusätzlichen Items/Skills. Native Durchfluss-, Platzierungs- und Speichertests der neuen Geräte stehen noch aus.
+Die neun neuen Ressourcenpaare werden genauso mit Ö konfiguriert. Quelle -> passender Schlauch -> Ressourcen-Sender; zusätzlich Strom an seinen zweiten Anschluss. Empfänger -> Schlauch -> Verbraucher/Tank. Gleiche Ressource UND gleicher Kanal erforderlich. AssetBridge 0.4.1 registriert die zusätzlichen Items/Skills. Native Durchfluss-, Platzierungs- und Speichertests der neuen Geräte stehen noch aus.
 
 UNIVERSALSENDER: Ein gemeinsamer Kanal für Strom und alle neun Flüssigkeits-/Gasressourcen. Normale passende Empfänger auf dieselbe Nummer stellen. Separate Anlagen benötigen unterschiedliche Kanäle. Anleitung: UNIVERSAL.md.
 
 UNIVERSAL-EMPFÄNGER: Universal-Sender und Universal-Empfänger mit Ö auf denselben Kanal stellen. Je ein Ausgang für alle zehn Ressourcen, unbenutzte Ausgänge dürfen frei bleiben. Ein Universal-Empfänger wird vom Universal-Sender versorgt und ersetzt am Ziel bis zu zehn einzelne Empfänger. Beide Geräte über Universelle Funkversorgung (Level 22, vier Punkte). Ein Paar: 4 kW Eigenbedarf, weitergeleiteter Strom zusätzlich. Anleitung: UNIVERSAL.md.
+
+
+Aktualisierung 25.10.2026: Fehlende, bereits verdiente Wireless-Baupläne werden nach dem Laden automatisch wiederhergestellt. Spiel vollständig neu starten, zehn Sekunden warten und das Baumenü neu öffnen. Der Fähigkeiten-Eintrag schaltet jeweils Sender und Empfänger gemeinsam frei. Aktueller vollständiger Prüfstatus: README.md und verification/wireless-audit-20261025.json. Version bleibt 1.0.0.

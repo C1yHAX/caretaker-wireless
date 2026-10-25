@@ -33,6 +33,7 @@ def setup():
  function list(t) return {ForEach=function(self,f)for k,v in pairs(t)do f(wrap(k),wrap(v))end end}end
  function klass(name) return validObject({GetFName=function()return fname(name)end})end
  function print()end
+ function RegisterInitGameStatePreHook(fn) end
  ''')
  return lua
 

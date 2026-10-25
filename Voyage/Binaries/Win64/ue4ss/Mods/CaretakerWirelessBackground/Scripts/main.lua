@@ -114,7 +114,7 @@ function M.refresh()
  for _,persistent in ipairs(FindAllOf('VoyagePersistentActorComponent')or{})do
   if valid(persistent)then
    local a=persistent:GetOwner()
-   if valid(a)and not discovered[a:GetAddress()]and same(a:GetWorld(),state.world)and classes[a:GetClass():GetFName():ToString()]then
+   if valid(a)and not a.bHidden and not discovered[a:GetAddress()]and same(a:GetWorld(),state.world)and classes[a:GetClass():GetFName():ToString()]then
     discovered[a:GetAddress()]=true
     addActor(a)
     local c=a.ModuleComponent
@@ -228,21 +228,45 @@ function M.bootstrap()
    end)
    return
   end
-  local k=queue[i];local x,y=coords(k)
+  -- A persistent-cell callback alone skips normal world/physics initialization
+  -- and can crash when native deferred collision restoration runs. Warm cells
+  -- through the engine's own streaming sources, then retain runtime actors via
+  -- the ordinary deactivation hook. At most four temporary sources coexist.
   local grid=state.locator:GetMainStreamingGridName()
-  local location=state.locator:GetStreamingCellLocation(grid,x,y)
-  if not state.locator:IsLocationActivated(location)then
-   state.pins[k]=true;state.background[k]={}
-   bypass=true
-   local ok,e=pcall(function()state.persistent:OnStreamCellActivate(grid,x,y)end)
-   bypass=false
-   if not ok then error(e)end
-   -- Suspension is repeated after native deferred initialization finishes.
-   lastActorScan=0
+  local sources,locations={},{}
+  local function cleanup()
+   for _,loader in ipairs(sources)do
+    if valid(loader)then loader.StreamingSource:DisableStreamingSource();loader:K2_DestroyActor()end
+   end
   end
-  -- All connected cells must exist before native deferred cable restoration.
-  -- Splitting them over frames can leave an endpoint absent during PostLoad.
-  nextCell(i+1)
+  while i<=#queue and #sources<4 do
+   local k=queue[i];i=i+1
+   local x,y=coords(k)
+   local p=state.locator:GetStreamingCellLocation(grid,x,y)
+   local location={X=p.X,Y=p.Y,Z=p.Z}
+   if not state.locator:IsLocationActivated(location)then
+    local loader=state.world:SpawnActor(StaticFindObject('/Script/Voyage.VoyageWorldStreamingLoader'),location,{Pitch=0,Yaw=0,Roll=0})
+    if not valid(loader)then cleanup();log('Saved network warm-up could not start');return end
+    loader.bDestroyActorAfterTrigger=false;loader.DelayedTriggerTime=10000
+    loader:SetLifeSpan(90);loader.StreamingSource:EnableStreamingSource()
+    sources[#sources+1]=loader;locations[#locations+1]=location
+   end
+  end
+  if #sources==0 then nextCell(i);return end
+  local startedAt=os.time();local activeAt
+  local function awaitCells()
+   if not enabled or state~=original then cleanup();return end
+   local ready=true
+   for _,location in ipairs(locations)do if not state.locator:IsLocationActivated(location)then ready=false;break end end
+   if ready then activeAt=activeAt or os.time()else activeAt=nil end
+   if activeAt and os.time()-activeAt>=3 then
+    M.refresh();scanActors();cleanup()
+    ExecuteInGameThreadWithDelay(2000,function()nextCell(i)end)
+   elseif os.time()-startedAt>=60 then
+    cleanup();log('Saved network warm-up timed out; normal streaming retained')
+   else ExecuteInGameThreadWithDelay(1000,awaitCells)end
+  end
+  ExecuteInGameThreadWithDelay(1000,awaitCells)
  end
  nextCell(1)
  return true

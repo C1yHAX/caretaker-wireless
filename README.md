@@ -6,6 +6,52 @@
 
 [Download auf GitHub](https://github.com/C1yHAX/caretaker-wireless/releases/tag/v1.0.0) · [Download auf GitLab](https://gitlab.com/c0d1ngf1eber/caretaker-wireless/-/releases/v1.0.0) · [Änderungsverlauf](CHANGELOG.md)
 
+## Reparaturen und vollständige Geräteprüfung vom 25.10.2026
+
+**Freigeschaltet, aber im Baumenü fehlend:** Der native Bauplanspeicher war auf
+1.024 Einträge begrenzt. Eine Fähigkeit konnte erfolgreich freigeschaltet werden,
+obwohl für ihre beiden Geräte kein Platz mehr vorhanden war. Die Mod bereitet
+den Bauplanspeicher vor dem Laden mit mindestens 4.096 Plätzen vor und stellt
+fehlende, bereits durch Fähigkeiten oder Scans verdiente Wireless-Baupläne wieder
+her. Sie vergibt keine neuen Fähigkeiten und löscht keine vorhandenen Einträge.
+Normale Inventare und Materialanforderungen bleiben unverändert.
+
+Nach der Installation vollständig neu starten, den Spielstand laden und etwa
+zehn Sekunden warten. Das Baumenü danach neu öffnen. Bereits freigeschaltete
+Fähigkeiten müssen nicht erneut gekauft werden. Jede Ressourcen-Fähigkeit
+schaltet **Sender und Empfänger gemeinsam** frei; im Fähigkeitenbaum steht dafür
+ein gemeinsamer Eintrag. Auch das Universalpaar teilt eine Freischaltung.
+
+**Gerätezuordnung:** Der orange Funkstrom-Sender hat einen Stromanschluss. Der
+gelbe Diesel-Funksender hat einen Strom- und einen Treibstoffanschluss. Die vier
+Wandanschlussarten sind Strom, Treibstoff, Gas und Wasser; sie sind zusätzlich zu
+den einzelnen Funkempfängern vorhanden. Ein Treibstoff-Wandanschluss deckt die
+Treibstoffressourcen ab, ein Gas-Wandanschluss die Gasressourcen.
+
+**Neustart und Fernbetrieb:** Gespeicherte entfernte Netze werden zunächst über
+reguläre Streamingquellen des Spiels initialisiert. Höchstens vier temporäre
+Quellen bestehen gleichzeitig; danach werden sie entfernt und die Umgebung
+darf wieder entladen. Physiksperren betreffen ausschließlich tatsächlich
+simulierende Körper. Bereits zerlegte, vom Spiel gepoolte Funkgeräte werden bei
+der Gerätesuche ignoriert. Dadurch bleibt kein solcher Geräteeintrag als
+zusätzlicher Hintergrund-Anker bestehen.
+
+Mit dem vollständigen Modpack, unverändertem **Dynamic Grinder 1.0.1** und
+**AssetBridge 0.4.1** wurden in einem separaten Testprofil geprüft: zehn
+Fähigkeiten und ihre 20 neuen Baupläne; native Herstellung und Platzierung;
+49 Ressourcenanschlüsse der 22 Funkgeräte; alle zehn Ressourcen über Einzel-
+und Universalgeräte; Kanaltrennung; Entladung, Rückkehr und Kaltstart;
+vier Wandbrückenarten sowie Signalrelais. Die Tests verwenden die tatsächlichen
+Spielfunktionen. Sie sind keine manuelle Prüfung jedes Mausklicks.
+
+Dampf wird mit eigens konfigurierten nativen Testreservoirs eingespeist. Deren
+vorübergehende Ressourcenkonfiguration und Schlauchverbindung werden nach einem
+Neustart erneut eingerichtet; die gespeicherten Funkgeräte bleiben dabei
+unverändert. Ein Langzeittest beliebig großer Fabriken ist damit nicht ersetzt.
+Der anonymisierte [Prüfbericht](verification/wireless-audit-20261025.json)
+beschreibt den Umfang. Private Spielstände und Rohprotokolle werden nicht
+veröffentlicht.
+
 ## Ein Universal-Gerätepaar für alle Ressourcen
 
 **Universal-Funksender (1.000 m)** und **Universal-Funkempfänger** besitzen jeweils zehn getrennte Anschlüsse für Strom, Benzin, Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf. Ein gemeinsamer Ö-Kanal verbindet das Paar. Am Ziel reicht ein Universal-Empfänger; die bisherigen einzelnen Ressourcen-Empfänger bleiben ebenfalls mit dem Universalsender kompatibel.
@@ -26,7 +72,7 @@ Zusätzlich zum vorhandenen Funkstrom enthält dieses Paket je einen eigenen Sen
 | Frischwasser | Wasser | 18 |
 | Salzwasser | Wasser | 18 |
 | Sauerstoff | Gas | 20 |
-| COâ‚‚ | Gas | 20 |
+| CO₂ | Gas | 20 |
 | Methan | Gas | 21 |
 | Dampf | Gas | 20 |
 
@@ -41,7 +87,7 @@ Die Stufen folgen den vorhandenen Wandbrücken (16–18), der Destillation (20) 
 - Senderrezept: **4 Kunststoff + 4 Eisen**, 8 s, 20 Wh. Empfänger: **2 Kunststoff + 2 Eisen**, 4 s, 10 Wh. Gewicht 0 und Stapelgröße 99.999 entsprechen den übrigen Modpack-Wireless-Items.
 - Hintergrund-Erkennung für alle **22 Gerätetypen** über einen gemeinsamen Scan nativer Persistenzkomponenten alle fünf Sekunden. Grenzen weiterhin 256 Gerätebereiche / 2.048 Objekte.
 
-**Prüfstatus:** Alle Ressourcenpaare sind offline geprüft und gepackt/rückextrahiert. Das Universal-Paar bestand zusätzlich den nativen Spieltest mit zehn gleichzeitigen Ressourcen, entladener Umgebung und Rückkehr. Die einzelnen spezialisierten Paare wurden nicht jeweils als eigener vollständiger Spieltest wiederholt. Manuelle Platzierung und ein vollständiger Speichern-/Neuladen-Zyklus des Universal-Netzes bleiben ausstehend.
+**Prüfstatus:** Alle spezialisierten Paare und das Universalpaar wurden zusätzlich zu den Offline-Prüfungen in der laufenden Spielengine geprüft. Aktueller Umfang und Grenzen stehen im Abschnitt vom 25.10.2026 oben.
 
 ## Was gegenüber den Original-Spielassets verbessert wurde
 
@@ -80,7 +126,7 @@ Alle 18 Ressourcen-Geräte besitzen ein eigenes transparentes Icon. Sender zeige
 | Frischwasser | Blau |
 | Salzwasser | Türkis |
 | Sauerstoff | Eisblau |
-| COâ‚‚ | Violett |
+| CO₂ | Violett |
 | Dampf | Silbergrau |
 
 ![Ressourcen-Icons mit 64-Pixel-Kontrolle; offline erstellt, kein Spiel-Screenshot](assets/icons/resource-preview.png)
@@ -91,7 +137,7 @@ Die 18 zusätzlichen Texturen haben jeweils 256 × 256 Pixel und benötigen zusa
 
 - *The Last Caretaker*, Windows, Build **25982825 / 0.10.0.653173**. Andere Builds sind nicht bestätigt.
 - **UE4SS v3.0.1-1125-g527a483b**, separat vom Originalprojekt: [geprüftes UE4SS-ZIP herunterladen](https://github.com/UE4SS-RE/RE-UE4SS/releases/download/experimental/UE4SS_v3.0.1-1125-g527a483b.zip). [Quellstand](https://github.com/UE4SS-RE/RE-UE4SS/commit/527a483b).
-- **[AssetBridge von NotLazy](https://www.nexusmods.com/thelastcaretaker/mods/225), Version 0.4.0**, separat installieren. Es registriert die 20 neuen Items und zehn Skills.
+- **[AssetBridge von NotLazy](https://www.nexusmods.com/thelastcaretaker/mods/225), Version 0.4.1**, separat installieren. Es registriert die 20 neuen Items und zehn Skills.
 - Unser Release-Download **`Caretaker-Wireless-Fix-1.0.0.zip`**. Die automatisch erzeugten GitHub/GitLab-Quellcodearchive sind nicht der empfohlene Installationsdownload.
 
 Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten Installation verglichen. SHA-256 des UE4SS-ZIP: `4f9762f812329a640c8cfa14444c2bb97ecc213b8320bd4c5433383c3eef48f7`. SHA-256 der `UE4SS.dll`: `91d5444f41d19d0bb502f0fbdc15d76421e20359e898caa39e41e134c8f87958`.
@@ -102,7 +148,7 @@ Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten
 
 1. Spiel und Modmanager schließen. Vor einem Modwechsel eine Sicherung des Spielstands anlegen.
 2. Falls noch nicht vorhanden: das oben verlinkte UE4SS-ZIP entpacken und dessen Inhalt in `<Spielordner>/Voyage/Binaries/Win64/` kopieren. Die DLL liegt anschließend unter `ue4ss/UE4SS.dll`; der Loader liegt neben der Spiel-EXE. Bei vorhandener UE4SS-Installation keine eigenen Einstellungen oder anderen Mods unbesehen überschreiben.
-3. AssetBridge 0.4.0 nach der verlinkten Autorenanleitung installieren. Anschließend **`Caretaker-Wireless-Fix-1.0.0.zip`** vollständig entpacken und den enthaltenen **`Voyage`**-Ordner in den Spielinstallationsordner kopieren, der bereits einen Unterordner `Voyage` enthält. Alle 16 Moddateien gehören zusammen; bei einem Update die Dateien am selben Ziel ersetzen.
+3. AssetBridge 0.4.1 nach der verlinkten Autorenanleitung installieren. Anschließend **`Caretaker-Wireless-Fix-1.0.0.zip`** vollständig entpacken und den enthaltenen **`Voyage`**-Ordner in den Spielinstallationsordner kopieren, der bereits einen Unterordner `Voyage` enthält. Alle 17 Moddateien gehören zusammen; bei einem Update die Dateien am selben Ziel ersetzen.
 4. Ältere **zusätzliche** Kopien von `CaretakerWirelessFix` oder `zLong_Wireless_Cables_P` außerhalb des gesamten `Paks`-Verzeichnisses aufbewahren. Nur eine Version laden. Der optionale PowerShell-Installer bleibt im Repository und wird nicht ins Mod-ZIP gepackt.
 
 5. Spiel vollständig neu starten. Bereits platzierte Sender und Empfänger behalten ihre Identität; ein Neubau ist für dieses Update nicht nötig.
@@ -143,11 +189,11 @@ Die DLL prüft die exakte Spiel-EXE und beide Funktionssignaturen. Bei einer nic
 
 Außerdem korrigiert das Paket 36 typisierte Flüssigkeits-/Gasanschlüsse in 20 Blueprints: `bAutoInitialize=false` verhindert, dass die Initialisierung deren Ressourcenart mit Strom überschreibt. Alle Kismet-Instruktionen bleiben unverändert; 63 der 83 Assetpakete sind von dieser Anschlusskorrektur unberührt. [Asset-Werkzeug](BUILDING-SOCKETS.md)
 
-Die acht ergänzenden Offline-Lua-Tests bestehen; sie prüfen Kanalbedienung, Hintergrundschutz und Kabelwiederherstellung mit simulierten Engine-Aufrufen.
+Die zwölf ergänzenden Offline-Lua-Tests bestehen; sie prüfen Kanalbedienung, Hintergrundschutz und Kabelwiederherstellung mit simulierten Engine-Aufrufen.
 
 Die Erweiterung hält die benötigten nativen Laufzeitgeräte einschließlich verbundener Kabel, Quellen, Verbraucher und Befestigungen aktiv. Landschaft und Weltgeometrie dürfen entladen werden. Das gilt während des laufenden Spiels; es gibt keine Berechnung bei beendetem Spiel.
 
-- Netzprüfung alle **fünf Sekunden**, keine globale Suche pro Bild. Die anfängliche Wiederherstellung beginnt ungefähr **25–30 Sekunden nach dem Weltwechsel**.
+- Netzprüfung alle **fünf Sekunden**, keine globale Suche pro Bild. Die anfängliche Wiederherstellung beginnt ungefähr **25–30 Sekunden nach dem Weltwechsel**. Sie wartet auf reguläres Laden und Initialisieren; höchstens vier temporäre Streamingquellen werden gleichzeitig eingesetzt und anschließend entfernt.
 - Geschützt werden native Gerätebereiche von **100 × 100 m**; weitere platzierte Objekte im selben Bereich können mit aktiv bleiben.
 - Schutzgrenzen: **256 Gerätebereiche / 2.048 platzierte Objekte**. Bei Überschreitung gilt die normale Entladung; eine Meldung erscheint im UE4SS-Protokoll.
 - Entfernte physikalische Körper werden vor Bewegung ohne geladenen Boden gesichert und beim Zurückkehren freigegeben. Daher werden unbesetzte entfernte Boote nicht weiter physikalisch bewegt.
@@ -157,7 +203,7 @@ Die native Simulation der aktiven Maschinen verursacht weiterhin Aufwand. Es gib
 
 ## Bisherige Funkstrom-Prüfung und bekannte Grenzen
 
-Geprüft wurden Stromfluss, Energiebilanz, Versorgungsabbruch/Wiederanlauf, Reichweitengrenze, mehrere Empfänger, Senderwechsel, Kanaltrennung und Zerlegen. In einer frischen Testwelt lief eine Verbindung über **997 m**, während der Spieler **20 km** entfernt war und die Umgebung entladen wurde. Native gespeicherte Gerätedaten einschließlich Kanälen und Kabeln wurden ohne Laden der Landschaft wiederhergestellt.
+Geprüft wurden Stromfluss, Energiebilanz, Versorgungsabbruch/Wiederanlauf, Reichweitengrenze, mehrere Empfänger, Senderwechsel, Kanaltrennung und Zerlegen. In einer frischen Testwelt lief eine Verbindung über **997 m**, während der Spieler **20 km** entfernt war und die Umgebung entladen wurde. Gespeicherte Gerätedaten einschließlich Kanälen und Kabeln werden über eine begrenzte reguläre Initialisierung wiederhergestellt; anschließend darf die Landschaft entladen werden.
 
 Für den Erstrelease wurden beide nativen Kanaldialoge, die registrierte Ö-Funktion und der Ablauf **Kabel greifen → F verwenden → Kabel wieder anschließen** an Sender und Empfänger geprüft. Die Ö-Funktion wurde programmgesteuert über den registrierten Callback ausgelöst; ihre Zuordnung zum deutschen Windows-Tastaturlayout wurde separat geprüft. Danach funktionierte die Stromübertragung. Die 13 Assetpakete einschließlich der zwei neuen Icontexturen wurden nach dem Packen rückextrahiert; ihre Exportdaten waren bytegleich. Beide neuen Icons wurden von der Spielengine geladen, bei 256 und 64 Pixeln gerendert und ihre Item-Zuordnungen bestätigt. Alle bisherigen Gameplay-Exports und Lua-Dateien sind durch die Icon-Ergänzung unverändert.
 
@@ -179,9 +225,9 @@ Eigene Lua-Skripte, native Korrektur, Installer, Paketierung und Dokumentation s
 
 Distinct orange transmitter and blue receiver icons show the actual antenna/socket forms and outgoing/incoming power direction. Extends the game's existing wireless devices with **1,000 m power transmission**, **channels 1–9999**, repaired cable sockets and receiver dismantling, and native device simulation while surrounding scenery is unloaded. Look at a sender or receiver nearby and press **Ö on a German keyboard** to configure its channel; the key is configurable. E/F cable interactions remain available. Wall bridges use 50 m; wireless data relays remain a separate control-signal system. Seven affected item definitions also retain modpack weight 0 / stack size 99,999.
 
-Requires the game build and separately linked, hash-verified **UE4SS v3.0.1-1125-g527a483b**. No full modpack or Energy mod required. **AssetBridge 0.4.0 is now required** for the additional resource devices and skills. Download the named release ZIP, close the game, copy its `Voyage` folder into the game installation folder, and restart. First release: controlled native-engine tests passed, but large-base long-term play and arbitrary mod combinations have not been validated. German in-game text. Original game assets remain the property of their respective owners.
+Requires the game build and separately linked, hash-verified **UE4SS v3.0.1-1125-g527a483b**. No full modpack or Energy mod required. **AssetBridge 0.4.1 is now required** for the additional resource devices and skills. Download the named release ZIP, close the game, copy its `Voyage` folder into the game installation folder, and restart. First release: controlled native-engine tests passed, but large-base long-term play and arbitrary mod combinations have not been validated. German in-game text. Original game assets remain the property of their respective owners.
 
-The extension adds nine resource sender/receiver pairs: petrol, diesel, crude oil, fresh water, salt water, oxygen, carbon dioxide, methane and steam. Each transmitter needs electrical supply plus its matching hose input. 1,000 m range, channels 1–9999, same resource/channel only, nominal 72,000 units/hour, 1,000-unit resource buffer. Unlock levels 18–21, two points per pair. **The universal pair passed native ten-resource flow and return tests. Separate native trials of every specialized pair, manual placement and universal save/reload remain pending.** Version remains 1.0.0.
+The extension adds nine resource sender/receiver pairs: petrol, diesel, crude oil, fresh water, salt water, oxygen, carbon dioxide, methane and steam. Each transmitter needs electrical supply plus its matching hose input. 1,000 m range, channels 1–9999, same resource/channel only, nominal 72,000 units/hour, 1,000-unit resource buffer. Unlock levels 18–21, two points per pair. **The universal pair passed native ten-resource flow and return tests. All specialized pairs and the universal pair also passed native-engine transfer tests on 25 October, including cold load and streaming transitions. Each individual mouse placement was not manually replayed.** Version remains 1.0.0.
 
 The universal pair provides ten typed ports and a shared level-22/four-point unlock. Native simultaneous transfer of all ten resources passed over 997 m with the player 20–21 km away and both world regions unloaded for 60 seconds. The return catch-up issue is fixed: routing/balancing passes are skipped only for grids whose initialized modules are already current. Return transfer rates and power consumption passed; an independent stock water network still received its legitimate offline catch-up. The guarded native DLL supports the exact tested executable. See verification/native-universal-resources.json.
 

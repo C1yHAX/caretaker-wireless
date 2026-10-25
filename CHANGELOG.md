@@ -1,5 +1,13 @@
 # Änderungen
 
+### Korrekturen vom 25.10.2026 innerhalb 1.0.0
+
+- Voller Bauplanspeicher: Kapazität vor dem Laden erweitern und ausschließlich bereits verdiente Wireless-Baupläne wiederherstellen.
+- Entfernte gespeicherte Netze regulär initialisieren; nur simulierende Physikkörper sperren; gepoolte Funkgeräte ignorieren.
+- Native Prüfung aller Einzelpaare, des Universalpaars, der Wandanschlüsse und Signalrelais im vollständigen Modpack.
+- Zwölf Offline-Lua-Tests. 17 Laufzeitdateien im separaten ZIP; Version unverändert.
+- Historische Prüfstände unten werden durch den aktuellen Bericht vom 25.10.2026 ergänzt.
+
 ## 1.0.0 – Erstrelease, 24. Oktober 2026
 
 - Bestehende Funkstrom-Reparaturen, 1.000 m, Ö-Kanäle 1–9999, Hintergrundbetrieb, zwei unterschiedliche Icons und 50-m-Wandbrücken.

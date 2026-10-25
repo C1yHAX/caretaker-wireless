@@ -1,0 +1,747 @@
+{
+  "date": "2026-10-25",
+  "version": "1.0.0",
+  "game": "0.10.0.653173",
+  "steamBuild": 25982825,
+  "environment": {
+    "fullModpack": true,
+    "dynamicGrinder": "1.0.1 unchanged author release",
+    "assetBridge": "0.4.1 unchanged author release",
+    "isolatedUserProfile": true,
+    "originalSaveFilesUnchanged": 6
+  },
+  "regression": {
+    "cause": "Native recipe vault capacity 1024 exhausted; successful skill unlock could omit its items",
+    "reproduced": true,
+    "skills": 10,
+    "newItems": 20,
+    "recipeRecoveryIdempotent": true,
+    "noUnearnedSkillsGranted": true,
+    "saveLoadExactSlots": 1046,
+    "saveLoadCapacity": 4096
+  },
+  "coverage": {
+    "deviceTypes": 27,
+    "radioDeviceTypes": 22,
+    "newSkills": 10,
+    "newItemsCraftedAndSpawned": 20,
+    "radioResourcePortsWithNativeCableInventoryMatch": 49,
+    "radioDevicesDismantled": 22,
+    "wallBridgeTypesTransferred": 4,
+    "signalRelayValue": 37.5,
+    "nativeBuildMenu": true,
+    "nativeChannelDialog": true,
+    "channelIsolation": true
+  },
+  "fixes": [
+    "Recover only already earned Wireless recipes and prepare vault capacity before deserialization",
+    "Warm saved distant cells through bounded native streaming sources",
+    "Apply physics locks only to simulating bodies",
+    "Ignore dismantled pooled radio devices during discovery"
+  ],
+  "nativeMeasurements": {
+    "cold-reload-12s": {
+      "Specific-Electricity": {
+        "delivered": 3333.3334,
+        "sourceLoss": 3333.3334,
+        "totalChange": -6.6667,
+        "passed": true
+      },
+      "Universal-Electricity": {
+        "delivered": 3320.0,
+        "sourceLoss": 3333.3334,
+        "totalChange": -13.3333,
+        "passed": true
+      },
+      "Specific-Petrol": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Petrol": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Diesel": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Diesel": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oil": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oil": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-FreshWater": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-FreshWater": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-SaltWater": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-SaltWater": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oxygen": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oxygen": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-CarbonDioxide": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-CarbonDioxide": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Methane": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Methane": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Steam": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Steam": {
+        "delivered": 240.0,
+        "sourceLoss": 240.0,
+        "totalChange": 0.0,
+        "passed": true
+      }
+    },
+    "cold-steam-tank-reconnect": {
+      "Specific-Electricity": {
+        "delivered": 2250.0,
+        "sourceLoss": 2250.0,
+        "totalChange": -4.5,
+        "passed": true
+      },
+      "Universal-Electricity": {
+        "delivered": 2250.0,
+        "sourceLoss": 2250.0,
+        "totalChange": -9.0,
+        "passed": true
+      },
+      "Specific-Petrol": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Petrol": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Diesel": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Diesel": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oil": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oil": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-FreshWater": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-FreshWater": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-SaltWater": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-SaltWater": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oxygen": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oxygen": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-CarbonDioxide": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-CarbonDioxide": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Methane": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Methane": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Steam": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Steam": {
+        "delivered": 162.0,
+        "sourceLoss": 162.0,
+        "totalChange": 0.0,
+        "passed": true
+      }
+    },
+    "fixed-cold-unloaded-20s": {
+      "Specific-Electricity": {
+        "delivered": 5555.5556,
+        "sourceLoss": 5555.5556,
+        "totalChange": -11.1111,
+        "passed": true
+      },
+      "Universal-Electricity": {
+        "delivered": 5555.5556,
+        "sourceLoss": 5555.5556,
+        "totalChange": -22.2222,
+        "passed": true
+      },
+      "Specific-Petrol": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Petrol": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Diesel": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Diesel": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oil": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oil": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-FreshWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-FreshWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-SaltWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-SaltWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oxygen": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oxygen": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-CarbonDioxide": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-CarbonDioxide": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Methane": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Methane": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Steam": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Steam": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      }
+    },
+    "fixed-cold-return-10s": {
+      "Specific-Electricity": {
+        "delivered": 2805.5556,
+        "sourceLoss": 2805.5556,
+        "totalChange": -5.6111,
+        "passed": true
+      },
+      "Universal-Electricity": {
+        "delivered": 2805.5556,
+        "sourceLoss": 2805.5556,
+        "totalChange": -11.2222,
+        "passed": true
+      },
+      "Specific-Petrol": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Petrol": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Diesel": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Diesel": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oil": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oil": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-FreshWater": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-FreshWater": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-SaltWater": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-SaltWater": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oxygen": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oxygen": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-CarbonDioxide": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-CarbonDioxide": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Methane": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Methane": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Steam": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Steam": {
+        "delivered": 202.0,
+        "sourceLoss": 202.0,
+        "totalChange": 0.0,
+        "passed": true
+      }
+    },
+    "fixed-second-unloaded-20s": {
+      "Specific-Electricity": {
+        "delivered": 5555.5556,
+        "sourceLoss": 5555.5556,
+        "totalChange": -11.1111,
+        "passed": true
+      },
+      "Universal-Electricity": {
+        "delivered": 5555.5556,
+        "sourceLoss": 5555.5556,
+        "totalChange": -22.2222,
+        "passed": true
+      },
+      "Specific-Petrol": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Petrol": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Diesel": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Diesel": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oil": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oil": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-FreshWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-FreshWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-SaltWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-SaltWater": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Oxygen": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Oxygen": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-CarbonDioxide": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-CarbonDioxide": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Methane": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Methane": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Specific-Steam": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      },
+      "Universal-Steam": {
+        "delivered": 400.0,
+        "sourceLoss": 400.0,
+        "totalChange": 0.0,
+        "passed": true
+      }
+    }
+  },
+  "offlineLuaTests": 12,
+  "limitations": [
+    "Native engine calls were instrumented; not every mouse/keyboard interaction was manually replayed",
+    "Steam uses native test reservoirs; their temporary resource definition and hose registration are recreated after restart, without changing the saved radios",
+    "Controlled tests do not establish long-term stability or FPS for arbitrarily large bases"
+  ],
+  "runtimeFiles": [
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/config.lua",
+      "bytes": 110,
+      "sha256": "ae3a9413ac8798e1f1fa160647bd068f3f73359b344b17077ac243cd0b8d530f"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/connections.lua",
+      "bytes": 2541,
+      "sha256": "8b437ab516f80e7577d4737b8f314b449cb15f43b6cbf9ef079a425c01129236"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/devices.lua",
+      "bytes": 1006,
+      "sha256": "6bb633ca7ea623de0ac7f902acc0ce6a93e2d481c0e0bab53348dd121fd30bea"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/main.lua",
+      "bytes": 13626,
+      "sha256": "467246350e7be91693c8d1b330432671b84a1a09d064a77801dd692c792ab2c2"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/native/caretaker_catchup.dll",
+      "bytes": 155648,
+      "sha256": "04f4f35c98f5cf815f6fa14e5ca29a2eaab18b925c28563613a003161f61c24e"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/physics.lua",
+      "bytes": 1457,
+      "sha256": "0691f0f1a0701a9d671211a398de3311ad92edc2bc8772fb4a37b0c50d9f965e"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/saved_network.lua",
+      "bytes": 3374,
+      "sha256": "80e5815a12ac50fa0b744ac854673b44e4fe6446b90cb70f677cad541c819d4c"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/enabled.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/availability.lua",
+      "bytes": 3879,
+      "sha256": "c837e35606af6608e49fdddaead355af423ca693372937bfa7fe17fc2d76a3d8"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/config.lua",
+      "bytes": 149,
+      "sha256": "8ad51e15e90167cf8e420a6e4d62c5e0b9eab76bb93a835140453711f2923b46"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/devices.lua",
+      "bytes": 1006,
+      "sha256": "6bb633ca7ea623de0ac7f902acc0ce6a93e2d481c0e0bab53348dd121fd30bea"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/main.lua",
+      "bytes": 2838,
+      "sha256": "43ce5acd581e8dfdfe8bf9265c4cf8b4147da559a3b23a58ac3d90bb4e2b7f05"
+    },
+    {
+      "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/enabled.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.pak",
+      "bytes": 347,
+      "sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.tlcaddon.json",
+      "bytes": 5824,
+      "sha256": "22eba09f97b63902fbd685edd4c4199837445ddd2e76b2120e97a6ae967979b4"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.ucas",
+      "bytes": 6562243,
+      "sha256": "468bb693038e33dbf3d607975906b2951913559a4c1b2df9c80126f8550553f7"
+    },
+    {
+      "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.utoc",
+      "bytes": 11025,
+      "sha256": "cb4d126ebe6e866959b39b94db6c2ff2cd49fa9d62ffa818516e4c7e7810c84b"
+    }
+  ]
+}

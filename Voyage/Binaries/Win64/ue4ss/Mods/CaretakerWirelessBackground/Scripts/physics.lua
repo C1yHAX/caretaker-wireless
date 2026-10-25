@@ -7,7 +7,9 @@ function M.freeze(actor)
  local ok,err=pcall(function()
  for _,v in ipairs(actor:K2_GetComponentsByClass(StaticFindObject('/Script/Engine.PrimitiveComponent')))do
   local c=v:get()
-  do
+  -- Socket shapes and newly restored components need no motion lock. Calling
+  -- SetConstraintMode on these can rebuild an uninitialized physics body.
+  if c:IsSimulatingPhysics(FName('None'))then
    local r={c=c,mode=c.BodyInstance.DOFMode,values={}}
    for _,k in ipairs(locks)do r.values[k]=c.BodyInstance[k];c.BodyInstance[k]=true end
    records[#records+1]=r

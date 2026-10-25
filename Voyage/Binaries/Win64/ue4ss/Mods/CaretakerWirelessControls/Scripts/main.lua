@@ -1,6 +1,8 @@
 -- Caretaker Wireless Controls 1.0.0. Independent of all game interaction bindings.
 local folder=debug.getinfo(1,'S').source:sub(2):match('^(.*[/\\])')
 local config=dofile(folder..'config.lua')
+-- Recipe recovery also works when the channel hotkey is disabled or occupied.
+dofile(folder..'availability.lua').start()
 local M={}
 local pending=false
 local function valid(o)return o and o:IsValid()end
