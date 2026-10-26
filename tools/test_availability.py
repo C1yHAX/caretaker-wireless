@@ -19,7 +19,11 @@ class Availability(unittest.TestCase):
           assert(self.Capacity==0 or self.count<self.Capacity)
           self.items[item.path]=1;self.count=self.count+1
         end
-        pc=validObject({Pawn=validObject(),PlayerState=validObject(),
+        playerState=validObject({AddSkill=function(self,skill,notify)
+          assert(not notify and skill.Unlock.Cost==0)
+          owned[skill.path]=true
+        end})
+        pc=validObject({Pawn=validObject(),PlayerState=playerState,
           GetInventoryComponent=function(self,kind)assert(kind==2);return inventory end})
         owned={};scanned={};assets={}
         gp=validObject({
@@ -30,7 +34,7 @@ class Availability(unittest.TestCase):
         function StaticFindObject(path)
           if path:find('Default__VoyageGameplay')then return gp end
           if path:find('BP_FirstPersonCharacter_New')then return pawnClass end
-          assets[path]=assets[path]or validObject({path=path})
+          assets[path]=assets[path]or validObject({path=path,Unlock={Cost=0}})
           return assets[path]
         end
         LoadAsset=StaticFindObject
@@ -58,6 +62,39 @@ class Availability(unittest.TestCase):
         self.fixture().execute('''
         assert(M.repair(pc)==0 and inventory.count==1024)
         assert(next(owned)==nil and next(inventory.items)==nil)
+        ''')
+
+    def test_legacy_pair_migrates_receiver_without_extra_vault_copy(self):
+        lua=self.fixture()
+        lua.execute('''
+        own('Diesel')
+        local n='DA_Wireless_Diesel_Receiver'
+        local path='/Game/CaretakerWireless/Items/'..n..'.'..n
+        inventory.items[path]=1
+        assert(M.repair(pc)==1)
+        assert(owned['/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Diesel_Receiver.DA_Skill_Wireless_Diesel_Receiver'])
+        assert(inventory.items[path]==1 and inventory.count==1025)
+        assert(M.repair(pc)==0 and inventory.count==1025)
+        ''')
+
+    def test_receiver_owned_independently_does_not_grant_sender(self):
+        self.fixture().execute('''
+        own('Diesel_Receiver')
+        assert(M.repair(pc)==1)
+        assert(inventory.items['/Game/CaretakerWireless/Items/DA_Wireless_Diesel_Receiver.DA_Wireless_Diesel_Receiver']==1)
+        assert(inventory.items['/Game/CaretakerWireless/Items/DA_Wireless_Diesel_Transmitter.DA_Wireless_Diesel_Transmitter']==nil)
+        ''')
+
+    def test_retired_universal_receiver_is_not_regranted_or_deleted(self):
+        self.fixture().execute('''
+        own('Universal')
+        local n='DA_Wireless_Universal_Receiver'
+        local path='/Game/CaretakerWireless/Items/'..n..'.'..n
+        assert(M.repair(pc)==1)
+        assert(inventory.items[path]==nil)
+        assert(not owned['/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Universal_Receiver.DA_Skill_Wireless_Universal_Receiver'])
+        inventory.items[path]=1;own('Universal_Receiver')
+        assert(M.repair(pc)==0 and inventory.items[path]==1)
         ''')
 
     def test_scanned_stock_sender_is_recovered_and_unlimited_vault_preserved(self):

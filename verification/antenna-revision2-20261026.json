@@ -1,0 +1,117 @@
+{
+  "version": "1.0.0",
+  "date": "2026-10-26",
+  "gameVersion": "0.10.0.653173",
+  "steamBuild": 25982825,
+  "asset": {
+    "heightCm": 409.52000617980957,
+    "feetDegrees": [
+      -90,
+      30,
+      150
+    ],
+    "soleZCm": 0,
+    "rowSpacingCm": 36,
+    "nativeSocketScale": 0.85,
+    "socketPanelNormalOffsetCm": 7,
+    "statusLight": "small native-controlled lens; no old floating bulb",
+    "lodTriangles": [
+      9523,
+      6000,
+      3499,
+      1799
+    ],
+    "collisionHulls": 8,
+    "newArtPackages": 9,
+    "originalFunctionsUnchanged": 12,
+    "originalBlueprintOnlyChange": "BP_Wireless_Universal_Transmitter",
+    "legacyReceiverRetainedForSavedObjects": true
+  },
+  "normalUi": {
+    "buildMenuAndConfirmWithMaterialCost": "passed in isolated copy",
+    "dieselHoseBothEndsUsingE": "passed; native Fuel hose is named Benzinschlauch by the game",
+    "dieselAmountAfterSixSeconds": 120.00000178814,
+    "channelMenuKey": "German Ö / VK_OEM_3",
+    "channelChange": {
+      "before": 1,
+      "after": 4340,
+      "nativeValueConfirmed": true
+    },
+    "powerIndicator": "red without supply, green with native battery/cable",
+    "dismantlingHeldTool": "not repeated in this revision"
+  },
+  "saveReload": {
+    "profile": "isolated test copy",
+    "savedThrough": "native RequestSaveGame",
+    "coldReload": "passed",
+    "channelRestored": 4340,
+    "socketCount": 10,
+    "finalSocketTransformsConfirmed": true
+  },
+  "resourceFlow": {
+    "method": "native engine actors and 20 typed cables, universal TX with ten individual RX",
+    "resources": [
+      "Electricity",
+      "Petrol",
+      "Diesel",
+      "Oil",
+      "FreshWater",
+      "SaltWater",
+      "Oxygen",
+      "CarbonDioxide",
+      "Methane",
+      "Steam"
+    ],
+    "senderReceiverDistanceM": 997,
+    "playerDistanceKm": ">18",
+    "loadedMeasurementSeconds": 30,
+    "distantMeasurementSeconds": 60,
+    "distantMethod": "test streaming sources disabled; background keeps required native devices active",
+    "steamFixture": "two native resource containers configured as steam reservoirs",
+    "senderPowerW": 13000,
+    "allTenLoaded": true,
+    "allTenDistant": true
+  },
+  "offlineLuaTests": {
+    "passed": 15
+  },
+  "limitations": [
+    "Only Diesel was manually connected at both ends in this revision. Other resource cables use native fixture setup.",
+    "No full normal-input dismantling or exhaustive performance/long-duration test.",
+    "One earlier discarded test run crashed during world travel with an UE4SS stack; the cause was not conclusively established. Asset preloading was moved after travel in the temporary test helper. Repeated later cold loads and saved-actor reload passed. The test helper is not shipped.",
+    "Existing transmitters keep their identities but may need more surrounding space for the enlarged body."
+  ],
+  "files": [
+    {
+      "name": "CaretakerAntenna_P.pak",
+      "bytes": 347,
+      "sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd"
+    },
+    {
+      "name": "CaretakerAntenna_P.ucas",
+      "bytes": 33503648,
+      "sha256": "a31b206d5bd2f4fe67f85c6d0297cc68212cccd8b54ce119c8b3733176c40527"
+    },
+    {
+      "name": "CaretakerAntenna_P.utoc",
+      "bytes": 10406,
+      "sha256": "733caa233202c15fb547644765126c4c2030224039da1fa2a28d6ddac9ac3ec9"
+    },
+    {
+      "name": "CaretakerWirelessFix_P.pak",
+      "bytes": 347,
+      "sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd"
+    },
+    {
+      "name": "CaretakerWirelessFix_P.ucas",
+      "bytes": 6605022,
+      "sha256": "afa068039cd7277363c5c1ca6a0cfb81d80beebc52d5073caa3ae0ba433be05f"
+    },
+    {
+      "name": "CaretakerWirelessFix_P.utoc",
+      "bytes": 12420,
+      "sha256": "55e7b2b4675bf911c27839944b9f621c69de7d9d2d365eee60c5b51a6d81ad0c"
+    }
+  ],
+  "mainSaveFilesUnchanged": 6
+}

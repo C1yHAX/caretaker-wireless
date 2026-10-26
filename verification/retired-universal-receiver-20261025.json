@@ -1,0 +1,18 @@
+{
+  "packages": 95,
+  "unchanged": 93,
+  "changed": [
+    "../../../Voyage/Content/CaretakerWireless/Items/DA_Wireless_Universal_Receiver.uasset",
+    "../../../Voyage/Content/CaretakerWireless/Skills/DA_Skill_Wireless_Universal_Receiver.uasset"
+  ],
+  "version": "1.0.0",
+  "testsPassed": 15,
+  "installedRuntimeFilesMatch": 17,
+  "zipRuntimeFiles": 17,
+  "zipSHA256": "596feb7ba2da0c71f80fc2c668074a337025f485a954a7de804606fce0446445",
+  "inGameTested": false,
+  "publicReleaseUpdated": false,
+  "externalSenderModelIntegrated": false,
+  "retiredReceiverIdentityPreserved": true,
+  "saveFilesUntouched": true
+}

@@ -6,6 +6,18 @@ ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE = 'Caretaker-Wireless-Fix-1.0.0.zip'
 KIND = 'wireless'
 
+def reject_unresolved_assets(name, data):
+    """Catch retoc's unresolved imports in our uncompressed asset containers.
+
+    This supplements complete-context asset parsing and live game tests.
+    """
+    if PurePosixPath(name).suffix not in {'.ucas', '.uasset'}:
+        return
+    for marker in ('UnknownExport', '/Engine/UnknownPackage'):
+        if marker.encode('ascii') in data or marker.encode('utf-16le') in data:
+            raise ValueError('Unresolved Unreal dependency '+marker+' in '+name)
+
+
 def runtime_path(name):
     p = PurePosixPath(name)
     return (name.startswith('Voyage/') and '..' not in p.parts and '\\' not in name
@@ -20,7 +32,7 @@ def main():
     args = parser.parse_args()
     rows = json.loads((ROOT/'Dateien.json').read_text(encoding='utf-8'))
     expected = {row['path'] for row in rows}
-    assert len(rows) == len(expected) == 17, 'Unexpected runtime manifest'
+    assert len(rows) == len(expected) == 20, 'Unexpected runtime manifest'
     files = {}
     for row in rows:
         name = row['path']
@@ -35,6 +47,7 @@ def main():
         else:
             source = ROOT/name
         data = source.read_bytes()
+        reject_unresolved_assets(name, data)
         assert len(data) == row['bytes'] and hashlib.sha256(data).hexdigest() == row['sha256'], name
         if source.suffix not in {'.pak', '.ucas', '.utoc', '.dll'}:
             text = data.decode('utf-8')

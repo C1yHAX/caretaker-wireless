@@ -7,13 +7,14 @@
       "category": "Fuel",
       "socket": "DA_Socket_LiquidData_Petrol",
       "level": 18,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_Petrol_Transmitter_C",
       "receiverClass": "BP_Wireless_Petrol_Receiver_C",
       "senderItem": "DA_Wireless_Petrol_Transmitter",
       "receiverItem": "DA_Wireless_Petrol_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_Petrol_Receiver"
     },
     {
       "resource": "Diesel",
@@ -21,13 +22,14 @@
       "category": "Fuel",
       "socket": "DA_Socket_LiquidData_Diesel",
       "level": 18,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_Diesel_Transmitter_C",
       "receiverClass": "BP_Wireless_Diesel_Receiver_C",
       "senderItem": "DA_Wireless_Diesel_Transmitter",
       "receiverItem": "DA_Wireless_Diesel_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_Diesel_Receiver"
     },
     {
       "resource": "Oil",
@@ -35,13 +37,14 @@
       "category": "Fuel",
       "socket": "DA_Socket_LiquidData_Oil",
       "level": 20,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_Oil_Transmitter_C",
       "receiverClass": "BP_Wireless_Oil_Receiver_C",
       "senderItem": "DA_Wireless_Oil_Transmitter",
       "receiverItem": "DA_Wireless_Oil_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_Oil_Receiver"
     },
     {
       "resource": "FreshWater",
@@ -49,13 +52,14 @@
       "category": "Water",
       "socket": "DA_Socket_LiquidData_Water",
       "level": 18,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_FreshWater_Transmitter_C",
       "receiverClass": "BP_Wireless_FreshWater_Receiver_C",
       "senderItem": "DA_Wireless_FreshWater_Transmitter",
       "receiverItem": "DA_Wireless_FreshWater_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_FreshWater_Receiver"
     },
     {
       "resource": "SaltWater",
@@ -63,13 +67,14 @@
       "category": "Water",
       "socket": "DA_Socket_LiquidData_SaltWater",
       "level": 18,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_SaltWater_Transmitter_C",
       "receiverClass": "BP_Wireless_SaltWater_Receiver_C",
       "senderItem": "DA_Wireless_SaltWater_Transmitter",
       "receiverItem": "DA_Wireless_SaltWater_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_SaltWater_Receiver"
     },
     {
       "resource": "Oxygen",
@@ -77,13 +82,14 @@
       "category": "Gas",
       "socket": "DA_Socket_GasData_Oxygen",
       "level": 20,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_Oxygen_Transmitter_C",
       "receiverClass": "BP_Wireless_Oxygen_Receiver_C",
       "senderItem": "DA_Wireless_Oxygen_Transmitter",
       "receiverItem": "DA_Wireless_Oxygen_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_Oxygen_Receiver"
     },
     {
       "resource": "CarbonDioxide",
@@ -91,13 +97,14 @@
       "category": "Gas",
       "socket": "DA_Socket_GasData_CO2",
       "level": 20,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_CarbonDioxide_Transmitter_C",
       "receiverClass": "BP_Wireless_CarbonDioxide_Receiver_C",
       "senderItem": "DA_Wireless_CarbonDioxide_Transmitter",
       "receiverItem": "DA_Wireless_CarbonDioxide_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_CarbonDioxide_Receiver"
     },
     {
       "resource": "Methane",
@@ -105,13 +112,14 @@
       "category": "Gas",
       "socket": "DA_Socket_GasData_Methane",
       "level": 21,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_Methane_Transmitter_C",
       "receiverClass": "BP_Wireless_Methane_Receiver_C",
       "senderItem": "DA_Wireless_Methane_Transmitter",
       "receiverItem": "DA_Wireless_Methane_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_Methane_Receiver"
     },
     {
       "resource": "Steam",
@@ -119,13 +127,14 @@
       "category": "Gas",
       "socket": "DA_Socket_GasData_Steam",
       "level": 20,
-      "cost": 2,
+      "cost": 0,
       "senderClass": "BP_Wireless_Steam_Transmitter_C",
       "receiverClass": "BP_Wireless_Steam_Receiver_C",
       "senderItem": "DA_Wireless_Steam_Transmitter",
       "receiverItem": "DA_Wireless_Steam_Receiver",
       "buffer": 1000,
-      "bandwidth": 72000
+      "bandwidth": 72000,
+      "receiverSkill": "DA_Skill_Wireless_Steam_Receiver"
     }
   ],
   "universal": {
@@ -133,7 +142,7 @@
     "senderItem": "DA_Wireless_Universal_Transmitter",
     "skill": "DA_Skill_Wireless_Universal",
     "level": 22,
-    "cost": 4,
+    "cost": 0,
     "range": 1000,
     "localSockets": 10,
     "baseElectricity": 3000,
@@ -159,13 +168,15 @@
         "component": "ResourceInput_Petrol",
         "bank": 1,
         "position": [
-          67.45950817142797,
-          16.346722084970192,
-          150.99152249727095
+          -31.811735935389617,
+          47.76148087609714,
+          194.0
         ],
-        "yaw": -90.0,
+        "yaw": 15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "Diesel",
@@ -174,13 +185,15 @@
         "component": "ResourceInput_Diesel",
         "bank": 1,
         "position": [
-          67.45950817142797,
-          16.346722084970192,
-          300.9915224972709
+          -31.811735935389617,
+          47.76148087609714,
+          158.0
         ],
-        "yaw": -90.0,
+        "yaw": 15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "Oil",
@@ -189,13 +202,15 @@
         "component": "ResourceInput_Oil",
         "bank": 1,
         "position": [
-          67.45950817142797,
-          16.346722084970192,
-          450.9915224972709
+          31.811735935389617,
+          47.76148087609714,
+          122.0
         ],
-        "yaw": -90.0,
+        "yaw": -15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "FreshWater",
@@ -204,13 +219,15 @@
         "component": "ResourceInput_FreshWater",
         "bank": 2,
         "position": [
-          0.0,
-          -67.45950817142797,
-          150.99152249727095
+          -31.811735935389617,
+          47.76148087609714,
+          86.0
         ],
-        "yaw": 180.0,
+        "yaw": 15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "SaltWater",
@@ -219,13 +236,15 @@
         "component": "ResourceInput_SaltWater",
         "bank": 2,
         "position": [
-          0.0,
-          -67.45950817142797,
-          300.9915224972709
+          31.811735935389617,
+          47.76148087609714,
+          50.0
         ],
-        "yaw": 180.0,
+        "yaw": -15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "Oxygen",
@@ -234,13 +253,15 @@
         "component": "ResourceInput_Oxygen",
         "bank": 2,
         "position": [
-          0.0,
-          -67.45950817142797,
-          450.9915224972709
+          31.811735935389617,
+          47.76148087609714,
+          194.0
         ],
-        "yaw": 180.0,
+        "yaw": -15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "CarbonDioxide",
@@ -249,13 +270,15 @@
         "component": "ResourceInput_CarbonDioxide",
         "bank": 3,
         "position": [
-          0.0,
-          67.45950817142797,
-          150.99152249727095
+          31.811735935389617,
+          47.76148087609714,
+          158.0
         ],
-        "yaw": 0.0,
+        "yaw": -15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "Methane",
@@ -264,13 +287,15 @@
         "component": "ResourceInput_Methane",
         "bank": 3,
         "position": [
-          0.0,
-          67.45950817142797,
-          300.9915224972709
+          -31.811735935389617,
+          47.76148087609714,
+          122.0
         ],
-        "yaw": 0.0,
+        "yaw": 15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       },
       {
         "resource": "Steam",
@@ -279,21 +304,23 @@
         "component": "ResourceInput_Steam",
         "bank": 3,
         "position": [
-          0.0,
-          67.45950817142797,
-          450.9915224972709
+          31.811735935389617,
+          47.76148087609714,
+          86.0
         ],
-        "yaw": 0.0,
+        "yaw": -15,
         "bandwidth": 72000,
-        "buffer": 1000
+        "buffer": 1000,
+        "roll": -90,
+        "scale": 0.85
       }
     ],
     "receiver": {
       "receiverClass": "BP_Wireless_Universal_Receiver_C",
       "receiverItem": "DA_Wireless_Universal_Receiver",
-      "skill": "DA_Skill_Wireless_Universal",
+      "skill": "DA_Skill_Wireless_Universal_Receiver",
       "level": 22,
-      "cost": 4,
+      "cost": 0,
       "range": 1000,
       "localSockets": 10,
       "receiverElectricity": 1000,
@@ -407,8 +434,37 @@
           ],
           "bandwidth": 72000
         }
-      ]
+      ],
+      "retired": true,
+      "craftable": false,
+      "legacySaveOnly": true
     },
-    "receiverCounting": "unique external socket owners; ten outputs on one receiver count as one device"
+    "receiverCounting": "unique external socket owners; ten outputs on one receiver count as one device",
+    "visualAsset": {
+      "mesh": "/Game/CaretakerAntenna/Meshes/SM_CaretakerUniversalAntenna.SM_CaretakerUniversalAntenna",
+      "container": "CaretakerAntenna_P",
+      "heightCm": 409.52000617980957,
+      "feetDegrees": [
+        -90,
+        30,
+        150
+      ],
+      "rowSpacingCm": 36,
+      "electricitySocket": {
+        "resource": "Electricity",
+        "position_cm": [
+          -31.811735935389617,
+          47.76148087609714,
+          50.0
+        ],
+        "yaw_degrees": 15,
+        "scale": 0.85
+      },
+      "statusIndicatorCm": [
+        0,
+        52.6,
+        217
+      ]
+    }
   }
 }

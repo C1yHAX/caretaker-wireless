@@ -9,10 +9,14 @@
 
 Dieses Release enthält weder das vollständige Modpack noch Caretaker Energy, fremde Lua-Mods, Spielstände, AssetBridge-Caches oder lokale Testprogramme.
 
-- **AssetBridge von NotLazy:** Version 0.4.0 für die 27 zusätzlichen Registrierungen erforderlich, separat vom Autor: https://www.nexusmods.com/thelastcaretaker/mods/225. Nicht mitgeliefert; die `.tlcaddon.json` beschreibt unsere zusätzlichen Geräte und Skills.
+- **AssetBridge von NotLazy:** Version 0.4.1 für die zusätzlichen Registrierungen erforderlich, separat vom Autor: https://www.nexusmods.com/thelastcaretaker/mods/225. Nicht mitgeliefert; die `.tlcaddon.json` beschreibt unsere zusätzlichen Geräte und Skills.
 
 Die 18 Ressourcen-Iconvarianten wurden mit dem integrierten OpenAI-Bildwerkzeug aus den bestehenden Sender-/Empfänger-Icons farblich abgeleitet. Die Geräteformen basieren auf den originalen Spielgeräten. Die Farbpalette und vollständigen Bearbeitungsprompts stehen in assets/icons/RESOURCE-PROMPTS.json. Die erzeugten PNGs werden unverändert als Quellen mitgeliefert; nur Größenanpassung und Texturverpackung erfolgen im Builder.
 
 Das Universalsender-Icon ist eine zusätzliche farbliche Bearbeitung des Sender-Icons mit dem integrierten OpenAI-Bildwerkzeug. Prompt: assets/icons/UNIVERSAL-PROMPT.json. Die Darstellung ist ein Menüsymbol und keine technische Darstellung der Anschlusspositionen.
 
 Das Universal-Empfänger-Icon ist eine zusätzliche Bearbeitung des Empfänger-Icons mit dem integrierten OpenAI-Bildwerkzeug. Prompt: assets/icons/UNIVERSAL-RECEIVER-PROMPT.json. Die Darstellung kennzeichnet den Gerätetyp im Menü; sie bildet die zehn räumlichen Anschlusspositionen nicht ab.
+
+## Neues Antennengehäuse
+
+Der Antennenmast wurde mit Meshy aus der vom Nutzer gewählten Bildvorlage erzeugt und für den Spieleinsatz nachbearbeitet. Unteres Gehäuse, Montageplatten, Dreifuß und Statuslinsengeometrie wurden anschließend neu aufgebaut. Die native Spielanschluss-Geometrie bleibt Eigentum des Spieleherstellers. Der eigene Artcontainer heißt CaretakerAntenna_P; die MIT-Code-Lizenz überträgt keine zusätzlichen Rechte an Spielinhalten.

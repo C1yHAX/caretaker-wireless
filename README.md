@@ -6,21 +6,53 @@
 
 [Download auf GitHub](https://github.com/C1yHAX/caretaker-wireless/releases/tag/v1.0.0) · [Download auf GitLab](https://gitlab.com/c0d1ngf1eber/caretaker-wireless/-/releases/v1.0.0) · [Änderungsverlauf](CHANGELOG.md)
 
-## Reparaturen und vollständige Geräteprüfung vom 25.10.2026
+## Neuer Universal-Sender
+
+Der Universal-Sender besitzt jetzt ein eigenes, **4,10 m hohes Antennengehäuse**.
+Der ausgewählte obere Antennenaufbau bleibt erhalten; das untere Gehäuse wurde
+neu konstruiert. Drei Füße im Abstand von 120° stehen auf einer gemeinsamen
+Bodenebene. Zwei Montageplatten tragen je fünf echte Spielanschlüsse mit
+**36 cm Abstand zwischen den Reihen**. Modellierte Scheinbuchsen und die frei
+stehende Warnlampe entfallen. Eine kleine eingelassene Anzeige signalisiert die
+Stromversorgung. Materialien: Elfenbein, Olivgrau, dunkle Rahmen, dezentes Cyan.
+
+Der Universalempfänger wird nicht mehr neu hergestellt oder freigeschaltet.
+Seine gespeicherten Objektkennungen bleiben für vorhandene Exemplare erhalten.
+Am Ziel dienen die einzelnen Ressourcenempfänger. Es gibt 21 reguläre
+Freischaltungen: zehn einzelne Sender, zehn einzelne Empfänger und den
+Universal-Sender. Stufen 18–22 und die aktuellen null Skillpunktkosten bleiben.
+Die Wiederherstellung berücksichtigt bereits verdiente Baupläne und frühere
+Paar-Freischaltungen; sie vergibt keinen neuen Universalempfänger.
+
+**Spielprüfung vom 26.10.2026 mit separatem Testprofil:** Bau über das Baumenü
+mit normaler Bestätigung und Materialverbrauch; Dieselanschluss an beiden
+Enden mit E verbunden; tatsächlicher Dieselzufluss; Ö-Kanalmenü und Änderung;
+rote/grüne Betriebsanzeige; Speichern und Kaltstart mit wiederhergestelltem
+Sender und Kanal. Alle zehn Ressourcen wurden zusätzlich in einem nativen
+Testnetz zwischen Universal-Sender und einzelnen Empfängern geprüft, geladen
+und bei über 18 km Spielerabstand. Das ist kein vollständiger manueller
+Kabel-/Abrissdurchlauf für alle Geräte. [Prüfumfang](verification/antenna-revision2-20261026.json)
+
+Der Sender behält seine Item-, Blueprint- und Anschlusskennungen. Bereits
+platzierte Sender erhalten das neue Aussehen beim Neustart; wegen des größeren
+Gehäuses benötigen sie mehr Freiraum. Ein Langzeittest großer Anlagen mit
+beliebigen Fremdmods ist nicht erfolgt. Version bleibt **1.0.0**.
+
+## Frühere Geräteprüfung vom 25.10.2026
 
 **Freigeschaltet, aber im Baumenü fehlend:** Der native Bauplanspeicher war auf
 1.024 Einträge begrenzt. Eine Fähigkeit konnte erfolgreich freigeschaltet werden,
 obwohl für ihre beiden Geräte kein Platz mehr vorhanden war. Die Mod bereitet
 den Bauplanspeicher vor dem Laden mit mindestens 4.096 Plätzen vor und stellt
 fehlende, bereits durch Fähigkeiten oder Scans verdiente Wireless-Baupläne wieder
-her. Sie vergibt keine neuen Fähigkeiten und löscht keine vorhandenen Einträge.
+her. Bereits verdiente Baupläne und alte Paar-Freischaltungen werden den
+getrennten Fähigkeiten zugeordnet. Vorhandene Einträge werden nicht gelöscht.
 Normale Inventare und Materialanforderungen bleiben unverändert.
 
 Nach der Installation vollständig neu starten, den Spielstand laden und etwa
 zehn Sekunden warten. Das Baumenü danach neu öffnen. Bereits freigeschaltete
-Fähigkeiten müssen nicht erneut gekauft werden. Jede Ressourcen-Fähigkeit
-schaltet **Sender und Empfänger gemeinsam** frei; im Fähigkeitenbaum steht dafür
-ein gemeinsamer Eintrag. Auch das Universalpaar teilt eine Freischaltung.
+Fähigkeiten müssen nicht erneut gekauft werden. Sender und Empfänger haben
+getrennte Einträge. Der Universalempfänger wird nicht mehr angeboten.
 
 **Gerätezuordnung:** Der orange Funkstrom-Sender hat einen Stromanschluss. Der
 gelbe Diesel-Funksender hat einen Strom- und einen Treibstoffanschluss. Die vier
@@ -52,13 +84,13 @@ Der anonymisierte [Prüfbericht](verification/wireless-audit-20261025.json)
 beschreibt den Umfang. Private Spielstände und Rohprotokolle werden nicht
 veröffentlicht.
 
-## Ein Universal-Gerätepaar für alle Ressourcen
+## Universal-Sender mit einzelnen Empfängern
 
-**Universal-Funksender (1.000 m)** und **Universal-Funkempfänger** besitzen jeweils zehn getrennte Anschlüsse für Strom, Benzin, Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf. Ein gemeinsamer Ö-Kanal verbindet das Paar. Am Ziel reicht ein Universal-Empfänger; die bisherigen einzelnen Ressourcen-Empfänger bleiben ebenfalls mit dem Universalsender kompatibel.
-
-Beide Universal-Geräte werden über **Universelle Funkversorgung ab Level 22 für vier Skillpunkte** freigeschaltet. **3 kW Grundlast plus 1 kW pro Empfängergerät** am Universalsender: zehn Anschlüsse eines Universal-Empfängers zählen als ein Gerät. Ein Paar benötigt somit 4 kW Eigenbedarf, zusätzlich zum übertragenen Strom. Unterschiedliche mehrfarbige Icons kennzeichnen Senden und Empfangen.
-
-**[Anschlüsse, Beispiel und vollständige Anleitung](UNIVERSAL.md).** Der native Spieltest mit allen zehn Ressourcen, entladener Umgebung und Rückkehr ist bestanden. Umfang und verbleibende Tests stehen weiter unten.
+Der **Universal-Funksender (1.000 m)** nimmt zehn Ressourcen über getrennte
+Anschlüsse an. Am Ziel werden einzelne Strom-, Treibstoff-, Wasser- oder
+Gasempfänger auf denselben Ö-Kanal eingestellt. Der frühere Universalempfänger
+ist ausschließlich für vorhandene Spielstände enthalten. Details und aktueller
+Prüfstatus: [UNIVERSAL.md](UNIVERSAL.md).
 
 ## Neue Ressourcen-Funkübertragung
 
@@ -115,7 +147,7 @@ Die beiden transparenten Icons sind fest an die vorhandenen Gegenstände gebunde
 
 ## Farbige Ressourcen-Icons
 
-Alle 18 Ressourcen-Geräte besitzen ein eigenes transparentes Icon. Sender zeigen eine hohe Antenne mit einem ausgehenden Pfeil; Empfänger einen flachen Anschluss mit einem eingehenden Pfeil. Die neun Freischaltungen zeigen jeweils den passenden Sender. Die Farbgebung gilt für die Menüsymbole.
+Alle 18 Ressourcen-Geräte besitzen ein eigenes transparentes Icon. Sender zeigen eine hohe Antenne mit einem ausgehenden Pfeil; Empfänger einen flachen Anschluss mit einem eingehenden Pfeil. Die getrennten Freischaltungen zeigen jeweils den passenden Sender oder Empfänger. Die Farbgebung gilt für die Menüsymbole.
 
 | Ressource | Iconfarbe |
 |---|---|
@@ -137,7 +169,7 @@ Die 18 zusätzlichen Texturen haben jeweils 256 × 256 Pixel und benötigen zusa
 
 - *The Last Caretaker*, Windows, Build **25982825 / 0.10.0.653173**. Andere Builds sind nicht bestätigt.
 - **UE4SS v3.0.1-1125-g527a483b**, separat vom Originalprojekt: [geprüftes UE4SS-ZIP herunterladen](https://github.com/UE4SS-RE/RE-UE4SS/releases/download/experimental/UE4SS_v3.0.1-1125-g527a483b.zip). [Quellstand](https://github.com/UE4SS-RE/RE-UE4SS/commit/527a483b).
-- **[AssetBridge von NotLazy](https://www.nexusmods.com/thelastcaretaker/mods/225), Version 0.4.1**, separat installieren. Es registriert die 20 neuen Items und zehn Skills.
+- **[AssetBridge von NotLazy](https://www.nexusmods.com/thelastcaretaker/mods/225), Version 0.4.1**, separat installieren. Es registriert 20 zusätzliche Items und 22 Skills, einschließlich der für alte Spielstände erhaltenen Universalempfänger-Einträge.
 - Unser Release-Download **`Caretaker-Wireless-Fix-1.0.0.zip`**. Die automatisch erzeugten GitHub/GitLab-Quellcodearchive sind nicht der empfohlene Installationsdownload.
 
 Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten Installation verglichen. SHA-256 des UE4SS-ZIP: `4f9762f812329a640c8cfa14444c2bb97ecc213b8320bd4c5433383c3eef48f7`. SHA-256 der `UE4SS.dll`: `91d5444f41d19d0bb502f0fbdc15d76421e20359e898caa39e41e134c8f87958`.
@@ -148,7 +180,7 @@ Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten
 
 1. Spiel und Modmanager schließen. Vor einem Modwechsel eine Sicherung des Spielstands anlegen.
 2. Falls noch nicht vorhanden: das oben verlinkte UE4SS-ZIP entpacken und dessen Inhalt in `<Spielordner>/Voyage/Binaries/Win64/` kopieren. Die DLL liegt anschließend unter `ue4ss/UE4SS.dll`; der Loader liegt neben der Spiel-EXE. Bei vorhandener UE4SS-Installation keine eigenen Einstellungen oder anderen Mods unbesehen überschreiben.
-3. AssetBridge 0.4.1 nach der verlinkten Autorenanleitung installieren. Anschließend **`Caretaker-Wireless-Fix-1.0.0.zip`** vollständig entpacken und den enthaltenen **`Voyage`**-Ordner in den Spielinstallationsordner kopieren, der bereits einen Unterordner `Voyage` enthält. Alle 17 Moddateien gehören zusammen; bei einem Update die Dateien am selben Ziel ersetzen.
+3. AssetBridge 0.4.1 nach der verlinkten Autorenanleitung installieren. Anschließend **`Caretaker-Wireless-Fix-1.0.0.zip`** vollständig entpacken und den enthaltenen **`Voyage`**-Ordner in den Spielinstallationsordner kopieren, der bereits einen Unterordner `Voyage` enthält. Alle 20 Moddateien gehören zusammen; bei einem Update die Dateien am selben Ziel ersetzen.
 4. Ältere **zusätzliche** Kopien von `CaretakerWirelessFix` oder `zLong_Wireless_Cables_P` außerhalb des gesamten `Paks`-Verzeichnisses aufbewahren. Nur eine Version laden. Der optionale PowerShell-Installer bleibt im Repository und wird nicht ins Mod-ZIP gepackt.
 
 5. Spiel vollständig neu starten. Bereits platzierte Sender und Empfänger behalten ihre Identität; ein Neubau ist für dieses Update nicht nötig.
@@ -156,7 +188,7 @@ Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten
 Im kopierten `Voyage`-Ordner gehören alle drei Bereiche zusammen:
 
 ```text
-Voyage/Content/Paks/~mods/CaretakerWirelessFix/        3 Containerdateien + .tlcaddon.json
+Voyage/Content/Paks/~mods/CaretakerWirelessFix/        6 Containerdateien + .tlcaddon.json
 Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/
 Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/
 ```
@@ -217,7 +249,7 @@ Wird nur `CaretakerWirelessBackground` entfernt, endet die zusätzliche Fernsimu
 
 ## Herkunft und Quellcode
 
-Die Geräte, Modelle und abgeleiteten gekochten Assets stammen aus *The Last Caretaker* von Channel37. Dies ist eine inoffizielle Community-Mod. [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) beschreibt Herkunft und Abhängigkeiten; [ASSET-CHANGES.md](ASSET-CHANGES.md) listet die Änderungen.
+Die ursprünglichen Geräte, Anschlussmodelle und abgeleiteten Spielassets stammen aus *The Last Caretaker* von Channel37. Das neue Antennengehäuse kombiniert einen erzeugten und nachbearbeiteten Antennenmast mit einer neu konstruierten Basis; es wird über einen eigenen Assetcontainer geladen. Dies ist eine inoffizielle Community-Mod. [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) beschreibt Herkunft und Abhängigkeiten; [ASSET-CHANGES.md](ASSET-CHANGES.md) listet die Änderungen.
 
 Eigene Lua-Skripte, native Korrektur, Installer, Paketierung und Dokumentation stehen unter MIT, siehe [LICENSE](LICENSE). Diese Lizenz erstreckt sich nicht auf Spielinhalte. Die Lua-Quellen liegen direkt in den beiden installierbaren Modordnern. Die elf bearbeiteten Basis-Spielassets, 45 Ressourcen-Assets und zwei eigenen Icontexturen werden als fertiger Container bereitgestellt; dieser Repository-Stand enthält keinen vollständigen Editor-/Asset-Build. PNG-Quellen, Prompts und der IconBuilder sind enthalten; siehe [BUILDING-ICONS.md](BUILDING-ICONS.md). `tools/package_release.py` prüft die bereitgestellten Dateien und erzeugt das Release-ZIP reproduzierbar.
 
@@ -227,9 +259,9 @@ Distinct orange transmitter and blue receiver icons show the actual antenna/sock
 
 Requires the game build and separately linked, hash-verified **UE4SS v3.0.1-1125-g527a483b**. No full modpack or Energy mod required. **AssetBridge 0.4.1 is now required** for the additional resource devices and skills. Download the named release ZIP, close the game, copy its `Voyage` folder into the game installation folder, and restart. First release: controlled native-engine tests passed, but large-base long-term play and arbitrary mod combinations have not been validated. German in-game text. Original game assets remain the property of their respective owners.
 
-The extension adds nine resource sender/receiver pairs: petrol, diesel, crude oil, fresh water, salt water, oxygen, carbon dioxide, methane and steam. Each transmitter needs electrical supply plus its matching hose input. 1,000 m range, channels 1–9999, same resource/channel only, nominal 72,000 units/hour, 1,000-unit resource buffer. Unlock levels 18–21, two points per pair. **The universal pair passed native ten-resource flow and return tests. All specialized pairs and the universal pair also passed native-engine transfer tests on 25 October, including cold load and streaming transitions. Each individual mouse placement was not manually replayed.** Version remains 1.0.0.
+The extension adds nine resource sender/receiver pairs: petrol, diesel, crude oil, fresh water, salt water, oxygen, carbon dioxide, methane and steam. Each transmitter needs electrical supply plus its matching hose input. 1,000 m range, channels 1–9999, same resource/channel only, nominal 72,000 units/hour, 1,000-unit resource buffer. Unlock levels 18–21; separate sender/receiver skills with zero cost in the current repair build. **The universal pair passed native ten-resource flow and return tests. All specialized pairs and the universal pair also passed native-engine transfer tests on 25 October, including cold load and streaming transitions. Each individual mouse placement was not manually replayed.** Version remains 1.0.0.
 
-The universal pair provides ten typed ports and a shared level-22/four-point unlock. Native simultaneous transfer of all ten resources passed over 997 m with the player 20–21 km away and both world regions unloaded for 60 seconds. The return catch-up issue is fixed: routing/balancing passes are skipped only for grids whose initialized modules are already current. Return transfer rates and power consumption passed; an independent stock water network still received its legitimate offline catch-up. The guarded native DLL supports the exact tested executable. See verification/native-universal-resources.json.
+The universal transmitter remains at level 22. New crafting/unlocking of the universal receiver is retired; its object identities remain for old saves. The following tests describe the earlier universal-pair build. Native simultaneous transfer of all ten resources passed over 997 m with the player 20–21 km away and both world regions unloaded for 60 seconds. The return catch-up issue is fixed: routing/balancing passes are skipped only for grids whose initialized modules are already current. Return transfer rates and power consumption passed; an independent stock water network still received its legitimate offline catch-up. The guarded native DLL supports the exact tested executable. See verification/native-universal-resources.json.
 
 ## Inhalt des Mod-Downloads
 
