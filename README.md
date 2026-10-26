@@ -174,7 +174,7 @@ Die 18 zusätzlichen Texturen haben jeweils 256 × 256 Pixel und benötigen zusa
 
 Die offizielle UE4SS-Datei wurde heruntergeladen und ihre DLL mit der getesteten Installation verglichen. SHA-256 des UE4SS-ZIP: `4f9762f812329a640c8cfa14444c2bb97ecc213b8320bd4c5433383c3eef48f7`. SHA-256 der `UE4SS.dll`: `91d5444f41d19d0bb502f0fbdc15d76421e20359e898caa39e41e134c8f87958`.
 
-**Das vollständige Modpack und Caretaker Energy sind nicht erforderlich. AssetBridge ist seit der Ressourcen-Erweiterung erforderlich.** Die elf vorhandenen Asset-Overrides bleiben; 50 Ressourcen-/Universal-Assets und insgesamt 22 Icontexturen kommen hinzu. AssetBridge registriert **30 zusätzliche Item-/Skill-Einträge** aus `CaretakerWirelessFix_P.tlcaddon.json`. UE4SS ist erforderlich für Hintergrundbetrieb und Ö-Kanalbedienung. Es wird nicht im Mod-ZIP mitgeliefert.
+**Das vollständige Modpack und Caretaker Energy sind nicht erforderlich. AssetBridge ist seit der Ressourcen-Erweiterung erforderlich.** Der bisherige Wireless-Container enthält 95 Assetpakete; der neue Antennencontainer ergänzt neun eigene Grafikassets. AssetBridge registriert **42 zusätzliche Item-/Skill-Einträge** aus `CaretakerWirelessFix_P.tlcaddon.json`. UE4SS ist erforderlich für Hintergrundbetrieb und Ö-Kanalbedienung. Es wird nicht im Mod-ZIP mitgeliefert.
 
 ## Installation
 
@@ -251,7 +251,7 @@ Wird nur `CaretakerWirelessBackground` entfernt, endet die zusätzliche Fernsimu
 
 Die ursprünglichen Geräte, Anschlussmodelle und abgeleiteten Spielassets stammen aus *The Last Caretaker* von Channel37. Das neue Antennengehäuse kombiniert einen erzeugten und nachbearbeiteten Antennenmast mit einer neu konstruierten Basis; es wird über einen eigenen Assetcontainer geladen. Dies ist eine inoffizielle Community-Mod. [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) beschreibt Herkunft und Abhängigkeiten; [ASSET-CHANGES.md](ASSET-CHANGES.md) listet die Änderungen.
 
-Eigene Lua-Skripte, native Korrektur, Installer, Paketierung und Dokumentation stehen unter MIT, siehe [LICENSE](LICENSE). Diese Lizenz erstreckt sich nicht auf Spielinhalte. Die Lua-Quellen liegen direkt in den beiden installierbaren Modordnern. Die elf bearbeiteten Basis-Spielassets, 45 Ressourcen-Assets und zwei eigenen Icontexturen werden als fertiger Container bereitgestellt; dieser Repository-Stand enthält keinen vollständigen Editor-/Asset-Build. PNG-Quellen, Prompts und der IconBuilder sind enthalten; siehe [BUILDING-ICONS.md](BUILDING-ICONS.md). `tools/package_release.py` prüft die bereitgestellten Dateien und erzeugt das Release-ZIP reproduzierbar.
+Eigene Lua-Skripte, native Korrektur, Installer, Paketierung und Dokumentation stehen unter MIT, siehe [LICENSE](LICENSE). Diese Lizenz erstreckt sich nicht auf Spielinhalte. Die Lua-Quellen liegen direkt in den beiden installierbaren Modordnern. Die abgeleiteten Spielassets, zusätzlichen Geräte und Icontexturen sowie die neuen Antennenassets werden als zwei fertige Container bereitgestellt; dieser Repository-Stand enthält keinen vollständigen Editor-/Asset-Build. PNG-Quellen, Prompts und der IconBuilder sind enthalten; siehe [BUILDING-ICONS.md](BUILDING-ICONS.md). `tools/package_release.py` prüft die bereitgestellten Dateien und erzeugt das Release-ZIP reproduzierbar.
 
 ## English
 
