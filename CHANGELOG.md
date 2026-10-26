@@ -1,5 +1,13 @@
 # Änderungen
 
+### Pufferkorrektur vom 26.10.2026 innerhalb 1.0.0
+
+- Volle Flüssigkeits- und Gaspuffer werden nicht mehr durch die geerbte Durchflusslogik geleert. Ohne Abnahme stoppt der Zufluss; Entnahmen werden regulär nachgeliefert.
+- Gilt für alle neun einzelnen Ressourcensender und den Universal-Sender mit den jeweiligen Empfängern. Die Anzeigen nutzen denselben Puffer.
+- Im kompletten Modpack mit separatem Testspielstand geprüft: 18 Ressourcenkombinationen ohne angeschlossenen Verbraucher, mit leeren/vollen Zieltanks, nach 250 Einheiten Entnahme und auf große Spielerentfernung. Zusätzlich Stromübertragung geprüft. Keine Bilanzabweichung in den Messdaten.
+- Das freigegebene Antennenmodell, Materialien, Lichter und Anschlusspositionen bleiben unverändert. Version 1.0.0, nur Laufzeitdateien in den ZIPs.
+- [Messumfang und Einschränkungen](verification/resource-conservation-20261026.json), [technische Ursache](BUILDING-BUFFERS.md).
+
 ### Korrekturen vom 25.10.2026 innerhalb 1.0.0
 
 - Voller Bauplanspeicher: Kapazität vor dem Laden erweitern und ausschließlich bereits verdiente Wireless-Baupläne wiederherstellen.

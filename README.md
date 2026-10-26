@@ -6,15 +6,29 @@
 
 [Download auf GitHub](https://github.com/C1yHAX/caretaker-wireless/releases/tag/v1.0.0) · [Download auf GitLab](https://gitlab.com/c0d1ngf1eber/caretaker-wireless/-/releases/v1.0.0) · [Änderungsverlauf](CHANGELOG.md)
 
+## Ressourcenpuffer bleiben erhalten
+
+Volle 1.000-Einheiten-Puffer für Flüssigkeiten und Gase werden nicht mehr auf null
+zurückgesetzt. Wenn ein Empfänger keinen angeschlossenen Verbraucher hat oder
+sein Ziel voll ist, stoppt der Zufluss. Sobald wieder Platz frei wird, wird die
+fehlende Menge nachgeliefert. Die regulären Stromkosten bleiben bestehen.
+
+Im separaten Testspielstand mit komplettem Modpack wurden alle neun Ressourcen
+sowohl an den einzelnen Sendern als auch am Universal-Sender geprüft. Die
+Messungen umfassen unverbundene Ausgänge, volle Ziele, 250 Einheiten Entnahme und
+große Spielerentfernung. Stromübertragung wurde zusätzlich geprüft.
+[Prüfbericht](verification/resource-conservation-20261026.json).
+
 ## Neuer Universal-Sender
 
-Der Universal-Sender besitzt jetzt ein eigenes, **4,10 m hohes Antennengehäuse**.
-Der ausgewählte obere Antennenaufbau bleibt erhalten; das untere Gehäuse wurde
-neu konstruiert. Drei Füße im Abstand von 120° stehen auf einer gemeinsamen
-Bodenebene. Zwei Montageplatten tragen je fünf echte Spielanschlüsse mit
-**36 cm Abstand zwischen den Reihen**. Modellierte Scheinbuchsen und die frei
-stehende Warnlampe entfallen. Eine kleine eingelassene Anzeige signalisiert die
-Stromversorgung. Materialien: Elfenbein, Olivgrau, dunkle Rahmen, dezentes Cyan.
+Der Universal-Sender verwendet das freigegebene Antennenmodell mit **5,024 m
+Höhe**, drei Füßen im Abstand von 120° und zwei Reihen mit je fünf echten
+Spielanschlüssen. Der senkrechte Abstand beträgt **48 cm**. Die Anschlüsse ragen
+8 cm weiter aus dem Gehäuse; die Übergänge der elfenbeinfarbenen Lackierung sind
+an das ursprüngliche Gehäuse angepasst. Das Gehäuse hat keine aufgesetzte
+Abdeckplatte. Zwei cyanfarbene Lichtquellen und eine rote Signalleuchte ergänzen
+die leuchtenden Oberflächen. Die Pufferkorrektur verändert dieses Modell,
+Materialien, Lichtquellen und Anschlusspositionen nicht.
 
 Der Universalempfänger wird nicht mehr neu hergestellt oder freigeschaltet.
 Seine gespeicherten Objektkennungen bleiben für vorhandene Exemplare erhalten.

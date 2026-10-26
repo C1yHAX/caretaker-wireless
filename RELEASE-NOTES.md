@@ -1,9 +1,12 @@
 # Caretaker Wireless Fix 1.0.0
 
-Der Universal-Funksender hat ein neues, größeres Antennengehäuse mit drei
-Standfüßen, zwei sauber getrennten Anschlussreihen und kleiner Betriebsanzeige.
-Die bisherigen im Modell eingebauten Scheinbuchsen und die abstehende Warnlampe
-entfallen. Höhe 4,10 m, Abstand der Anschlussreihen 36 cm, vier Detailstufen.
+**Ressourcenverlust behoben:** Volle Flüssigkeits- und Gaspuffer bleiben erhalten. Ohne Abnahme stoppt der Zufluss; nach einer Entnahme läuft er wieder an. Alle neun Ressourcen an einzelnen Sendern und am Universal-Sender wurden in einem separaten Testprofil geprüft. [Messbericht](https://github.com/C1yHAX/caretaker-wireless/blob/main/verification/resource-conservation-20261026.json).
+
+Der Universal-Funksender behält das freigegebene Antennenmodell mit drei
+Standfüßen, 5,024 m Höhe und 48 cm senkrechtem Anschlussabstand. Die Anschlüsse
+ragen aus dem Gehäuse, die Lackierung geht in die ursprünglichen Gehäuseränder
+über, und drei echte Lichtquellen ergänzen die emissiven Flächen. Die aktuelle
+Pufferkorrektur verändert das Aussehen nicht.
 
 Der Universal-Sender versorgt die einzelnen Empfänger für Strom, Benzin,
 Diesel, Rohöl, Frischwasser, Salzwasser, Sauerstoff, CO₂, Methan und Dampf.
@@ -18,7 +21,18 @@ bleibt ab Level 22 verfügbar. Aktuelle Skillkosten: null Punkte.
 
 ## Geprüft
 
-Separater Testspielstand mit komplettem Modpack: normaler Neubau und
+Aktuelle Pufferkorrektur: automatisierte Mengenmessungen im laufenden Spiel mit
+komplettem Modpack und separatem Testspielstand. Alle neun Flüssigkeits- und
+Gasressourcen am jeweiligen Einzelsender und am Universal-Sender: unverbundene
+Empfänger, leere und volle Zieltanks, Nachfüllen nach 250 Einheiten Entnahme und
+Betrieb auf große Spielerentfernung. In den aufgezeichneten Messungen keine
+Bilanzabweichung. Die Stromübertragung wurde zusätzlich geprüft; der reguläre
+Stromverbrauch ist davon ausgenommen. Der originale CO₂-Tank lässt oberhalb von
+99,9 % absichtlich Gas ab; zur Prüfung der Wireless-Bilanz dient ein geschlossener
+Testbehälter. Originalbehälter wurden nicht geändert.
+
+Frühere Bedienprüfung der Antenne, ebenfalls im separaten Testspielstand mit
+komplettem Modpack: normaler Neubau und
 Materialverbrauch, Dieselschlauch an beiden Enden mit E, tatsächlicher Zufluss,
 Ö-Menü und Kanaländerung, Betriebsanzeige sowie Speichern und erneuter Kaltstart.
 Zusätzlich nativer Übertragungstest aller zehn Ressourcen bei 997 m Abstand

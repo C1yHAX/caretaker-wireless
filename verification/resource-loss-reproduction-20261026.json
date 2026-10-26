@@ -1,0 +1,118 @@
+{
+  "unmodifiedInstalledBuildReproduced": true,
+  "unconnectedReceivers": true,
+  "resourcesLostPerType": {
+    "Petrol": 2000.0,
+    "Diesel": 2000.0,
+    "Oil": 2000.0,
+    "FreshWater": 2000.0,
+    "SaltWater": 2000.0,
+    "Oxygen": 2000.0,
+    "CarbonDioxide": 2000.0,
+    "Methane": 2000.0,
+    "Steam": 2000.0
+  },
+  "originalActiveFlowTimerSeconds": 0.5,
+  "diagnosticTimerExtendedInTestOnly": true,
+  "shippingFix": "Remove non-electric resources from ActiveFlowResources; preserve 1000-unit MaxResources and all other fields",
+  "initialSample": {
+    "elapsed": 0.0,
+    "resources": {
+      "Petrol": {
+        "source": 19758.0,
+        "buffer": 242.0,
+        "total": 20000.0
+      },
+      "Diesel": {
+        "source": 19758.0,
+        "buffer": 242.0,
+        "total": 20000.0
+      },
+      "Oil": {
+        "source": 7758.0,
+        "buffer": 242.0,
+        "total": 8000.0
+      },
+      "FreshWater": {
+        "source": 7758.0,
+        "buffer": 242.0,
+        "total": 8000.0
+      },
+      "SaltWater": {
+        "source": 7758.0,
+        "buffer": 242.0,
+        "total": 8000.0
+      },
+      "Oxygen": {
+        "source": 35758.0,
+        "buffer": 242.0,
+        "total": 36000.0
+      },
+      "CarbonDioxide": {
+        "source": 47758.0,
+        "buffer": 242.0,
+        "total": 48000.0
+      },
+      "Methane": {
+        "source": 23758.0,
+        "buffer": 242.0,
+        "total": 24000.0
+      },
+      "Steam": {
+        "source": 59758.0,
+        "buffer": 242.0,
+        "total": 60000.0
+      }
+    }
+  },
+  "lastDiagnosticSample": {
+    "elapsed": 556.3,
+    "resources": {
+      "Petrol": {
+        "source": 17000.0,
+        "buffer": 1000.0,
+        "total": 18000.0
+      },
+      "Diesel": {
+        "source": 17000.0,
+        "buffer": 1000.0,
+        "total": 18000.0
+      },
+      "Oil": {
+        "source": 5000.0,
+        "buffer": 1000.0,
+        "total": 6000.0
+      },
+      "FreshWater": {
+        "source": 5000.0,
+        "buffer": 1000.0,
+        "total": 6000.0
+      },
+      "SaltWater": {
+        "source": 5000.0,
+        "buffer": 1000.0,
+        "total": 6000.0
+      },
+      "Oxygen": {
+        "source": 33000.0,
+        "buffer": 1000.0,
+        "total": 34000.0
+      },
+      "CarbonDioxide": {
+        "source": 45000.0,
+        "buffer": 1000.0,
+        "total": 46000.0
+      },
+      "Methane": {
+        "source": 21000.0,
+        "buffer": 1000.0,
+        "total": 22000.0
+      },
+      "Steam": {
+        "source": 57000.0,
+        "buffer": 1000.0,
+        "total": 58000.0
+      }
+    }
+  }
+}

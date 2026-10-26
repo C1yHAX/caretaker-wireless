@@ -1,0 +1,75 @@
+{
+  "version": "1.0.0",
+  "changes": [
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_CarbonDioxide_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::CarbonDioxide"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_Diesel_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::Diesel"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_FreshWater_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::FreshWater"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_Methane_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::Methane"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_Oil_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::Oil"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_Oxygen_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::Oxygen"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_Petrol_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::Petrol"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_SaltWater_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::SaltWater"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_Steam_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::Steam"
+      ]
+    },
+    {
+      "asset": "Voyage/Content/CaretakerWireless/Blueprints/BP_Wireless_Universal_Transmitter.uasset",
+      "removedIdleExpiry": [
+        "EModuleResourceType::Petrol",
+        "EModuleResourceType::Diesel",
+        "EModuleResourceType::Oil",
+        "EModuleResourceType::FreshWater",
+        "EModuleResourceType::SaltWater",
+        "EModuleResourceType::Oxygen",
+        "EModuleResourceType::CarbonDioxide",
+        "EModuleResourceType::Methane",
+        "EModuleResourceType::Steam"
+      ]
+    }
+  ],
+  "allOtherExportsAndBytecodeUnchanged": true,
+  "allOtherAssetsUnchanged": true
+}
