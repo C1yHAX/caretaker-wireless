@@ -51,8 +51,8 @@
   },
   {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/config.lua",
-    "bytes": 149,
-    "sha256": "8ad51e15e90167cf8e420a6e4d62c5e0b9eab76bb93a835140453711f2923b46"
+    "bytes": 1149,
+    "sha256": "b9e7e0cec938a0b8ff83aab2e2e3bc0caa05e4ade2cf97b544cf8a1e5eb4c48e"
   },
   {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/devices.lua",
@@ -61,8 +61,8 @@
   },
   {
     "path": "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/main.lua",
-    "bytes": 2838,
-    "sha256": "43ce5acd581e8dfdfe8bf9265c4cf8b4147da559a3b23a58ac3d90bb4e2b7f05"
+    "bytes": 4700,
+    "sha256": "91cdf7f7eb1ddc262816bf571488fc546555cf6a6a10ecb27bfcfe9468bd3cb2"
   },
   {
     "path": "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerAntenna_P.pak",

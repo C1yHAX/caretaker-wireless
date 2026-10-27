@@ -1,0 +1,19 @@
+{
+  "update": "2026-10-27 configurable channel key",
+  "version": "1.0.0",
+  "offlineTests": 22,
+  "passed": 22,
+  "gameStarted": false,
+  "changedRuntimeFiles": [
+    "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/config.lua",
+    "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/main.lua"
+  ],
+  "unchangedAssets": true,
+  "package": {
+    "file": "Caretaker-Wireless-Fix-1.0.0.zip",
+    "bytes": 35669376,
+    "sha256": "cd17df27b2f0d584eaa63a8df39c3b902dd146a6c367cfe5226561bdd352254e",
+    "runtimeFiles": 20,
+    "runtimeOnly": true
+  }
+}

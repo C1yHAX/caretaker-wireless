@@ -1,5 +1,12 @@
 # Änderungen
 
+### Configurable channel key / Einstellbare Kanaltaste, 27.10.2026, 1.0.0
+
+- English/German instructions and examples in the runtime `config.lua`; any supported UE4SS key plus optional CONTROL/ALT/SHIFT modifiers. / Deutsch-/englische Anleitung und Beispiele in der mitgelieferten `config.lua`; UE4SS-Tasten und optionale Zusatztasten.
+- Default remains OEM_THREE (DE Ö / US backtick); F8 and Ctrl+F8 examples. Automatic log label, case-insensitive names, validation and binding conflict checks. / Standard bleibt OEM_THREE; automatische Protokoll-Beschriftung, Prüfung ungültiger/belegter Tasten.
+- Malformed configuration no longer prevents recipe recovery. / Fehlerhafte Konfiguration blockiert die Bauplanwiederherstellung nicht mehr.
+- 22 offline Lua tests passed; no new game session for this update. All models, resource buffers and native files unchanged. / 22 Offline-Lua-Tests bestanden; kein neuer Spieltest. Modelle, Ressourcenpuffer und native Dateien unverändert.
+
 ### Pufferkorrektur vom 26.10.2026 innerhalb 1.0.0
 
 - Volle Flüssigkeits- und Gaspuffer werden nicht mehr durch die geerbte Durchflusslogik geleert. Ohne Abnahme stoppt der Zufluss; Entnahmen werden regulär nachgeliefert.

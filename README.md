@@ -6,6 +6,43 @@
 
 [Download auf GitHub](https://github.com/C1yHAX/caretaker-wireless/releases/tag/v1.0.0) · [Download auf GitLab](https://gitlab.com/c0d1ngf1eber/caretaker-wireless/-/releases/v1.0.0) · [Änderungsverlauf](CHANGELOG.md)
 
+## Channel key / Kanalwechsel-Taste
+
+**English:** Close the game and edit
+`Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/config.lua`
+inside your game installation. For **F8**, set `KeyName = 'F8'` and
+`Modifiers = {}`, then restart. For **Ctrl+F8**, use `Modifiers = {'CONTROL'}`.
+Other examples: `'F9'`, `'K'`, `'HOME'`; optional modifiers are `'CONTROL'`,
+`'ALT'` and `'SHIFT'`. Key names are case-insensitive. Use a
+[UE4SS key name](https://docs.ue4ss.com/lua-api/table-definitions/key.html),
+not `Key.F8` or a translated key caption. The default `'OEM_THREE'` retains
+**Ö on German layouts / the backtick key on US layouts**. Aim at a nearby
+wireless transmitter or receiver and press your configured key. Existing
+in-game descriptions may still mention Ö; the configuration determines the key.
+
+**Deutsch:** Spiel schließen und die oben genannte `config.lua` im
+Spielinstallationsordner bearbeiten. Für **F8** `KeyName = 'F8'` und
+`Modifiers = {}` eintragen, dann neu starten. Für **Strg+F8**
+`Modifiers = {'CONTROL'}` verwenden. Weitere Beispiele: `'F9'`, `'K'`,
+`'HOME'`; mögliche Zusatztasten sind `'CONTROL'`, `'ALT'` und `'SHIFT'`.
+Groß-/Kleinschreibung ist egal. Den UE4SS-Tastennamen verwenden, nicht `Key.F8`
+oder eine übersetzte Tastenbeschriftung. Standard bleibt `'OEM_THREE'`
+(**Ö bei deutschem Layout / Backtick bei US-Layout**). Ein Funkgerät aus der
+Nähe anvisieren und die eingestellte Taste drücken. Ältere Spielbeschreibungen
+können weiterhin Ö nennen; maßgeblich ist die Konfiguration.
+
+**Updates / Aktualisierung:** Back up your edited `config.lua` before replacing
+files and reapply your key settings afterwards. / Angepasste `config.lua` vor
+dem Ersetzen sichern und eigene Tasteneinstellungen anschließend übernehmen.
+Avoid keys already used by the game or another mod. Invalid settings or a
+detected UE4SS binding conflict disable only this hotkey and write a clear
+message to `UE4SS.log`; recipe recovery and resource transfer remain active.
+/ Belegte Spiel-/Modtasten vermeiden. Bei ungültigen Einstellungen oder einem
+erkannten UE4SS-Tastenkonflikt wird nur dieser Hotkey deaktiviert und eine
+Meldung in `UE4SS.log` geschrieben; Bauplanwiederherstellung und Übertragung
+bleiben aktiv. No new in-game test for this config update: 22 offline Lua tests
+passed. / Für dieses Konfigurationsupdate kein neuer Spieltest: 22 Offline-Lua-Tests bestanden.
+
 ## Ressourcenpuffer bleiben erhalten
 
 Volle 1.000-Einheiten-Puffer für Flüssigkeiten und Gase werden nicht mehr auf null
@@ -219,7 +256,7 @@ Das vollständige Caretaker-Modpack ab **1.0.0** enthält diese Fassung bereits.
 
 Mehrere Empfänger desselben Kanals teilen die verfügbare Leistung. Ein Empfänger weicht bei Stromausfall nicht auf andere Kanäle aus. E und F behalten die normale Kabelbedienung. Ö ist ein separater Befehl und erscheint nicht als normale Interaktion-2-Einblendung.
 
-Auf einer deutschen Windows-Tastatur entspricht Ö `KeyName = 'OEM_THREE'`. Bei anderer Tastatur kann dies unter `CaretakerWirelessControls/Scripts/config.lua` geändert werden; `KeyLabel` ist nur die Beschriftung. Danach neu starten. Das Menü öffnet nur beim Anvisieren eines Funkstrom-Geräts aus der Nähe und nicht über einem bereits offenen Dialog.
+Die Taste und optionale Zusatztasten stehen in `CaretakerWirelessControls/Scripts/config.lua`; Beispiele und US-Tastaturhinweise stehen oben unter **Channel key / Kanalwechsel-Taste**. Die Protokoll-Beschriftung wird automatisch aus der tatsächlichen Belegung abgeleitet; ein älteres `KeyLabel` ist nicht mehr erforderlich. Danach neu starten. Das Menü öffnet nur beim Anvisieren eines Wireless-Geräts aus der Nähe und nicht über einem bereits offenen Dialog.
 
 **Wandbrücken und Funk-Datenrelais sind andere Systeme.** Wandbrücken bilden passende Paare derselben Kategorie bis 50 m unter den Montagebedingungen des Spiels. Datenrelais übertragen Steuersignale und verwenden ihre eigene Kanalbedienung; sie versorgen keine Stromverbraucher.
 
