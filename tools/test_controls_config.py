@@ -65,11 +65,11 @@ class ControlsConfig(unittest.TestCase):
                        "return {KeyName='F8',Modifiers={[2]='ALT'}}",
                        "return {KeyName='F8',Modifiers={oops='ALT'}}"]:
             with self.subTest(source=source):
-                boot(source).execute('assert(recovery==1 and #bindings==0 and next(timers)==nil and #logs>0)')
+                boot(source).execute('assert(recovery==1 and #bindings==0 and timers[50]==nil and timers[1000] and #logs>0)')
 
     def test_occupied_binding_does_not_replace_other_mod(self):
         boot("return {KeyName='F8',Modifiers={'CONTROL'}}", occupied=True).execute(
-            "assert(recovery==1 and #bindings==0 and next(timers)==nil and table.concat(logs):find('already used',1,true))")
+            "assert(recovery==1 and #bindings==0 and timers[50]==nil and timers[1000] and table.concat(logs):find('already used',1,true))")
 
     def test_callback_defers_dialog_to_game_thread_and_coalesces_presses(self):
         lua = boot("return {KeyName='F8'}")

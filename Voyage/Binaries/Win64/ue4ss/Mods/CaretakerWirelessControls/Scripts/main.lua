@@ -2,6 +2,7 @@
 local folder=debug.getinfo(1,'S').source:sub(2):match('^(.*[/\\])')
 local function log(s)print('[CaretakerWirelessControls] '..s..'\n')end
 local loaded,config=pcall(dofile,folder..'config.lua')
+dofile(folder..'localization.lua').start(dofile(folder..'translations.lua'),'CaretakerWirelessControls')
 -- Recipe recovery also works when the channel hotkey is disabled or occupied.
 dofile(folder..'availability.lua').start()
 local M={}

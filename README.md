@@ -2,7 +2,7 @@
 
 **1.000 Meter Funkübertragung für Strom, Treibstoffe, Wasser und Gase mit getrennten Kanälen und Hintergrundbetrieb** für *The Last Caretaker*. Diese eigenständige Mod repariert und erweitert die vorhandenen Wireless-Spielgeräte. Die ursprünglichen Modelle und Gegenstände stammen aus dem Spiel.
 
-**Version 1.0.0 – Erstrelease**, geprüft mit Spielversion **0.10.0.653173 / Steam-Build 25982825** unter Windows. Die Modtexte sind deutsch.
+**Version 1.0.0 – Erstrelease**, geprüft mit Spielversion **0.10.0.653173 / Steam-Build 25982825** unter Windows. Die Mod folgt automatisch der Spielsprache: Deutsch bei deutscher Sprache, Englisch bei englischer Sprache. Für andere Spielsprachen wird Englisch verwendet. Ein Sprachwechsel im Spiel wird übernommen.
 
 [Download auf GitHub](https://github.com/C1yHAX/caretaker-wireless/releases/tag/v1.0.0) · [Download auf GitLab](https://gitlab.com/c0d1ngf1eber/caretaker-wireless/-/releases/v1.0.0) · [Änderungsverlauf](CHANGELOG.md)
 
@@ -17,8 +17,8 @@ Other examples: `'F9'`, `'K'`, `'HOME'`; optional modifiers are `'CONTROL'`,
 [UE4SS key name](https://docs.ue4ss.com/lua-api/table-definitions/key.html),
 not `Key.F8` or a translated key caption. The default `'OEM_THREE'` retains
 **Ö on German layouts / the backtick key on US layouts**. Aim at a nearby
-wireless transmitter or receiver and press your configured key. Existing
-in-game descriptions may still mention Ö; the configuration determines the key.
+wireless transmitter or receiver and press your configured key. The translated
+in-game descriptions refer to the configured channel key.
 
 **Deutsch:** Spiel schließen und die oben genannte `config.lua` im
 Spielinstallationsordner bearbeiten. Für **F8** `KeyName = 'F8'` und
@@ -28,8 +28,8 @@ Spielinstallationsordner bearbeiten. Für **F8** `KeyName = 'F8'` und
 Groß-/Kleinschreibung ist egal. Den UE4SS-Tastennamen verwenden, nicht `Key.F8`
 oder eine übersetzte Tastenbeschriftung. Standard bleibt `'OEM_THREE'`
 (**Ö bei deutschem Layout / Backtick bei US-Layout**). Ein Funkgerät aus der
-Nähe anvisieren und die eingestellte Taste drücken. Ältere Spielbeschreibungen
-können weiterhin Ö nennen; maßgeblich ist die Konfiguration.
+Nähe anvisieren und die eingestellte Taste drücken. Die übersetzten
+Spielbeschreibungen verweisen auf die konfigurierte Kanaltaste.
 
 **Updates / Aktualisierung:** Back up your edited `config.lua` before replacing
 files and reapply your key settings afterwards. / Angepasste `config.lua` vor
@@ -40,8 +40,7 @@ message to `UE4SS.log`; recipe recovery and resource transfer remain active.
 / Belegte Spiel-/Modtasten vermeiden. Bei ungültigen Einstellungen oder einem
 erkannten UE4SS-Tastenkonflikt wird nur dieser Hotkey deaktiviert und eine
 Meldung in `UE4SS.log` geschrieben; Bauplanwiederherstellung und Übertragung
-bleiben aktiv. No new in-game test for this config update: 22 offline Lua tests
-passed. / Für dieses Konfigurationsupdate kein neuer Spieltest: 22 Offline-Lua-Tests bestanden.
+bleiben aktiv. The mod automatically follows the game language: German for German, English for English, with English as the fallback for other languages. In-game language changes are picked up automatically. / 120 Wireless-Texte wurden in der Spielengine auf Deutsch, Englisch, de-DE, en-US und englischen Fallback geprüft.
 
 ## Ressourcenpuffer bleiben erhalten
 
