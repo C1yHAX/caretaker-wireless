@@ -1,6 +1,7 @@
 -- Restore earned Wireless recipes when the native 1024-slot vault filled up.
--- Migrate already earned recipes to the separate zero-cost skill entries.
--- Never grant unearned devices, delete a slot, or append an existing pattern.
+-- Ownership is managed exclusively by the game's research system.
+-- Never grant a skill, infer a receiver from its transmitter, delete a slot,
+-- or append an existing pattern. Previously earned recipes remain usable.
 local M={}
 local specs={}
 for _,resource in ipairs({'Petrol','Diesel','Oil','FreshWater','SaltWater','Oxygen','CarbonDioxide','Methane','Steam','Universal'})do
@@ -12,9 +13,7 @@ for _,resource in ipairs({'Petrol','Diesel','Oil','FreshWater','SaltWater','Oxyg
         local item='DA_Wireless_'..resource..'_'..role
         local ownSkill=skill..(role=='Receiver'and '_Receiver'or '')
         specs[#specs+1]={item='/Game/CaretakerWireless/Items/'..item..'.'..item,
-            skill='/Game/CaretakerWireless/Skills/'..ownSkill..'.'..ownSkill,
-            legacyPair=role=='Receiver'and('/Game/CaretakerWireless/Skills/'..skill..'.'..skill)or nil,
-            migrate=true}
+            skill='/Game/CaretakerWireless/Skills/'..ownSkill..'.'..ownSkill}
     end
 end
 for _,kind in ipairs({'Electric','Fuel','Gas','Water'})do
@@ -27,7 +26,7 @@ for _,role in ipairs({'Transmitter','Receiver'})do
     local item='DA_Module_WirelessResourceTransmitter'..(role=='Receiver'and '_Socket_Electricity'or '')
     local skill='DA_Skill_Wireless_Electricity'..(role=='Receiver'and '_Receiver'or '')
     specs[#specs+1]={item='/Game/Data/Assets/Cable/'..item..'.'..item,
-        skill='/Game/CaretakerWireless/Skills/'..skill..'.'..skill,migrate=true}
+        skill='/Game/CaretakerWireless/Skills/'..skill..'.'..skill}
 end
 specs[#specs+1]={item='/Game/Data/Assets/Cable/DA_Module_Wireless_Relay.DA_Module_Wireless_Relay'}
 local function valid(o)return o and o:IsValid()end
@@ -47,7 +46,7 @@ function M.repair(pc)
     if vault.Capacity>0 and vault.Capacity<needed then
         vault.Capacity=math.ceil(needed/256)*256
     end
-    local restored,migrated=0,0
+    local restored=0
     for _,s in ipairs(specs)do
         local item=asset(s.item)
         if valid(item)then
@@ -55,18 +54,7 @@ function M.repair(pc)
             local skill=s.skill and asset(s.skill)
             local owned=valid(skill)and gp:HasPlayerSkill(skill,pc)
             local earned=count>0 or owned or gp:HasItemBeenScanned(pc,item)
-            if not earned and s.legacyPair then
-                local legacy=asset(s.legacyPair)
-                earned=valid(legacy)and gp:HasPlayerSkill(legacy,pc)
-            end
             if earned then
-                -- AddSkill records ownership; the inventory check below is the
-                -- sole recipe repair path and remains safe if native listeners
-                -- have already restored the item during the ownership event.
-                if s.migrate and valid(skill)and not owned and skill.Unlock.Cost==0 then
-                    pc.PlayerState:AddSkill(skill,false)
-                    if gp:HasPlayerSkill(skill,pc)then migrated=migrated+1 end
-                end
                 if vault:GetNumItems(item)==0 then
                     vault:AddItem(item,{ItemCount=1,Timestamp=0,Flags=0,Version=0},true,true)
                     if vault:GetNumItems(item)>0 then restored=restored+1 end
@@ -75,7 +63,6 @@ function M.repair(pc)
         end
     end
     if restored>0 then print('[CaretakerWirelessControls] Restored '..restored..' earned Wireless recipes to the vault\n')end
-    if migrated>0 then print('[CaretakerWirelessControls] Migrated '..migrated..' earned Wireless skills to separate entries\n')end
     return restored
 end
 function M.prepareVault()

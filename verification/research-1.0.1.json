@@ -1,0 +1,195 @@
+{
+  "version": "1.0.1",
+  "skills": [
+    {
+      "asset": "DA_Skill_Wireless_CarbonDioxide_Receiver",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_CarbonDioxide",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_Diesel_Receiver",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_Diesel",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_Electricity_Receiver",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_Electricity",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_FreshWater_Receiver",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_FreshWater",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_Methane_Receiver",
+      "cost": 1,
+      "level": 21
+    },
+    {
+      "asset": "DA_Skill_Wireless_Methane",
+      "cost": 1,
+      "level": 21
+    },
+    {
+      "asset": "DA_Skill_Wireless_Oil_Receiver",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_Oil",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_Oxygen_Receiver",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_Oxygen",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_Petrol_Receiver",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_Petrol",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_SaltWater_Receiver",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_SaltWater",
+      "cost": 1,
+      "level": 18
+    },
+    {
+      "asset": "DA_Skill_Wireless_Steam_Receiver",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_Steam",
+      "cost": 1,
+      "level": 20
+    },
+    {
+      "asset": "DA_Skill_Wireless_Universal",
+      "cost": 3,
+      "level": 22
+    }
+  ],
+  "changedSkills": 21,
+  "preservedChunks": 75,
+  "containerDependenciesPreserved": true,
+  "modelsTexturesItemsBlueprintsPreserved": true,
+  "baselineUcasSha256": "1b882767fc0be41eae0d816d3567b307146dcab0036f7de2585f8db77bdda69c",
+  "files": [
+    {
+      "name": "CaretakerWirelessFix_P.pak",
+      "sha256": "75e7144577253917f6da7312ef5e585b12fb728226a22b0938323751a6b555cd",
+      "bytes": 347
+    },
+    {
+      "name": "CaretakerWirelessFix_P.ucas",
+      "sha256": "958a361a2ba82f57c010275c63f47e24e36a595aa6a6edcd1bde1dfb92b73292",
+      "bytes": 6608494
+    },
+    {
+      "name": "CaretakerWirelessFix_P.utoc",
+      "sha256": "33fc0fa4e9af05d81c9dde7e2006e9a3f826894c33c8f6564b76fd00a8699b83",
+      "bytes": 12420
+    }
+  ],
+  "publicBaseline": {
+    "nexusFileId": 1633,
+    "sha256": "92ea745c9382ab65c3469e91974d8aa1852daf2e2aa70d52e42df8172cdf377e",
+    "all21ActiveCostsWereZero": true
+  },
+  "nativeTests": {
+    "game": "0.10.0.653173",
+    "isolatedProfile": true,
+    "temporaryPlayerState": true,
+    "all21Costs": true,
+    "all21PurchasesAndDeductions": true,
+    "totalCost": 23,
+    "normalEligibilityApi": true,
+    "zeroPointsRejected": true,
+    "universalTwoRejectedThreeAccepted": true,
+    "minimumLevelsPreserved": true,
+    "duplicatePurchasesRejected": true,
+    "noReceiverAutogrant": true,
+    "languages": [
+      "en",
+      "de",
+      "en-US",
+      "de-DE",
+      "fr"
+    ],
+    "originalUserFilesUnchanged": true,
+    "customConfigPreserved": true
+  },
+  "offlineTestsPassed": 24,
+  "limits": [
+    "Native API tests, not a full manual skill-menu click-through.",
+    "Paid-skill persistence across a cold reload was not separately retested; asset IDs and game serialization were unchanged."
+  ],
+  "archive": {
+    "name": "Caretaker-Wireless-Fix-1.0.1.zip",
+    "sha256": "0eadc4e60cede51379644fa9387c59453375fe10091cad87eb67416f552863bb",
+    "bytes": 35693959,
+    "members": [
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/config.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/connections.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/devices.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/main.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/native/caretaker_catchup.dll",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/physics.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/Scripts/saved_network.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessBackground/enabled.txt",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/availability.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/config.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/devices.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/localization.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/main.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/Scripts/translations.lua",
+      "Voyage/Binaries/Win64/ue4ss/Mods/CaretakerWirelessControls/enabled.txt",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerAntenna_P.pak",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerAntenna_P.ucas",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerAntenna_P.utoc",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.pak",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.tlcaddon.json",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.ucas",
+      "Voyage/Content/Paks/~mods/CaretakerWirelessFix/CaretakerWirelessFix_P.utoc"
+    ],
+    "runtimeOnly": true
+  }
+}

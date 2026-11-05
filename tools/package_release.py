@@ -3,7 +3,7 @@ from pathlib import Path, PurePosixPath
 import argparse, hashlib, json, zipfile
 
 ROOT = Path(__file__).resolve().parent.parent
-ARCHIVE = 'Caretaker-Wireless-Fix-1.0.0.zip'
+ARCHIVE = 'Caretaker-Wireless-Fix-1.0.1.zip'
 KIND = 'wireless'
 
 def reject_unresolved_assets(name, data):

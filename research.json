@@ -1,0 +1,107 @@
+[
+  {
+    "asset": "DA_Skill_Wireless_CarbonDioxide_Receiver",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_CarbonDioxide",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_Diesel_Receiver",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_Diesel",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_Electricity_Receiver",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_Electricity",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_FreshWater_Receiver",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_FreshWater",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_Methane_Receiver",
+    "cost": 1,
+    "level": 21
+  },
+  {
+    "asset": "DA_Skill_Wireless_Methane",
+    "cost": 1,
+    "level": 21
+  },
+  {
+    "asset": "DA_Skill_Wireless_Oil_Receiver",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_Oil",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_Oxygen_Receiver",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_Oxygen",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_Petrol_Receiver",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_Petrol",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_SaltWater_Receiver",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_SaltWater",
+    "cost": 1,
+    "level": 18
+  },
+  {
+    "asset": "DA_Skill_Wireless_Steam_Receiver",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_Steam",
+    "cost": 1,
+    "level": 20
+  },
+  {
+    "asset": "DA_Skill_Wireless_Universal",
+    "cost": 3,
+    "level": 22
+  }
+]

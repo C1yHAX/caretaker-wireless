@@ -20,8 +20,7 @@ class Availability(unittest.TestCase):
           self.items[item.path]=1;self.count=self.count+1
         end
         playerState=validObject({AddSkill=function(self,skill,notify)
-          assert(not notify and skill.Unlock.Cost==0)
-          owned[skill.path]=true
+          error('Recipe recovery must never grant a research skill')
         end})
         pc=validObject({Pawn=validObject(),PlayerState=playerState,
           GetInventoryComponent=function(self,kind)assert(kind==2);return inventory end})
@@ -34,7 +33,7 @@ class Availability(unittest.TestCase):
         function StaticFindObject(path)
           if path:find('Default__VoyageGameplay')then return gp end
           if path:find('BP_FirstPersonCharacter_New')then return pawnClass end
-          assets[path]=assets[path]or validObject({path=path,Unlock={Cost=0}})
+          assets[path]=assets[path]or validObject({path=path,Unlock={Cost=1}})
           return assets[path]
         end
         LoadAsset=StaticFindObject
@@ -48,13 +47,13 @@ class Availability(unittest.TestCase):
         ''')
         return lua
 
-    def test_full_vault_repairs_only_earned_pair_once_without_deleting(self):
+    def test_full_vault_repairs_only_owned_sender_without_granting_receiver(self):
         lua = self.fixture()
         lua.execute('''
         inventory.items.existing=7;own('Diesel')
-        assert(M.repair(pc)==2 and inventory.count==1026)
+        assert(M.repair(pc)==1 and inventory.count==1025)
         assert(inventory.items.existing==7 and inventory.Capacity==1280)
-        assert(M.repair(pc)==0 and inventory.count==1026)
+        assert(M.repair(pc)==0 and inventory.count==1025)
         assert(inventory.Capacity==1280)
         ''')
 
@@ -64,7 +63,7 @@ class Availability(unittest.TestCase):
         assert(next(owned)==nil and next(inventory.items)==nil)
         ''')
 
-    def test_legacy_pair_migrates_receiver_without_extra_vault_copy(self):
+    def test_existing_receiver_recipe_is_preserved_without_granting_research(self):
         lua=self.fixture()
         lua.execute('''
         own('Diesel')
@@ -72,7 +71,7 @@ class Availability(unittest.TestCase):
         local path='/Game/CaretakerWireless/Items/'..n..'.'..n
         inventory.items[path]=1
         assert(M.repair(pc)==1)
-        assert(owned['/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Diesel_Receiver.DA_Skill_Wireless_Diesel_Receiver'])
+        assert(not owned['/Game/CaretakerWireless/Skills/DA_Skill_Wireless_Diesel_Receiver.DA_Skill_Wireless_Diesel_Receiver'])
         assert(inventory.items[path]==1 and inventory.count==1025)
         assert(M.repair(pc)==0 and inventory.count==1025)
         ''')

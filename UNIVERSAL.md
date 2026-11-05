@@ -22,7 +22,8 @@ Spielstände vorhanden.
 ## Anschließen
 
 1. Universal-Sender ab Level 22 freischalten. Die aktuelle Korrekturfassung hat
-   getrennte Freischaltungen mit null Skillpunktkosten.
+   getrennte Freischaltungen: jeweils 1 Forschungspunkt für einzelne Sender oder
+   Empfänger, 3 Punkte für den Universal-Sender.
 2. Stromversorgung und gewünschte Ressourcenquellen an die zugehörigen Eingänge
    des Senders anschließen.
 3. Den Sender anvisieren und mit Ö einen Kanal von 1 bis 9999 wählen.
@@ -55,7 +56,7 @@ Gehäuse kann an vorher engen Aufstellorten eine neue Position benötigen.
 
 ## Prüfstatus und Installation
 
-Version bleibt 1.0.0. Alle 20 Laufzeitdateien des ZIP gehören zusammen,
+Alle 22 Laufzeitdateien des ZIP gehören zusammen,
 einschließlich der drei neuen CaretakerAntenna_P-Containerdateien. Voraussetzungen
 und Installation stehen in README.md. Der Universalempfänger wird nicht wieder
 in Herstellung oder Freischaltung aufgenommen.

@@ -1,8 +1,7 @@
 # Release packaging preference
 
-The user requires version 1.0.0 for the current first releases. Release download
-ZIPs must contain only files required to run the mod, under the installation
-folder structure. Keep this policy for future packaging changes.
+The first release is 1.0.0. Public fixes receive a new version number.
+Release ZIPs contain only runtime files under the installation folder structure.
 
 - Do not include README, BUILDING, THIRD-PARTY-NOTICES, CHANGELOG, release notes,
   license text files, source images, development tools, installers, verification
@@ -15,3 +14,9 @@ folder structure. Keep this policy for future packaging changes.
 - Apply the same runtime-only rule to the complete local modpack ZIP. Preserve
   local settings and saved state; do not publish personal files in standalone mods.
 - Do not start the game automatically for packaging or offline verification.
+
+# Nexus description preference
+
+Main descriptions contain current features and a brief installation guide in
+English and German. Version-specific changes, tests and release history belong
+in the separate changelog, never the main description. Preserve user credits.

@@ -591,148 +591,148 @@
     "namespace": "CaretakerWireless",
     "key": "text_9962f6a3dd4fa1e2",
     "source": "Schaltet Benzin-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Petrol Wireless Receiver. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Benzin-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Petrol Wireless Receiver. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Benzin-Funkempfänger frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_3ed12936d2d4f7c6",
     "source": "Schaltet Benzin-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Petrol Wireless Transmitter. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Benzin-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Petrol Wireless Transmitter. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Benzin-Funksender frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_c8d3cd77d65645c5",
     "source": "Schaltet CO₂-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the CO₂ Wireless Receiver. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet CO₂-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the CO₂ Wireless Receiver. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet CO₂-Funkempfänger frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_c1d306cebd24b790",
     "source": "Schaltet CO₂-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the CO₂ Wireless Transmitter. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet CO₂-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the CO₂ Wireless Transmitter. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet CO₂-Funksender frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_4720b835df57dd98",
     "source": "Schaltet Dampf-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Steam Wireless Receiver. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Dampf-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Steam Wireless Receiver. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Dampf-Funkempfänger frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_3a18adf241bdb3e9",
     "source": "Schaltet Dampf-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Steam Wireless Transmitter. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Dampf-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Steam Wireless Transmitter. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Dampf-Funksender frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_2073e1f1f5185e63",
     "source": "Schaltet Diesel-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Diesel Wireless Receiver. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Diesel-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Diesel Wireless Receiver. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Diesel-Funkempfänger frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_6a7ba4f25b0b5bcf",
     "source": "Schaltet Diesel-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Diesel Wireless Transmitter. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Diesel-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Diesel Wireless Transmitter. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Diesel-Funksender frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_1f88f837ef677b7d",
     "source": "Schaltet Frischwasser-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Fresh Water Wireless Receiver. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Frischwasser-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Fresh Water Wireless Receiver. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Frischwasser-Funkempfänger frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_e3d755cbebffb028",
     "source": "Schaltet Frischwasser-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Fresh Water Wireless Transmitter. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Frischwasser-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Fresh Water Wireless Transmitter. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Frischwasser-Funksender frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_8cdc0912b5797701",
     "source": "Schaltet Funkstrom-Empfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Wireless Power Receiver. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Funkstrom-Empfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Wireless Power Receiver. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Funkstrom-Empfänger frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_f36c82e5c7794cf7",
     "source": "Schaltet Funkstrom-Sender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Wireless Power Transmitter. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Funkstrom-Sender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Wireless Power Transmitter. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Funkstrom-Sender frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_6489e33f0390d60e",
     "source": "Schaltet Methan-Funkempfänger frei. Ab Stufe 21, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Methane Wireless Receiver. Available at level 21, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Methan-Funkempfänger frei. Ab Stufe 21, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Methane Wireless Receiver. Available at level 21, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Methan-Funkempfänger frei. Ab Stufe 21, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_6b9fdbc6ef5e04fa",
     "source": "Schaltet Methan-Funksender frei. Ab Stufe 21, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Methane Wireless Transmitter. Available at level 21, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Methan-Funksender frei. Ab Stufe 21, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Methane Wireless Transmitter. Available at level 21, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Methan-Funksender frei. Ab Stufe 21, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_ca7cbbdb018d215c",
     "source": "Schaltet Rohöl-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Crude Oil Wireless Receiver. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Rohöl-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Crude Oil Wireless Receiver. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Rohöl-Funkempfänger frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_431278419630ea47",
     "source": "Schaltet Rohöl-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Crude Oil Wireless Transmitter. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Rohöl-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Crude Oil Wireless Transmitter. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Rohöl-Funksender frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_3c2a304b4a23a72b",
     "source": "Schaltet Salzwasser-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Salt Water Wireless Receiver. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Salzwasser-Funkempfänger frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Salt Water Wireless Receiver. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Salzwasser-Funkempfänger frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_295de1b03004f5ca",
     "source": "Schaltet Salzwasser-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Salt Water Wireless Transmitter. Available at level 18, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Salzwasser-Funksender frei. Ab Stufe 18, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Salt Water Wireless Transmitter. Available at level 18, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Salzwasser-Funksender frei. Ab Stufe 18, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_bd892d5112b8468f",
     "source": "Schaltet Sauerstoff-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Oxygen Wireless Receiver. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Sauerstoff-Funkempfänger frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Oxygen Wireless Receiver. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Sauerstoff-Funkempfänger frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_f4aa5f909fc47423",
     "source": "Schaltet Sauerstoff-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Oxygen Wireless Transmitter. Available at level 20, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Sauerstoff-Funksender frei. Ab Stufe 20, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Oxygen Wireless Transmitter. Available at level 20, research cost: 1 skill point. Find it in the build menu under Item / Cable / Cable Extension. Transmitters and receivers each have their own entry and icon. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Sauerstoff-Funksender frei. Ab Stufe 20, Forschungskosten: 1 Fähigkeitspunkt. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",
     "key": "text_4a31d2684c206ebb",
     "source": "Schaltet Universal-Funksender frei. Ab Stufe 22, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Sender und Empfänger haben jeweils einen eigenen Eintrag und ein eigenes Icon. Gleiche Ressource und gleicher Ö-Kanal verbinden sich bis 1.000 m.",
-    "en": "Unlocks the Universal Wireless Transmitter. Available at level 22, with no additional skill point cost. Find it in the build menu under Item / Cable / Cable Extension. The transmitter has its own entry and icon. Use individual resource receivers. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
-    "de": "Schaltet Universal-Funksender frei. Ab Stufe 22, ohne zusätzliche Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Der Sender hat einen eigenen Eintrag und ein eigenes Icon; als Empfänger dienen die einzelnen Ressourcen-Empfänger. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
+    "en": "Unlocks the Universal Wireless Transmitter. Available at level 22, research cost: 3 skill points. Find it in the build menu under Item / Cable / Cable Extension. The transmitter has its own entry and icon. Use individual resource receivers. Matching resources on the same channel connect within 1,000 m. Use the configured channel key to change channels.",
+    "de": "Schaltet Universal-Funksender frei. Ab Stufe 22, Forschungskosten: 3 Fähigkeitspunkte. Im Baumenü unter Gegenstand / Leitung / Leitungsverlängerung. Der Sender hat einen eigenen Eintrag und ein eigenes Icon; als Empfänger dienen die einzelnen Ressourcen-Empfänger. Gleiche Ressource und gleicher Funkkanal verbinden sich bis 1.000 m."
   },
   {
     "namespace": "CaretakerWireless",

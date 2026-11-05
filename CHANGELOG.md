@@ -1,5 +1,21 @@
 # Änderungen
 
+## 1.0.1 — Research costs / Forschungskosten, 5 November 2026
+
+**English**
+- Each individual wireless transmitter and receiver costs 1 research point; the universal transmitter costs 3. Existing level requirements remain 18–22.
+- Buying a transmitter no longer grants its receiver through recipe recovery. Recovery does not grant research skills; existing earned recipes and learned skills are retained.
+- English and German research descriptions show the matching costs.
+- Models, textures, lights, channels, resource buffers and transfer behavior are unchanged.
+- The game's used-point total reflects the new costs for learned skills. Existing unlocks are not removed and saves are not reset.
+
+**Deutsch**
+- Einzelne Funksender und Funkempfänger kosten jeweils 1 Forschungspunkt, der Universal-Sender 3. Die bisherigen Mindeststufen 18–22 bleiben bestehen.
+- Senderforschung schaltet den Empfänger nicht mehr über die Bauplanwiederherstellung mit frei. Die Wiederherstellung vergibt keine Fähigkeiten; bereits verdiente Baupläne und erlernte Fähigkeiten bleiben erhalten.
+- Deutsche und englische Forschungstexte enthalten die passenden Kosten.
+- Modelle, Texturen, Lichter, Kanäle, Ressourcenpuffer und Übertragung bleiben unverändert.
+- Das Spiel berücksichtigt die neuen Kosten in der Summe verbrauchter Punkte bereits erlernter Fähigkeiten. Freischaltungen werden nicht entfernt und Spielstände nicht zurückgesetzt.
+
 ### Configurable channel key / Einstellbare Kanaltaste, 27.10.2026, 1.0.0
 
 - English/German instructions and examples in the runtime `config.lua`; any supported UE4SS key plus optional CONTROL/ALT/SHIFT modifiers. / Deutsch-/englische Anleitung und Beispiele in der mitgelieferten `config.lua`; UE4SS-Tasten und optionale Zusatztasten.
